@@ -85,34 +85,64 @@
 
   <div class="lx-entry padding">
     <div>
+      <h2 class="title"><a href="/2020/04/21/KMS%E6%BF%80%E6%B4%BB/">KMS激活</a></h2>
+      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2020-04-21</span>
+      <p><h1 id="KMS"><a href="#KMS" class="headerlink" title="KMS"></a>KMS</h1><ol>
+<li><p>确保你的windows的key为对应的批量key</p>
+</li>
+<li><p>以管理员权限运行cmd，输入命令行：slmgr /skms weii.ga</p>
+</li>
+</ol>
+<h2 id="office激活的方法，kms服务器的使用方式："><a href="#office激活的方法，kms服务器的使用方式：" class="headerlink" title="office激活的方法，kms服务器的使用方式："></a>office激活的方法，kms服务器的使用方式：</h2><ol>
+<li><p>office必须是VOL版本，否则是无法使用kms激活的</p>
+</li>
+<li><p>找到PC上安装office的文件夹位置</p>
+</li>
+</ol>
+<p>默认的，64位的位置为：C:\Program Files (x86)\Microsoft Office\Office16</p>
+<p>32位的位置为：C:\Program Files\Microsoft Office\Office16</p>
+<ol start="3">
+<li>以管理员权限运行cmd，进入office安装位置，输入以下三个命令行：</li>
+</ol>
+<p>cd C:\Program Files (x86)\Microsoft Office\Office16</p>
+<p>cscript ospp.vbs /sethst:NAS.com（如果是局域网，则地址为你nas所在ip）</p>
+<p>cscript ospp.vbs /act</p>
+<hr>
+<p>顺便，附上windows10各个版本的key：</p>
+<p>Windows 10 Professional</p>
+<p>W269N-WFGWX-YVC9B-4J6C9-T83GX</p>
+<p>Windows 10 Professional N</p>
+<p>MH37W-N47XK-V7XM9-C7227-GCQG9</p>
+<p>Windows 10 Enterprise</p>
+<p>NPPR9-FWDCX-D2C8J-H872K-2YT43</p>
+<p>Windows 10 Enterprise N</p>
+<p>DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4</p>
+<p>Windows 10 Education</p>
+<p>NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</p>
+<p>Windows 10 Education N</p>
+<p>2WH4N-8QGBV-H22JP-CT43Q-MDWWJ</p>
+<p>Windows 10 Enterprise 2015 LTSB</p>
+<p>WNMTR-4C88C-JK8YV-HQ7T2-76DF9</p>
+<p>Windows 10 Enterprise 2015 LTSB N</p>
+<p>2F77B-TNFGY-69QQF-B8YKP-D69TJ</p>
+<p>Windows 10 Enterprise 2016 LTSB</p>
+<p>DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ</p>
+<p>Windows 10 Enterprise 2016 LTSB N</p>
+<p>QFFDN-GRT3P-VKWWX-X7T3R-8B639</p>
+<hr>
+</p>
+      <div class="post-button"><a class="btn" href="/2020/04/21/KMS%E6%BF%80%E6%B4%BB/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>阅读更多</a></div>
+    </div>
+  </div>
+  <div class="lx-entry padding">
+    <div>
       <h2 class="title"><a href="/2020/04/20/Hexo%E7%94%A8%E6%B3%95/">Hexo用法</a></h2>
       <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2020-04-20</span>
       <p><h1 id="Hexo用法"><a href="#Hexo用法" class="headerlink" title="Hexo用法"></a>Hexo用法</h1><p>npm install hexo -g #安装Hexo<br>npm update hexo -g #升级<br>hexo init #初始化博客</p>
 <p>命令简写<br>hexo n “名字” == hexo new “名字” #新建文章<br>hexo g == hexo generate #生成<br>hexo s == hexo server #启动服务预览<br>hexo d == hexo deploy #部署</p>
 <p>hexo server #Hexo会监视文件变动并自动更新，无须重启服务器<br>hexo server -s #静态模式<br>hexo server -p 5000 #更改端口<br>hexo server -i 192.168.1.1 #自定义 IP<br>hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令</p>
 </p>
-      <div class="post-button"><a class="btn" href="/2020/04/20/Hexo%E7%94%A8%E6%B3%95/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
-    </div>
-  </div>
-  <div class="lx-entry padding">
-    <div>
-      <h2 class="title"><a href="/2020/04/20/hello-world/">Hello World</a></h2>
-      <span class="lx-post-detail"><i class="fa fa-calendar-o"></i> 2020-04-20</span>
-      <p><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-</p>
-      <div class="post-button"><a class="btn" href="/2020/04/20/hello-world/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>Read More</a></div>
+      <div class="post-button"><a class="btn" href="/2020/04/20/Hexo%E7%94%A8%E6%B3%95/" rel="noopener"><i class="fa fa-angle-double-right fa-fw"></i>阅读更多</a></div>
     </div>
   </div>
 
@@ -152,14 +182,13 @@
   </div>
   <nav class="menu-container">
   <ul class="menu-items">
-    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
-    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>首页</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>归档</a></li>
     
     <li class="has-sub"><span class="dropdown-heading">
-      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
+      <i class="fa fa-bookmark fa-fw"></i>页面</span>
         <ul>
-          <li><a href="/guestbook/">Guestbook</a></li>
-        <li><a href="/about/">About</a></li>
+          <li><a href="/about/">About</a></li>
         </ul>
     </li>
     
