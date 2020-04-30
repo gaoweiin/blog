@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme-color" content=#58b77a>
-  <title>KMS激活 | Hello World!</title>
+  <title>PyAutoGUI | Hello World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="WEI">
   <meta name="keywords" content="">
@@ -69,9 +69,9 @@
   <div class="overlay">
   <div class="page-title">
     <div class="avatar"><a href="/"><img src="http://cdnp.gaowei.in/favicon.ico"></a></div>
-    <span>2020-04-21</span>
-    <h2>KMS激活</h2>
-    <div class="tags"><i class="fa fa-tag"></i><a class="tag-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a></div>
+    <span>2020-04-24</span>
+    <h2>PyAutoGUI</h2>
+    <div class="tags"><i class="fa fa-tag"></i><a class="tag-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></div>
     <div class="social-links">
     <a href="https://github.com/gaoweiin" target="_blank"><i class="fa fa-github fa-fw"></i></a>
     <a href="mailto:admin@gaowei.in" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
@@ -84,39 +84,18 @@
   <div class="lx-post">
     <div class="lx-entry padding">
       <div>
-        <h1 id="KMS"><a href="#KMS" class="headerlink" title="KMS"></a>KMS</h1><ol>
-<li><p>确保你的windows的key为对应的批量key</p>
-</li>
-<li><p>以管理员权限运行cmd，输入命令行：slmgr /skms weii.ga</p>
-</li>
-</ol>
-<h2 id="office激活的方法，kms服务器的使用方式："><a href="#office激活的方法，kms服务器的使用方式：" class="headerlink" title="office激活的方法，kms服务器的使用方式："></a>office激活的方法，kms服务器的使用方式：</h2><ol>
-<li><p>office必须是VOL版本，否则是无法使用kms激活的</p>
-</li>
-<li><p>找到PC上安装office的文件夹位置</p>
-</li>
-</ol>
-<p>默认的，64位的位置为：C:\Program Files (x86)\Microsoft Office\Office16</p>
-<p>32位的位置为：C:\Program Files\Microsoft Office\Office16</p>
-<ol start="3">
-<li>以管理员权限运行cmd，进入office安装位置，输入以下三个命令行：</li>
-</ol>
-<p>cd C:\Program Files (x86)\Microsoft Office\Office16</p>
-<p>cscript ospp.vbs /sethst: weii.ga</p>
-<p>cscript ospp.vbs /act</p>
-<hr>
-<p>顺便，附上windows10各个版本的key：</p>
-<h3 id="Windows-10-Professional"><a href="#Windows-10-Professional" class="headerlink" title="Windows 10 Professional"></a>Windows 10 Professional</h3><p>W269N-WFGWX-YVC9B-4J6C9-T83GX</p>
-<h3 id="Windows-10-Professional-N"><a href="#Windows-10-Professional-N" class="headerlink" title="Windows 10 Professional N"></a>Windows 10 Professional N</h3><p>MH37W-N47XK-V7XM9-C7227-GCQG9</p>
-<h3 id="Windows-10-Enterprise"><a href="#Windows-10-Enterprise" class="headerlink" title="Windows 10 Enterprise"></a>Windows 10 Enterprise</h3><p>NPPR9-FWDCX-D2C8J-H872K-2YT43</p>
-<h3 id="Windows-10-Enterprise-N"><a href="#Windows-10-Enterprise-N" class="headerlink" title="Windows 10 Enterprise N"></a>Windows 10 Enterprise N</h3><p>DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4</p>
-<h3 id="Windows-10-Education"><a href="#Windows-10-Education" class="headerlink" title="Windows 10 Education"></a>Windows 10 Education</h3><p>NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</p>
-<h3 id="Windows-10-Education-N"><a href="#Windows-10-Education-N" class="headerlink" title="Windows 10 Education N"></a>Windows 10 Education N</h3><p>2WH4N-8QGBV-H22JP-CT43Q-MDWWJ</p>
-<h3 id="Windows-10-Enterprise-2015-LTSB"><a href="#Windows-10-Enterprise-2015-LTSB" class="headerlink" title="Windows 10 Enterprise 2015 LTSB"></a>Windows 10 Enterprise 2015 LTSB</h3><p>WNMTR-4C88C-JK8YV-HQ7T2-76DF9</p>
-<h3 id="Windows-10-Enterprise-2015-LTSB-N"><a href="#Windows-10-Enterprise-2015-LTSB-N" class="headerlink" title="Windows 10 Enterprise 2015 LTSB N"></a>Windows 10 Enterprise 2015 LTSB N</h3><p>2F77B-TNFGY-69QQF-B8YKP-D69TJ</p>
-<h3 id="Windows-10-Enterprise-2016-LTSB"><a href="#Windows-10-Enterprise-2016-LTSB" class="headerlink" title="Windows 10 Enterprise 2016 LTSB"></a>Windows 10 Enterprise 2016 LTSB</h3><p>DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ</p>
-<h3 id="Windows-10-Enterprise-2016-LTSB-N"><a href="#Windows-10-Enterprise-2016-LTSB-N" class="headerlink" title="Windows 10 Enterprise 2016 LTSB N"></a>Windows 10 Enterprise 2016 LTSB N</h3><p>QFFDN-GRT3P-VKWWX-X7T3R-8B639</p>
-<hr>
+        <h1 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install pyperclip pyautogui</span><br><span class="line"><span class="keyword">import</span> pyperclip</span><br><span class="line"><span class="keyword">import</span> pyautogui</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>通过 </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(pyautogui.KEYBOARD_KEYS)</span><br></pre></td></tr></table></figure>
+
+<p>可以获得所有支持的键</p>
+<blockquote>
+<p>[‘\t’, ‘\n’, ‘\r’, ‘ ‘, ‘!’, ‘“‘, ‘#’, ‘$’, ‘%’, ‘&amp;’, “‘“, ‘(‘, ‘)’, ‘*’, ‘+’, ‘,’, ‘-‘, ‘.’, ‘/‘, ‘0’, ‘1’, ‘2’, ‘3’, ‘4’, ‘5’, ‘6’, ‘7’, ‘8’, ‘9’, ‘:’, ‘;’, ‘&lt;’, ‘=’, ‘&gt;’, ‘?’, ‘@’, ‘[‘, ‘\‘, ‘]’, ‘^’, ‘_’, ‘`’, ‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’, ‘i’, ‘j’, ‘k’, ‘l’, ‘m’, ‘n’, ‘o’, ‘p’, ‘q’, ‘r’, ‘s’, ‘t’, ‘u’, ‘v’, ‘w’, ‘x’, ‘y’, ‘z’, ‘{‘, ‘|’, ‘}’, ‘~’, ‘accept’, ‘add’, ‘alt’, ‘altleft’, ‘altright’, ‘apps’, ‘backspace’, ‘browserback’, ‘browserfavorites’, ‘browserforward’, ‘browserhome’, ‘browserrefresh’, ‘browsersearch’, ‘browserstop’, ‘capslock’, ‘clear’, ‘convert’, ‘ctrl’, ‘ctrlleft’, ‘ctrlright’, ‘decimal’, ‘del’, ‘delete’, ‘divide’, ‘down’, ‘end’, ‘enter’, ‘esc’, ‘escape’, ‘execute’, ‘f1’, ‘f10’, ‘f11’, ‘f12’, ‘f13’, ‘f14’, ‘f15’, ‘f16’, ‘f17’, ‘f18’, ‘f19’, ‘f2’, ‘f20’, ‘f21’, ‘f22’, ‘f23’, ‘f24’, ‘f3’, ‘f4’, ‘f5’, ‘f6’, ‘f7’, ‘f8’, ‘f9’, ‘final’, ‘fn’, ‘hanguel’, ‘hangul’, ‘hanja’, ‘help’, ‘home’, ‘insert’, ‘junja’, ‘kana’, ‘kanji’, ‘launchapp1’, ‘launchapp2’, ‘launchmail’, ‘launchmediaselect’, ‘left’, ‘modechange’, ‘multiply’, ‘nexttrack’, ‘nonconvert’, ‘num0’, ‘num1’, ‘num2’, ‘num3’, ‘num4’, ‘num5’, ‘num6’, ‘num7’, ‘num8’, ‘num9’, ‘numlock’, ‘pagedown’, ‘pageup’, ‘pause’, ‘pgdn’, ‘pgup’, ‘playpause’, ‘prevtrack’, ‘print’, ‘printscreen’, ‘prntscrn’, ‘prtsc’, ‘prtscr’, ‘return’, ‘right’, ‘scrolllock’, ‘select’, ‘separator’, ‘shift’, ‘shiftleft’, ‘shiftright’, ‘sleep’, ‘space’, ‘stop’, ‘subtract’, ‘tab’, ‘up’, ‘volumedown’, ‘volumemute’, ‘volumeup’, ‘win’, ‘winleft’, ‘winright’, ‘yen’, ‘command’, ‘option’, ‘optionleft’, ‘optionright’]</p>
+</blockquote>
+<p>可以使用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">press()</span><br><span class="line">keyDown()</span><br><span class="line">keyUp()</span><br><span class="line">hotkey()</span><br></pre></td></tr></table></figure>
+
 
       </div>
     </div>
@@ -125,12 +104,12 @@
 <div class="lx-navigation">
 	<div class="lx-cover prev lx-cover-sm" style="background-image: url(http://cdnp.gaowei.in/bing.jpg)">
 		<div class="overlay"></div>
-		<a class="copy" href="/2020/04/24/PyAutoGUI/">
+		<a class="copy" href="/2020/04/30/Xcode%E5%86%99c/">
 			<div class="display-t">
 				<div class="display-tc">
 					<div>
 						<span>Next</span>
-						<h3>PyAutoGUI</h3>
+						<h3>Xcode写c</h3>
 					</div>
 				</div>
 			</div>
@@ -138,12 +117,12 @@
 	</div>
         <div class="lx-cover next lx-cover-sm" style="background-image: url(http://cdnp.gaowei.in/bingprepre.jpg)">
 		<div class="overlay"></div>
-		<a class="copy" href="/2020/04/20/Hexo%E7%94%A8%E6%B3%95/">
+		<a class="copy" href="/2020/04/21/KMS%E6%BF%80%E6%B4%BB/">
 			<div class="display-t">
 				<div class="display-tc">
 					<div>
 						<span>Prev</span>
-						<h3>Hexo用法</h3>
+						<h3>KMS激活</h3>
 					</div>
 				</div>
 			</div>
