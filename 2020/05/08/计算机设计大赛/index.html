@@ -84,22 +84,17 @@
   <div class="lx-post">
     <div class="lx-entry padding">
       <div>
-        <h2 id="作品安装说明"><a href="#作品安装说明" class="headerlink" title="作品安装说明"></a>作品安装说明</h2><h3 id="智能按键部分"><a href="#智能按键部分" class="headerlink" title="智能按键部分:"></a>智能按键部分:</h3><p>  将智能按键开机如联网失败10秒后会自动进入配网模式,连接到名为”连接配网”的wifi 使用浏览器打开192.168.4.1 进行配置  软件部分:    Windows平台:  将自解压文件解压,获得两个文件button_win.exe  config.ini,启动button_win.exe 即可(如需开机自启动可将两个文件放到 C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start  Menu\Programs\Startup 内)(第一次运行会 自动启动GUI配置,按步骤进行配置即可.)  Linux平台:    将button_linux 与config.ini 放于同一目录下,运行button_linux 即可 , (第一次运行会 自动启动GUI配置,按步骤进行配置即可.)     </p>
-<p>将智能按键开机如联网失败10秒后会自动进入配网模式,连接到名为”连接配网”的wifi 使用浏览器打开192.168.4.1 进行配置  </p>
-<h3 id="软件部分"><a href="#软件部分" class="headerlink" title="软件部分:"></a>软件部分:</h3><p> Windows平台:  将自解压文件解压,获得两个文件button_win.exe  config.ini,启动button_win.exe 即可(如需开机自启动可将两个文件放到 C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start  Menu\Programs\Startup 内)(第一次运行会 自动启动GUI配置,按步骤进行配置即可.)  Linux平台:    将button_linux 与config.ini 放于同一目录下,运行button_linux 即可 , (第一次运行会 自动启动GUI配置,按步骤进行配置即可.)     </p>
+        <h2 id="作品安装说明"><a href="#作品安装说明" class="headerlink" title="作品安装说明"></a>作品安装说明</h2><h3 id="智能按键部分"><a href="#智能按键部分" class="headerlink" title="智能按键部分:"></a>智能按键部分:</h3><p>将智能按键开机如联网失败10秒后会自动进入配网模式,连接到名为”连接配网”的wifi 使用浏览器打开192.168.4.1 进行配置  </p>
+<h3 id="软件部分"><a href="#软件部分" class="headerlink" title="软件部分:"></a>软件部分:</h3><h4 id="Windows平台"><a href="#Windows平台" class="headerlink" title="Windows平台:"></a>Windows平台:</h4><p>将自解压文件解压,获得两个文件button_win.exe  config.ini,启动button_win.exe 即可(如需开机自启动可将两个文件放到 C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start  Menu\Programs\Startup 内)(第一次运行会 自动启动GUI配置,按步骤进行配置即可.)  </p>
+<h4 id="Linux平台"><a href="#Linux平台" class="headerlink" title="Linux平台:"></a>Linux平台:</h4><p>将button_linux 与config.ini 放于同一目录下,运行button_linux 即可 , (第一次运行会 自动启动GUI配置,按步骤进行配置即可.)     </p>
 <h2 id="设计重点与难点："><a href="#设计重点与难点：" class="headerlink" title="设计重点与难点："></a>设计重点与难点：</h2><h3 id="重点："><a href="#重点：" class="headerlink" title="重点："></a>重点：</h3><ol>
-<li><p>硬件方面,本作品使用了实体按键,手势控制,人脸识别三种控制方法,在保证实用性,安全性的前提下增加了趣味性.</p>
-</li>
-<li><p>多平台方面,为了覆盖到更多的用户群体,特别开发了Windows 和Linux两个平台的软件,方便大多数用户的使用</p>
-</li>
-<li><p>独特设计的多人脸支持模式,可以单独为每个用户设置不同的自定义功能. </p>
-</li>
-<li><p>修改配置方面均可通过图形化用户界面完成配置,智能按键可以通过网页快速完成配置,软件则直接通过GUI完成配置</p>
-</li>
-<li><p>软件为绿色软件,不操作注册表,保证系统安全</p>
-</li>
-<li><p>智能按键自带3000mAh电池和LED可以在应急情况下当移动电源或手电筒使用</p>
-</li>
+<li>硬件方面,本作品使用了实体按键,手势控制,人脸识别三种控制方法,在保证实用性,安全性的前提下增加了趣味性.</li>
+<li>多平台方面,为了覆盖到更多的用户群体,特别开发了Windows 和Linux两个平台的软件,方便大多数用户的使用</li>
+<li>独特设计的多人脸支持模式,可以单独为每个用户设置不同的自定义功能. </li>
+<li>修改配置方面均可通过图形化用户界面完成配置,智能按键可以通过网页快速完成配置,软件则直接通过GUI完成配置</li>
+<li>软件为绿色软件,不操作注册表,保证系统安全</li>
+<li>智能按键自带3000mAh电池和LED可以在应急情况下当移动电源或</li>
+<li>手电筒使用</li>
 </ol>
 <h3 id="难点："><a href="#难点：" class="headerlink" title="难点："></a>难点：</h3><ol>
 <li><p>图片上传,由于 ESP32s的内存较小,如果一次性上传整张图片会导致系统重启,为解决此问题,我们采用了分段上传的方式,保证系统的稳定性.</p>
