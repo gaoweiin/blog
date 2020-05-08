@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme-color" content=#58b77a>
-  <title>Xcode写c | Hello World!</title>
+  <title>计算机设计大赛 | Hello World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="WEI">
   <meta name="keywords" content="">
@@ -69,9 +69,9 @@
   <div class="overlay">
   <div class="page-title">
     <div class="avatar"><a href="/"><img src="http://cdnp.gaowei.in/favicon.ico"></a></div>
-    <span>2020-04-30</span>
-    <h2>Xcode写c</h2>
-    <div class="tags"><i class="fa fa-tag"></i><a class="tag-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></div>
+    <span>2020-05-08</span>
+    <h2>计算机设计大赛</h2>
+    
     <div class="social-links">
     <a href="https://github.com/gaoweiin" target="_blank"><i class="fa fa-github fa-fw"></i></a>
     <a href="mailto:admin@gaowei.in" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
@@ -84,14 +84,41 @@
   <div class="lx-post">
     <div class="lx-entry padding">
       <div>
-        <h1 id="先到AppStore下载安装xcode"><a href="#先到AppStore下载安装xcode" class="headerlink" title="先到AppStore下载安装xcode"></a>先到AppStore下载安装xcode</h1><h2 id="打开xcode"><a href="#打开xcode" class="headerlink" title="打开xcode"></a>打开xcode</h2><p><img src="http://cdnp.gaowei.in/markdown/20200430101454.png" alt="7F72DCA6-5714-4782-8F19-93279E5BE4F4"></p>
-<p>选择创建新项目</p>
-<p>平台macos 命令行应用</p>
-<p><img src="http://cdnp.gaowei.in/markdown/20200430101528.png" alt="7211CD35-8F2C-4F81-ABA5-12A05016BC60"></p>
-<p>设置c语言环境</p>
-<p><img src="http://cdnp.gaowei.in/markdown/20200430101542.png" alt="63B31255-E177-445E-9F99-6DD2E308AD69"></p>
-<p>enjoy coding!</p>
-<p><img src="http://cdnp.gaowei.in/markdown/20200430101609.png" alt="344F320E-B6F9-4647-A367-DB9A8B7AFEA2"></p>
+        <hr>
+<p>title: 计算机设计大赛<br>date: 2020-05-08 12:50:52<br>tags: 存档<br>category: 存档z</p>
+<h2 id="智能按键部分"><a href="#智能按键部分" class="headerlink" title="智能按键部分:"></a>智能按键部分:</h2><p>  将智能按键开机如联网失败10秒后会自动进入配网模式,连接到名为”连接配网”的wifi 使用浏览器打开192.168.4.1 进行配置  软件部分:    Windows平台:  将自解压文件解压,获得两个文件button_win.exe  config.ini,启动button_win.exe 即可(如需开机自启动可将两个文件放到 C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start  Menu\Programs\Startup 内)(第一次运行会 自动启动GUI配置,按步骤进行配置即可.)  Linux平台:    将button_linux 与config.ini 放于同一目录下,运行button_linux 即可 , (第一次运行会 自动启动GUI配置,按步骤进行配置即可.)     </p>
+<p>将智能按键开机如联网失败10秒后会自动进入配网模式,连接到名为”连接配网”的wifi 使用浏览器打开192.168.4.1 进行配置  </p>
+<h2 id="软件部分"><a href="#软件部分" class="headerlink" title="软件部分:"></a>软件部分:</h2><p> Windows平台:  将自解压文件解压,获得两个文件button_win.exe  config.ini,启动button_win.exe 即可(如需开机自启动可将两个文件放到 C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start  Menu\Programs\Startup 内)(第一次运行会 自动启动GUI配置,按步骤进行配置即可.)  Linux平台:    将button_linux 与config.ini 放于同一目录下,运行button_linux 即可 , (第一次运行会 自动启动GUI配置,按步骤进行配置即可.)     </p>
+<h2 id="设计重点与难点："><a href="#设计重点与难点：" class="headerlink" title="设计重点与难点："></a>设计重点与难点：</h2><h3 id="重点："><a href="#重点：" class="headerlink" title="重点："></a>重点：</h3><ol>
+<li><p>硬件方面,本作品使用了实体按键,手势控制,人脸识别三种控制方法,在保证实用性,安全性的前提下增加了趣味性.</p>
+</li>
+<li><p>多平台方面,为了覆盖到更多的用户群体,特别开发了Windows 和Linux两个平台的软件,方便大多数用户的使用</p>
+</li>
+<li><p>独特设计的多人脸支持模式,可以单独为每个用户设置不同的自定义功能. </p>
+</li>
+<li><p>修改配置方面均可通过图形化用户界面完成配置,智能按键可以通过网页快速完成配置,软件则直接通过GUI完成配置</p>
+</li>
+<li><p>软件为绿色软件,不操作注册表,保证系统安全</p>
+</li>
+<li><p>智能按键自带3000mAh电池和LED可以在应急情况下当移动电源和手电筒使用</p>
+</li>
+</ol>
+<h3 id="难点："><a href="#难点：" class="headerlink" title="难点："></a>难点：</h3><ol>
+<li><p>图片上传,由于 ESP32s的内存较小,如果一次性上传整张图片会导致系统重启,为解决此问题,我们采用了分段上传的方式,保证系统的稳定性.</p>
+</li>
+<li><p>模型的设计,整体设计先运用SOLIDWORKS进行建模,但之后发现兼容性问题,又重新使用Blender进行建模,并使用Cycles制作动画效果并渲染</p>
+</li>
+<li><p>人脸识别与手势识别,为了保证上传数据的安全性,均使用了加密方法,能够在保证安全的前提下识别率达到98%以上.</p>
+</li>
+<li><p>人脸识别还使用了来自百度智能云活体检测,保证安全性</p>
+</li>
+<li><p>GUI方面,为了更好的支持多平台,使用了wxPython来编写</p>
+</li>
+<li><p>双平台方面,由于Linux系统桌面的多样化,单独为Linux用户预留接口,方便修改快捷键</p>
+</li>
+<li><p>智能按键硬件方面,原本每次修改wifi信息与服务器信息均需要重新烧录,十分不便,为了解决这一问题,我们通过创建web服务器来时用户可以通过浏览器完成配置</p>
+</li>
+</ol>
 
       </div>
     </div>
@@ -100,12 +127,12 @@
 <div class="lx-navigation">
 	<div class="lx-cover prev lx-cover-sm" style="background-image: url(http://cdnp.gaowei.in/bing.jpg)">
 		<div class="overlay"></div>
-		<a class="copy" href="/2020/05/08/%E6%9C%AA%E6%95%B4%E7%90%86/Untitled/">
+		<a class="copy" href="/2020/05/08/Gesture/">
 			<div class="display-t">
 				<div class="display-tc">
 					<div>
 						<span>Next</span>
-						<h3>未整理/Unt...</h3>
+						<h3>手势帮助</h3>
 					</div>
 				</div>
 			</div>
@@ -113,12 +140,12 @@
 	</div>
         <div class="lx-cover next lx-cover-sm" style="background-image: url(http://cdnp.gaowei.in/bingprepre.jpg)">
 		<div class="overlay"></div>
-		<a class="copy" href="/2020/04/24/PyAutoGUI/">
+		<a class="copy" href="/2020/05/08/%E6%9C%AA%E6%95%B4%E7%90%86/Untitled/">
 			<div class="display-t">
 				<div class="display-tc">
 					<div>
 						<span>Prev</span>
-						<h3>PyAutoGUI</h3>
+						<h3>未整理/Unt...</h3>
 					</div>
 				</div>
 			</div>
