@@ -1,58 +1,1274 @@
-<% var pageTitle = page.title || '';
-if (is_archive()) pageTitle = __('pagetitle.archive');
-if (is_tag()) pageTitle = __('pagetitle.tag') + '-' + page.tag;
-if (is_category()) pageTitle = __('pagetitle.category') + '-' + page.category;
-if (pageTitle == '') {
-    pageTitle = config.title;
-} else {
-    pageTitle += ' | ' + config.title;
-}
-var js = theme.base_file.js;
-var css = theme.base_file.css;
-if (theme.develop){ js = config.root + 'js/'; css = config.root + 'css/main.css';}
-else { css += 'main.min.css';}
-%><!DOCTYPE html>
-<html <%if(config.language.length){%>lang="<%-config.language.substring(0,2)%>"<%}%>>
+<!DOCTYPE html>
+<html lang="zh">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="theme-color" content=<%- theme.theme_color%>>
-  <title><%=pageTitle%></title>
+  <meta name="theme-color" content=#58b77a>
+  <title>英语期末 | Hello World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="<%- config.author%>">
-  <meta name="keywords" content="<%- config.keywords%>">
-  <meta name="description" content="<%- config.description%>">
-  <%- partial('partials/config')%>
-  <link rel="shortcut icon" href="<%- url_for(theme.favicon)%>">
-  <link rel="stylesheet" href="<%= css%>">
-  <%-partial('partials/font')%>
-  <script src="<%= theme.base_file.jquery_cdn%>"></script>
-  <script src="<%= js%>jquery.jside.menu.js"></script>
+  <meta name="author" content="WEI">
+  <meta name="keywords" content="">
+  <meta name="description" content="前路虽长,尤可期许">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'lx',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="http://cdnp.gaowei.in/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
 	<script>
 	$(document).ready(function(){
 	$(".menu-container").jSideMenu({
 	    jSidePosition: "position-right",
 	    jSideSticky: true,
-	    jSideSkin: "<%- theme.menu_theme%>",
+	    jSideSkin: "greenish",
 	     });
 	}); 
 	</script>
-  <%-partial('third-party/analytics/index')%>
-  <%- lx_font()%>
-  <link rel="stylesheet" href="<%= theme.font_awesome%>">
-</head>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 4.2.1"></head>
 <body>
-<%- body %>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(http://cdnp.gaowei.in/bingpre.jpg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="http://cdnp.gaowei.in/favicon.ico"></a></div>
+    <span>2020-06-19</span>
+    <h2>英语期末</h2>
+    <div class="tags"><i class="fa fa-tag"></i><a class="tag-link" href="/tags/%E5%AD%98%E6%A1%A3/" rel="tag">存档</a></div>
+    <div class="social-links">
+    <a href="https://github.com/gaoweiin" target="_blank"><i class="fa fa-github fa-fw"></i></a>
+    <a href="mailto:admin@gaowei.in" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+    <a href="tencent://message/?Menu=yes&amp;uin=331562022" target="_blank"><i class="fa fa-qq fa-fw"></i></a>
+</div></div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <p>英语期末</p>
+<a id="more"></a>
+
+
+
+
+
+<h1 id="1-1-1-2"><a href="#1-1-1-2" class="headerlink" title="1.1 1.2"></a>1.1 1.2</h1><p><strong>Unit 1</strong></p>
+<p><strong>1.1</strong></p>
+<ol>
+<li>Jack has no interest whatsoever in pursuing an acting career. He loves writing and directing.</li>
+</ol>
+<ol start="2">
+<li><p>The idea was to have users upload their medical records, so that they could be available at any time.</p>
+</li>
+<li><p>Traffic jams often build up when drivers slow down to see what happened in a crash.</p>
+</li>
+<li><p>A native New Yorker, Ben is familiar with the city, its neighborhoods, and all he has connections with.</p>
+</li>
+<li><p>You may have already seen your dream house. Before you put in an offer, you can do a few more things to ensure you purchase the right property for the right price.</p>
+</li>
+<li><p>Buying organic fruit and vegetables costs more, and for many shoppers, the benefits hardly seem worth the extra expense.</p>
+</li>
+<li><p>Self-sufficient living is the practice of providing for your own needs without outside aid or resources.</p>
+</li>
+<li><p>In the interview, the writer was asked how he set about writing a novel based on a dream he once had.</p>
+</li>
+<li><p>Are you thinking of becoming an insurance sales agent? Take this quiz to find out if this is the right career choice for you.</p>
+</li>
+<li><p>The rent for the apartment is reasonable; besides, the utilities are included, which means you don’t have to pay anything for gas, electricity and water.</p>
+</li>
+<li><p>A central heating and cooling system produces warm or cool air in one central area and distributes it throughout the building.</p>
+</li>
+<li><p>We were deeply shocked and saddened when we learned of the sudden death of our newly retired professor.</p>
+</li>
+<li><p>If you know the ins and outs of something, you know all the details about it and understand how it works.</p>
+</li>
+<li><p>It’s long been proven that we can accomplish any project if we break it up into small pieces and do the project one piece at a time.</p>
+</li>
+</ol>
+<p><strong>1.2</strong></p>
+<ol>
+<li><p>All electronic computers are made up of four basic units although they may be of different kinds. (  consist of  )</p>
+</li>
+<li><p>The moment I saw it clearly for what it was — a dead fish — I threw it away immediately. (   tossed   )</p>
+</li>
+<li><p>True, the furnishings are dated (陈旧的) but in general, the hotel is very clean and the staff very friendly. (  overall   )</p>
+</li>
+<li><p>They had little difficulty in hooking the fish, but pulling it out of the water proved to be a big problem. (  hauling   )</p>
+</li>
+<li><p>They built a fireplace to heat the small flat, but there were nights when the fire stopped burning and they shivered under the blanket. ( went out  ) </p>
+</li>
+<li><p>The pot you saw had been in service for four years and showed very little wear (磨损，用旧). ( in use  ) </p>
+</li>
+</ol>
+<p><strong>Unit 2</strong></p>
+<p><strong>1.1</strong></p>
+<ol>
+<li>While I was working in a fast-food restaurant, I constantly dreamt of being able to own one someday.</li>
+</ol>
+<ol>
+<li><p>It was common for people to keep up correspondence with friends through letters before the age of the Internet.</p>
+</li>
+<li><p>In modern Chinese society, women, to a large extent, are no longer dominated by men either in family life or in the workplace.</p>
+</li>
+<li><p>There is now a growing realization of the importance of recycling among the residents in our neighborhood.</p>
+</li>
+<li><p>The Japanese invasion during World War II met with fierce resistance from the Chinese people.</p>
+</li>
+<li><p>It is wonderful to see flowers bloom in different colours after a long bleak winter.</p>
+</li>
+<li><p>The elderly landlady couldn’t endure the behavior of the young man any more: he tossed trash all over the building.</p>
+</li>
+<li><p>It is true that human beings have had war constantly throughout history; nevertheless human civilization has managed to survive.</p>
+</li>
+<li><p>An increasingly large number of Chinese plan to spend their time travelling to different countries and seeing more of the world when they retire.</p>
+</li>
+<li><p>Last week I submitted my first project proposal and I was very anxious to know how the department manager would react to it.</p>
+</li>
+<li><p>We all sympathize with those who lost loved ones in the disaster.</p>
+</li>
+<li><p>The general decided to launch an assault on the enemy at midnight.</p>
+</li>
+<li><p>At that time, most stores in that region allowed shoppers to exchange goods and services at a mutually agreed price.</p>
+</li>
+<li><p>The kids never received any professional training previously, but their performance was impressive.</p>
+</li>
+<li><p>It’s amazing that the toddler can count up to one hundred and backward.</p>
+</li>
+</ol>
+<p><strong>1.2</strong> </p>
+<ol>
+<li><p>The research team has made all necessary preparations for the project to start and they are frustrated to learn that it is to be put off indefinitely. ( postponed )</p>
+</li>
+<li><p>What disturbs investors is the fact that the market has been fluctuating (波动) irrationally (非理性地) recently. ( of late )</p>
+</li>
+<li><p>It’s natural for young people to have a very strong desire for adventure and romance. ( long for )</p>
+</li>
+<li><p>The client was very hard to please and had been complaining all the time, despite all our efforts to satisfy her demands. ( continually )</p>
+</li>
+<li><p>The travel agency apologized to the clients who missed the tour bus. In addition, it made up for the additional travelling costs. ( compensated for )</p>
+</li>
+<li><p>As the outdoor concert attracted crowds of teenagers, the organizer made sure police and volunteers were present throughout the event, just in case. ( on hand )</p>
+</li>
+<li><p>The proud woman intensely loved her son and would do anything to please him. ( adored )</p>
+</li>
+<li><p>Those days the number of the unemployed, especially in the big cities, kept going up almost every day. ( by the day )</p>
+</li>
+</ol>
+<p><strong>Unit 3</strong> </p>
+<p><strong>1.1</strong></p>
+<ol>
+<li>We set out to find the truth behind the mystery of the scientist’s disappearance.</li>
+</ol>
+<ol>
+<li><p>A good relationship is built on honesty, trust, and mutual respect.</p>
+</li>
+<li><p>Kids may grow faster or slower but most of them still end up with an average height.</p>
+</li>
+<li><p>In the joint venture, the Chinese party will hold a 51 percent controlling interest.</p>
+</li>
+<li><p>Although John has dated the girl for a year, he is still in two minds as to whether to marry her or not.</p>
+</li>
+<li><p>Many people are unaware of just how much food and drink they consume each day.</p>
+</li>
+<li><p>In order not to hurt Mary’s feelings, please don’t refer to the incident again.</p>
+</li>
+<li><p>He and Jeannie used to live together, but recently they have been apart for the first time.</p>
+</li>
+<li><p>Adam has announced that he is to take an extended touring break in order to spend more time with his family.</p>
+</li>
+<li><p>Jim survived the heart attack thanks to the prompt first aid treatment.</p>
+</li>
+<li><p>His interview did not go well and his chance of getting the job slipped away.</p>
+</li>
+<li><p>Kids exposed to an unhealthy environment tend to grow up with more problems.</p>
+</li>
+<li><p>An occasional all-nighter is rough, but he is young enough to bounce back.</p>
+</li>
+<li><p>Olivier turned it down flat and tried to persuade Vivien to do likewise.</p>
+</li>
+<li><p>Nowadays when you buy a house in a big city, you have to invest lots of money.</p>
+</li>
+</ol>
+<p><strong>1.2</strong></p>
+<ol>
+<li><p>While in New York, Sara developed a strong liking for oil painting. ( passion )</p>
+</li>
+<li><p>Our friendship finally broke up mainly because of my fault: I failed to keep in touch with him. ( due to )</p>
+</li>
+<li><p>She had no liking for aimlessness, and besides thought it vulgar (粗鄙的). ( moreover )</p>
+</li>
+<li><p>We have to notice the presence of other cultures when they come into contact with our own. ( cannot help but )</p>
+</li>
+<li><p>The king tried to overcome the difficulty, immediately holding a meeting on how to bring about recovery of the economy. ( revive )</p>
+</li>
+<li><p>Even though I wanted to keep our friendship, we could not help but be apart for some reason. ( As much as )</p>
+</li>
+<li><p>Mary paid no attention to my repeated warnings and lost all her money in the stock market. ( neglected )</p>
+</li>
+<li><p>Because she spoke Spanish, she got around the country very well by herself. ( on her own )</p>
+</li>
+<li><p>Press reports say that firearms (枪械) kill or harm 10,000 American children each year. ( injure )</p>
+</li>
+</ol>
+<p><strong>Unit 4</strong></p>
+<p><strong>1.1</strong></p>
+<ol>
+<li>Which one is better, a secure job with a low pay or a job with a high pay but easy to lose?</li>
+</ol>
+<ol>
+<li><p>News filtered through from Bombay last night of a city on strike and tourists stuck at the airport.</p>
+</li>
+<li><p>Suicide ranks as the 10th leading cause of death in the United States. Globally, an estimated 700,000 people take their own lives annually.</p>
+</li>
+<li><p>A large product catalog is critical to a successful furniture store website. People who visit your website are looking for new furniture. You need to show it to them.</p>
+</li>
+<li><p>Some of the most provocative thinkers, writers, artists, business people, teachers and other leaders drawn from different fields around the world will gather at this summer program — to teach, speak, lead, question, and answer.</p>
+</li>
+<li><p>The guy tried to run away but the policeman caught him by grabbing the collar of his coat.</p>
+</li>
+<li><p>This dialogue window pops up in my game every five seconds! How do I disable it?</p>
+</li>
+<li><p>Life is like a journey with no known destination.</p>
+</li>
+<li><p>No one can finish all the tasks alone. Don’t hesitate to ask for help. We can all benefit from cooperation.</p>
+</li>
+<li><p>Manchester United, dubbed the Red Devils, is a top football team in England.</p>
+</li>
+<li><p>The police officer turned to the crowd and shouted, “Come on. You need to get out of here. No lingering around the crime scene.”</p>
+</li>
+<li><p>The flower show is so crowded that there is never an ideal spot for taking pictures no matter how you position yourself.</p>
+</li>
+<li><p>Our mutual friend John has got a rare ability to memorize facts and figures.</p>
+</li>
+<li><p>John stretched out an arm from bed to pick up his phone. Sleepily he asked, “Who is it?”</p>
+</li>
+<li><p>An advance team was sent to the UK to make preparations for President Xi Jinping’s visit.</p>
+</li>
+</ol>
+<p><strong>1.2</strong> </p>
+<ol>
+<li><p>There are jobs more dangerous than driving a racing car, for example, training lions. (  for instance  )</p>
+</li>
+<li><p>The radio station received a lot of phone calls from listeners requesting more pop songs. (  was flooded with  )</p>
+</li>
+<li><p>Animal lovers stopped the truck to save dogs fated to be sold to restaurants. (  destined to  )</p>
+</li>
+<li><p>When the stock market goes down, investors are usually unwilling to sell out their stocks. (  reluctant   )</p>
+</li>
+<li><p>They hugged (拥抱) each other so tightly that no one could separate them. (  pull them apart   ) </p>
+</li>
+<li><p>If you want to tell the difference in taste between wines we are going to taste tonight, you’d better have only bread and water for supper. (   stick to   )</p>
+</li>
+<li><p>Juliet begged her father to let her meet Romeo one more time. (   pleaded with   )</p>
+</li>
+<li><p>Textbooks can be expensive. That’s why some students buy from second-hand bookstores. (   As a result   )</p>
+</li>
+</ol>
+<p><strong>Unit 5</strong> </p>
+<p><strong>1.1</strong></p>
+<ol>
+<li>He regards learning as a daily experience as well as a lifetime mission.</li>
+</ol>
+<ol>
+<li><p>His plan is to design a new model, into which some features of previous models will be incorporated.</p>
+</li>
+<li><p>The ship, with 1,000 passengers aboard, was bound for New York.</p>
+</li>
+<li><p>It’s one thing to learn the rules of politics from books. It is quite another to get into the complex world of real-life politics.</p>
+</li>
+<li><p>At yesterday’s sports meet, my roommate Brian broke the record of our school in the men’s 100-meter race.</p>
+</li>
+<li><p>Jack had a hard time grasping the basic concepts of mathematics.</p>
+</li>
+<li><p>They are working on a new project, which calls for a(n) enormous amount of time and energy.</p>
+</li>
+<li><p>After I bought this iPad, I put into storage my old computer.</p>
+</li>
+<li><p>The new law tries to maintain a balance between national interests and individual rights.</p>
+</li>
+<li><p>The teacher drew a(n) analogy between the human heart and a pump to help students understand how it works.</p>
+</li>
+<li><p>If we teachers believe in education and focus on students’ growth, our labor will eventually pay off.</p>
+</li>
+<li><p>On display in the exhibition room is a new device to harness wind power.</p>
+</li>
+<li><p>His newly published book, which has made waves in literary circles, is based on events that the writer himself has witnessed.</p>
+</li>
+<li><p>At the meeting, he tried to steer the discussion away from criticizing the educational experiment.</p>
+</li>
+<li><p>The money was given to Ann as a scholarship, with no conditions attached.</p>
+</li>
+</ol>
+<p><strong>1.2</strong></p>
+<ol>
+<li><p>The new leader is determined to lead his party away from its past mistakes. ( steer )</p>
+</li>
+<li><p>Our train is already late. I wonder whether we will be in time for Tom’s wedding. ( behind schedule )</p>
+</li>
+<li><p>Howard Hughes was futuristic in aviation design. ( ahead of his time )</p>
+</li>
+<li><p>Moving materials and troops in times of war is no easy job.</p>
+</li>
+</ol>
+<p>( Transportation of )</p>
+<ol start="5">
+<li><p>The latest developments have proved that their worst fears were not unfounded/groundless. ( confirmed )</p>
+</li>
+<li><p>The paintings exhibited in this room are not for sale. ( put on display )</p>
+</li>
+<li><p>We aim to do better at making use of the limitless power of the sun. ( harnessing )</p>
+</li>
+<li><p>This mistake originated in his over-confidence. ( had its roots in )</p>
+</li>
+</ol>
+<h1 id="cloze"><a href="#cloze" class="headerlink" title="cloze"></a>cloze</h1><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>The story took place in India. The hosts and their guests were at a dinner party in a heated discussion, or rather an argument 2 the question of whether women had as much self-control as men. As they 3， signs appeared to one of the guests that a cobra（HR Btse） was present in the room. While his first 4 was to jump back he knew that this would be a mistake:so he the other diners in a 6<br>tone to hold still without telling them why. 7 the cobra emerged on the veranda（ PA A, EaB）； and the man ran quickly to the door to slam it shut. It was soon discovered that the 8 cobra crawled across the hostess’ foot the hostess. however did not scream or utter a sound. She calmly asked the 9 to get a bowl of milk, bait（il）<br>for a snake, and finally got the cobra out of the dinning room successfully. Thus the<br>10 of this crisis laid bare（ki） the fact that women have as much self-control as men argue B d C. commanding D. Shortly F. fatal Involve H. concerning I. impulse J. servant lusion L. heated M. argument N motion O. unexpected</p>
+<p><img src="http://cdnp.gaowei.in/markdown/20200619201754.png" alt="image-20200619201621656"></p>
+<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>While waiting to enter university, the young man saw a teaching job 1 in ocal newspaper； and 2 he thought his chances of getting the job were slim（i/ B）， he decided to 3. When he arrived at the school for his interview, he sensed in the headmaster an attitude of 4 and 5. The interview 6 of a number of questions regarding the young mans education and background. And then he was asked whether or not he 7 importance to games as part of a boys schooling. 8 his answer was not entirely satisfactory to the headmaster. In spite of the fact that he and the headmaster had little in 9 in their views on education the young man was told that he would be hired. However, at a salary of only twelve pounds per week and with the<br>10 of having to work under the headmasters wife, the teaching post had become quite undesirable（不如意的）<br>A. advertised B. apply C. consisted D. attached E. Obviously F common G involve H concernin g lous J. disapproval K. calm L. heated M. prospect（前景）N superiorit unexpecte</p>
+<p><img src="http://cdnp.gaowei.in/markdown/20200619201817.png" alt="image-20200619201814104"></p>
+<h2 id="5"><a href="#5" class="headerlink" title="5"></a>5</h2><p>This text is to address（处理，解决） the issue of greenhouse effect resulting from the e villain<br>（恶棍，祸首） of carbon dioxide（二氧化碳）， though it is, at first, harmless and essential to life. It is 1 that the temperature of the earth is rising. If this trend s allowed to continue, many coastal cities will 2 beneath the ocean waves, much farmland will be lost under the sea, and the resulting 3 on food supply<br>4 starvation and lead to the 5 of the whole social structure What’s to be done？ There’s no 6 but to get rid of this carbon dioxide. Carbon dioxide is not very poisonous, and in small quantities it does us no 7. Plants absorb it and convert it into their own tissue（4）， which serve as the basic food supply for all of animal life, including human beings. In the process they liberate （ix）oxygen which. again is essential to all animal life. However carbon dioxide lets in 8<br>sunlight during the day, but blocks infrared（红外线的） radiation at night. When its concentration in the 9 rises, the temperature on earth goes up, too.<br>But carbon dioxide is not rising by itself. If we stop cutting down the forests and consume less coal and gas, or use fuel that does not produce carbon dioxide, such as nuclear and solar energy In a l10<br>we can restore Its concentration to previous levels and save mankind from disaster A. alternative B. likelihood C. visible D. atmosphere E. harm F. collapse G Involve H concerning I. impulse（冲动）J across K. widespread L. pressure M. disappear N. motion O. apparent</p>
+<p><img src="http://cdnp.gaowei.in/markdown/20200619201919.png" alt="image-20200619201915309"></p>
+<h2 id="7"><a href="#7" class="headerlink" title="7"></a>7</h2><p>The story tells how Ethel Armstead, a mother about50 stood up（对抗，勇敢面X f）to young people dealing drugs outside her house. When Armstead first saw the drug dealers<br>1 out on the stoop of her newly purchased house, she was rather 2<br>Worse was that the stoop（i’】E） of her long 3 house had been used by the drug dealers to 4 business At the beginning, she would call the police to drive them away, but 5 it didnt have an effect. One day she decided to go out to talk to the gangsters（黑帮成员）。She summoned up（振作，鼓起）her6 and demanded them leave. Later, she warned them against the 7 of drug dealing. Her efforts eventually 8， one of the most notable examples being the young man who gave up drugs and found a job Ethel armstead is a9 example of community activists whose concerns go beyond their own house to the community of which they are a part. They keep making efforts for a safer and 10<br>neighbor A. vacant B. apparentl C. especially anger E. apartment courage G. startled H. harmful I. conduct J. healthier K. worked prevent M. ha anging N. typical O. stopping</p>
+<p><img src="http://cdnp.gaowei.in/markdown/20200619202023.png" alt="image-20200619202022294"></p>
+<h2 id="9"><a href="#9" class="headerlink" title="9"></a>9</h2><p>Scientist and science-fiction writer Isaac Asimov explores the question of intelligence in this article. He 1 with his recollection（回忆） of an aptitude（才能，资质）test on which he had 2 far above normal. This indicated that he was a 3 intelligent individual. However, Asimoy questions whether such scores are 4 of the attention they receive. To make his point, he gives the 5 of a garage mechanic who, though<br>6 in academic knowledge, has an ability far beyond asimov’s to 7 causes of automotive（自动的，汽车的） problems and solve them. Indeed, in an area such as mechanics（机器等的结构）， asimov8 that he could be considered quite dumb<br>（A）。 Intelligence, therefore, is not 9 but relative. This has led Asimov to make an evaluation of such aptitude tests, whose worth, it seems, should not be taken for<br>10<br>A. slightly B. begins complains granting E. absolute lacking CGK etermine H. granted g J. example score L. worth y M. admits N. intelligent O. objected</p>
+<p><img src="http://cdnp.gaowei.in/markdown/20200619202113.png" alt="image-20200619202111862"></p>
+<h1 id="仔细阅读"><a href="#仔细阅读" class="headerlink" title="仔细阅读"></a>仔细阅读</h1><p><strong>Text1</strong></p>
+<p>On a September day in 1991, two Germans were climbing the mountains between Austria and Italy. High up on a mountain pass, they found the body of a man lying on the ice. At that height(10，499 feet，or 3，200 meters), the ice is usually permanent, but 1991 had been an especially warm year. The mountain ice had melted more than usual and so the body had come to the surface. </p>
+<p>It was lying face downward. The skeleton(骨架) was in perfect condition, except for a wound in the head. There was still skin on the bones and the remains of some clothes. The hands were still holding the wooden handle of an ax and on the feet there were very simple leather and cloth boots. Nearby was a pair of gloves made of tree bark(树皮) and a holder for arrows.</p>
+<p>Who was this man? How and when had he died? Everybody had a different answer to these questions. Some people thought that it was from this century, perhaps the body of a soldier who died in World War I, since several soldiers had already been found in the area. A Swiss woman believed it might be her father, who had died in those mountains twenty years before and whose body had never been found. The scientists who rushed to look at the body thought it was probably much older, maybe even a thousand years old. </p>
+<p>With modern dating techniques, the scientists soon learned that the Iceman was about 5,300 years old. Born in about 3300 B.C., he lived during the Bronze Age in Europe. At first scientists thought he was probably a hunter who had died from an accident in the high mountains. More recent evidence, however, tells a different story. A new kind of X-ray shows an arrowhead still stuck in his shoulder. It left only a tiny hole in his skin, but it caused internal damage and bleeding. He almost certainly died from this wound, and not from the wound on the back of his head. This means that he was probably in some kind of a battle. It may have been part of a larger war, or he may have been fighting bandits. He may never have been a bandit himself.</p>
+<p>By studying his clothes and tools, scientists have already learned a great deal from the Iceman about the times he lived in. We may never know the full story of how he died, but he has given us important clues to the history of those distant times.</p>
+<ol>
+<li>The body of the Iceman was found in the mountains mainly because____________.</li>
+</ol>
+<p>A. two Germans were climbing the mountains</p>
+<p>B. he was just on a mountain pass</p>
+<p>C. the melted ice made him visible</p>
+<p>D. he was lying on the ice</p>
+<ol start="2">
+<li>What can be inferred from paragraph 2?</li>
+</ol>
+<p>A. The iceman could have died from the wound in the head.</p>
+<p>B. The Iceman was struck dead from behind.</p>
+<p>C. The Iceman was killed while working.</p>
+<p>D. The Iceman lived a poor life.</p>
+<ol start="3">
+<li>All the following are assumptions once made about the Iceman EXCEPT_________.</li>
+</ol>
+<p>A. he was a soldier in World War I</p>
+<p>B. he came from Italy</p>
+<p>C. he was a Swiss woman’s long-lost father</p>
+<p>D. he was born about a thousand years ago</p>
+<ol start="4">
+<li>The scientists made the deduction that the Iceman <strong>____</strong>.</li>
+</ol>
+<p>A. was hit in the shoulder by an arrowhead</p>
+<p>B. had a tiny hole in his skin causing his death</p>
+<p>C. was probably in some kind of a battle</p>
+<p>D. had got a wound on the back of his head</p>
+<ol start="5">
+<li>The word “bandits” in paragraph 4 could be best replaced by________.</li>
+</ol>
+<p>A. robbers       B. shooters      C. soldiers      D. hunters </p>
+<p>答案：CABCA</p>
+<p><strong>Text 2</strong> </p>
+<p>Long bus rides are like televisions shows. They have a beginning, a middle, and an end — with commercials (商业的) thrown in every three or four minutes. The commercials are unavoidable. They happen whether you want them or not. Every couple of minutes a billboard glides by outside the bus window. “Buy Super Clean Toothpaste.” “Drink Good and Wet Root Beer.” “Fill up with Pacific Gas.” Only if you sleep, which is equal to turning the television set off, are you spared the unending cry of “You Need It! Buy It Now!”</p>
+<p>The beginning of the ride is comfortable and somewhat exciting, even if you’ve traveled that way before. Usually some things have changed — new houses, new buildings, sometimes even a new road. The bus driver has a style of driving and it’s fun to try to figure it out the first hour or so. If the driver is particularly reckless or daring, the ride can be as thrilling as a suspense (悬念) story. Will the driver pass the truck in time？ Will the driver move into the right or the left—hand lane? After a while, of course, the excitement dies down. Sleeping for a while helps pass the middle hours of the ride. Food always makes bus rides more interesting. But you’ve got to be careful of what kind of food you eat. Too much salty food can make you very thirsty between stops.</p>
+<p>The end of the ride is somewhat like the beginning. You know it will soon be over and there’s a kind of expectation and excitement in that. The seat, of course, has become harder as the hours have passed. By now you’ve sat with your legs crossed, with your hands in your lap, with your hands on the arm rests —even with your hands crossed behind your head. The end comes just at no more ways to sit.</p>
+<ol>
+<li>According to the passage, what do the passengers usually see when they are on a long bus trip?</li>
+</ol>
+<p>A. Buses on the road.</p>
+<p>B. Films on television.</p>
+<p>C. Advertisements on the board.</p>
+<p>D. Gas stations.</p>
+<ol start="2">
+<li><p>What is the purpose of this passage?<br>A. To give the writer’s opinion about long bus trips.<br>B. To persuade you to take a long bus trip.<br>C. To explain how bus trips and television shows differ.<br>D. To describe the billboards along the road.</p>
+</li>
+<li><p>The writer of this passage would probably favor <strong>_____</strong>.<br>A. bus drivers who weren’t  reckless </p>
+</li>
+</ol>
+<p>B. driving alone<br> C. a television set on the bus </p>
+<p>D. no billboards along the road</p>
+<ol start="4">
+<li><p>The writer feels long bus rides are like TV shows because <strong>_____</strong>.<br>A. the commercials both on TV shows and on billboards along the road are fun<br>B. they both have a beginning, a middle, and an end, with commercials in between<br>C. the drivers are always reckless on TV shows just as they are on buses<br>D. both traveling and watching TV are not exciting.</p>
+</li>
+<li><p>The writer thinks that the end of the ride is somewhat like the beginning because both are <strong>____</strong>.<br>A. exciting      B. comfortable     C. tiring    D. boring</p>
+</li>
+</ol>
+<p>答案：CADBA</p>
+<p><strong>Text 3</strong> </p>
+<p>Exceptional children are different in some significant ways from others of the same age, for these children to develop to their full adult potential, their education must be adapted to those differences.</p>
+<p>Although we focus on the needs of exceptional children, we find ourselves describing their environment as well. While the leading actor on the stage captures our attention, we are aware of the importance of the supporting players and the scenery of the play itself. Both the family and the society in which exceptional children live are often the key to their growth and development. And it is in the public schools that we find the full expression of society’s understanding the knowledge, hopes, and fears that are passed on to the next generation.</p>
+<p>Education in any society is a mirror of that society. In that mirror we can see the strengths, the weaknesses, the hopes, the prejudices, and the central values of the culture itself. The great interest in exceptional children shown in public education over the past three decades indicates the strong feeling in our society that all citizens, whatever their special conditions, deserve the opportunity to fully develop their capabilities.</p>
+<p>“All men are created equal.” We’ve heard it many times, but it still has important meaning for education in a democratic society. Although the phrase was used by this country’s founders to denote(表示) equality before the law, it has also been interpreted to mean equality of opportunity. That concept implies educational opportunity for all children—the right of each child to receive help in learning to the limits of his or her capacity, whether that capacity be small or great. Recent court decisions have confirmed the right of all children-disabled or not-to an appropriate education, and have ordered that public schools take the necessary steps to provide that education. In response, schools are modifying their programs, adapting instruction to children who are exceptional, to those who cannot profit substantially from regular programs.</p>
+<ol>
+<li>In paragraph 2, the author cites the example of the leading actor on the stage to show that <strong>__</strong>.</li>
+</ol>
+<p>A.   the growth of exceptional children has much to do with their family and the society</p>
+<p>B.   exceptional children are more influenced by their families than normal children are</p>
+<p>C.   exceptional children are the key interest of the family and society</p>
+<p>D.   the needs of the society weigh much heavier than the needs of the exceptional children</p>
+<ol start="2">
+<li>The reason why the exceptional children receive so much concern in education is that <strong>__</strong>.</li>
+</ol>
+<p>A.   they are expected to be leaders of the society</p>
+<p>B.   they might become a burden of the society</p>
+<p>C.   they should fully develop their potentials</p>
+<p>D.   disabled children deserve special consideration</p>
+<ol start="3">
+<li>This passage mainly deals with <strong>__</strong>.</li>
+</ol>
+<p>A.   the differences of children in their learning capabilities</p>
+<p>B.   the definition of exceptional children in modern society</p>
+<p>C.   the special educational programs for exceptional children</p>
+<p>D.   the necessity of adapting education to exceptional children</p>
+<ol start="4">
+<li>From this passage we learn that the educational concern for exceptional children <strong>__</strong>.</li>
+</ol>
+<p>A.   is now enjoying legal support</p>
+<p>B.   disagrees with the tradition of the country</p>
+<p>C.   was clearly stated by the country’s founders</p>
+<p>D.   will exert great influence over court decisions</p>
+<ol start="5">
+<li>Which of the following is TRUE according to the passage?</li>
+</ol>
+<p>A.   Exceptional children refer to those with mental or physical problems.</p>
+<p>B.   The author uses “All men are created equal” to counter the school program for the exceptional children.</p>
+<p>C.   Recent court decisions confirm the rights of the exceptional children to enjoy the equal rights to learn with the normal ones.</p>
+<p>D.   Regular school programs fail to meet the requirements to develop the potential to exceptional children.</p>
+<p>答案：ACDAD</p>
+<p><strong>Text 4</strong> </p>
+<p>What should you think about in trying to find your career? You are probably better at some school subjects than others. These may show strengths that you can use in your work. A boy who is good at mathematics can use that in an engineering career. A girl who spells well and likes English may be good at office work. So it is important to know the subjects you do well at school. On the other hand, you may not have any specially strong or weak subjects but your records show a general satisfactory standard. Although not all subjects can be used directly in a job, they may have indirect value. Knowledge of history is not required for most jobs but if history is one of your good subjects you will have learned to remember facts and details. This is an ability that can be useful in many jobs. </p>
+<p>Your school may have taught you skills, such as typing or technical drawing, which you can use in your work. You may be good at metal work or cookery (烹饪术) and look for a job where you can improve these skills.</p>
+<p>If you have had a part-time job on Saturday or in the summer, think what you gained from it. If nothing else, you may have learned how to get to work on time, to follow instructions and to get on with older workers. You may have learned to give correct changes in a shop, for example. Just as important, you may become interested in a particular industry or career you see from the inside in a part-time job. Facing your weak points is also part of knowing yourself. You may be all thumbs when you handle tools; perhaps you are a poor speller or cannot add up a column of figures. It is bitter to face any weaknesses than to pretend they do not exist. Your school record, for instance, may not be too good, yet it is an important part of your background. You should not be apologetic about it but instead recognize that you will have a chance of a fresh start at work.</p>
+<ol>
+<li>Which of the following best sums up the first paragraph?</li>
+</ol>
+<p>A.   The importance of doing well at school.</p>
+<p>B.   Using school performance to help to choose a career.</p>
+<p>C.   The importance of being good at all subjects.</p>
+<p>D.   The indirect value of schoolwork.</p>
+<ol start="2">
+<li>The writer thinks that for a student to have a part-time job is probably <strong>__</strong>.</li>
+</ol>
+<p>A.   A waste of time that could have been spent on study</p>
+<p>B.   Useful for his future work</p>
+<p>C.   A good way to earn extra money </p>
+<p>D.   A good way to find out his weak points</p>
+<ol start="3">
+<li>According to the passage, if a student’s school record is not good, he <strong>__</strong>.</li>
+</ol>
+<p>A.   will be a complete failure in his future work</p>
+<p>B.   will not be able to find a suitable job</p>
+<p>C.   will regret not having worked harder at school</p>
+<p>D.   may do well in his future work</p>
+<ol start="4">
+<li>Which subject is supposed to have no direct value for job hunting?</li>
+</ol>
+<p>A．Mathematics    B. English      C. Technical drawing    D. History</p>
+<ol start="5">
+<li>The whole passage centers on <strong>__</strong>. </li>
+</ol>
+<p>A. choosing a career according to what one is skilled in</p>
+<p>  B. acquiring knowledge by working hard at school</p>
+<p>C. finding ones strong and weak points</p>
+<p>D. developing ones abilities useful in school work</p>
+<p>答案：BBDDA</p>
+<p><strong>Text 5</strong> </p>
+<p>On Thursday afternoon Mrs. Clarke, dressed for going out, took her handbag with her money and her key in it, pulled the door behind her to lock it and went to the Over 60s Club. She always went there on Thursdays. It was a nice outing for an old woman who lived alone.<br>   At six o’clock she came home, let herself in and at once smelt cigarette smoke. Cigarette smoke in her house? How? Had someone got in? She checked the back door and the windows. All were locked or fastened, as usual. There was no sign of forced entry.<br>   Over a cup of tea she wondered whether someone might have a key that fitted her front door—“a master key” perhaps. So she stayed at home the following Thursday. Nothing happened. Was anyone watching her movements? On the Thursday after that she went out at her usual time, dressed as usual, but she didn’t go to the club. Instead she took a short cut home again, letting herself in through her garden and the back door. She settled down to wait.<br>   It was just after four o’clock when the front door bell rang. Mrs. Clarke was making a cup of tea at the time. The bell rang again, and then she heard her letter box being pushed open. With the kettle of boiling water in her hand, she moved quietly toward the front door. A long piece of wire appeared through the letter box, and then a hand. The wire turned and caught around the knob on the door lock. Mrs. Clarke raised the kettle and poured the water over the hand. There was a shout outside, and the skin seemed to drop off the fingers like a glove. The wire fell to the floor, the hand was pulled back, and Mrs. Clarke heard the sound of running feet.</p>
+<ol>
+<li><p>Mrs. Clarke looked forward to Thursday because <strong>___</strong>.</p>
+<p>A. she worked at a club on the day </p>
+<p>B. she had visitors on Thursdays</p>
+<p>C. she visited a club on Thursday</p>
+<p>D. a special visitor came on Thursday</p>
+</li>
+</ol>
+<ol start="2">
+<li><p>If someone had made a forced entry, <strong>___</strong>.</p>
+<p>A. Mrs. Clarke would have found a broken door or window</p>
+<p>B. he or she was still in the house</p>
+<p>C. things would have been thrown about</p>
+<p>D. he or she would have needed a master key</p>
+</li>
+</ol>
+<ol start="3">
+<li><p>On the third Thursday Mrs. Clarke went out <strong>___</strong>.</p>
+<p>A. because she didn’t want to miss the club again</p>
+<p>B. to see if the thief was hanging about outside</p>
+<p>C. to the club but then changed her mind</p>
+<p>D. in an attempt to trick the thief</p>
+</li>
+</ol>
+<ol start="4">
+<li><p>The lock on the front door was one which <strong>___</strong>.</p>
+<p>A. needed a piece of wire to open it</p>
+<p>B. could be opened from inside without a key</p>
+<p>C. couldn’t be opened without a key</p>
+<p>D. used a knob instead of a key</p>
+</li>
+</ol>
+<ol start="5">
+<li>The wire fell to the floor <strong>___</strong>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>A.  because Mrs. Clarke refused to open the door</th>
+<th>B. when  the man’s glove dropped off</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C. because  it was too hot to hold</td>
+<td>D.  because the man just wanted to get away</td>
+</tr>
+</tbody></table>
+<p><strong>答案：</strong>CADBD</p>
+<p><strong>Text 6</strong> </p>
+<p>At the Science Leadership Academy, we encourage current upperclassmen to participate when we interview incoming students. We prepare these budding leaders to be patient and professional when sitting across from students who are the only one to three years younger than they are—and our kids exceed our best expectations. Yet, among the student body, there is one wrong way to answer our questions about why they have applied: “I hear you’ve got laptops.” </p>
+<p>Our students smile warmly at this, but, despite their training, most reflexively attempt to meet their teacher’s eyes. We look back knowingly and continue the conversation, aware that, for many eighth graders, going to school carrying a personal laptop and no textbooks seems otherworldly. Much as they deny it, the technology was just as cool to our current students when they sat across the table. It is just that with each hour spent in our environment their understanding of what makes a school progressive has matured—and has put the technology in its right place.</p>
+<p>It is fun watching this year’s freshmen begin this growth process—for their trials mirror the school’s own developing ideas on the subject of technology. They struggle against the frequent distractions suddenly appearing into their view. Not long ago, students would ball up scraps of notebook paper and pass them around the room. They now instantly message three friends at once.</p>
+<p>The students rarely do their homework in isolation. The same chatting software enables us to collaborate in dynamic ways. Students now continue fiery classroom debates when they get home from school. They now walk each other through difficult readings of “The Odyssey” and “Hamlet” and return to class with stronger understandings.</p>
+<p>I was once asked in a mock interview how to best use technology in the classroom. My expressionless answer, “Very carefully,” drew laughs from the audience of undergraduates. After three years, my philosophy has not changed. When prudently used, the technology prepares our students to make the most of a world that we cannot yet imagine.</p>
+<ol>
+<li>Who are the coming interviewees?</li>
+</ol>
+<p>A. Leaders at the Science Leadership Academy.</p>
+<p>B. Current upperclassmen at the Science Leadership Academy.</p>
+<p>C. Some students in grade Eight.</p>
+<p>D. Budding leaders at the Science Leadership Academy.</p>
+<ol start="2">
+<li>One common opinion about carrying a laptop to school is that <strong>___</strong>.</li>
+</ol>
+<p>A. it is useful for them to learn textbooks</p>
+<p>B. it is fashionable for current students</p>
+<p>C. it is very useless that can only attract students’ attention</p>
+<p>D. it is wonderful to use advanced techniques</p>
+<ol start="3">
+<li>How did students message each other in class not long ago?</li>
+</ol>
+<p>A. Students used computer to send messages to each other in the classroom.</p>
+<p>B. Students used cell phone to exchange messages in the classroom.</p>
+<p>C. Students talked to each other directly in the classroom.</p>
+<p>D. Students passed paper scraps around the classroom.</p>
+<ol start="4">
+<li>What is the influence of applying technology for students?</li>
+</ol>
+<p>A. Students begin to finish their homework independently.</p>
+<p>B. Students have fewer chances to communicate with each other.</p>
+<p>C. Students are more willing to cooperate with others.</p>
+<p>D. Students chat more on class and make it fall into disorder.</p>
+<ol start="5">
+<li>What is the author’s attitude toward technology in the classroom?</li>
+</ol>
+<p>A. Critical.    B. Serious.   C. Indifferent.    D. Optimistic.</p>
+<p><strong>答案：</strong>CBDCD</p>
+<p><strong>Text 7</strong> </p>
+<p>Women are also underrepresented in the administration and this is because there are so few women full professors. In 1985, Regent Beryl Milburn produced a report blasting(谴责) the University of Texas System administration for not encouraging women. The university was rated among the lowest for the system. In a 1987 update, Milburn commended the progress that was made and called for even more improvement.</p>
+<p>One of the positive results from her study was a System-wide program to inform women of available administrative jobs.</p>
+<p>College of Communication Associate Dean Patricia Witherspoon, said it is important that women be flexible when it comes to relocating if they want to rise in the ranks.</p>
+<p>Although a woman may face a chilly climate on campus, many times in order for her to succeed, she must rise above the problems around her and concentrate on her work.</p>
+<p>Until women make up a greater percentage of the senior positions in the university and all academia, inequalities will exist.</p>
+<p>“Women need to spend their energies and time doing scholarly activities that are important here at the University,” Spirduso said. “If they do that they will be successful in this system. If they spend their time in little groups mourning the sexual discrimination that they think exists here, they are wasting valuable study time.”</p>
+<ol>
+<li>According to Spirduso, women need to <strong>__</strong>.</li>
+</ol>
+<p>A. produce a report on sexual discrimination</p>
+<p>B. call for further improvement in their working conditions</p>
+<p>C. spend their energies and time fighting against sexual discrimination</p>
+<p>D. spend more time and energy doing scholarly activities</p>
+<ol start="2">
+<li>From this passage, we know that <strong>__</strong>.</li>
+</ol>
+<p>A. there are many women full professors in the University of Texas</p>
+<p>B. women play an important part in administrating the University</p>
+<p>C. the weather on the campus is chilly</p>
+<p>D. women make up a small percentage of the senior positions in the University</p>
+<ol start="3">
+<li>Which of the following statements is true?</li>
+</ol>
+<p>A. the number of women professors in the University in 1987 was <a href="http://class.hujiang.com/category/12498429425?ch_source=ipo_qbmh_0_gjcdlwj" target="_blank" rel="noopener">gre</a>ater than that of 1985.</p>
+<p>B. the number of women professors in the University in 1987 was smaller than that of 1985.</p>
+<p>C. the number of women professors was the same as that of 1985.</p>
+<p>D. more and more women professors thought that sexual discrimination did exit in the University</p>
+<ol start="4">
+<li>One of the positive results from Milburn’s study was that <strong>__</strong>.</li>
+</ol>
+<p>A. women were told to concentrate on their work</p>
+<p>B. women were given information about available administrative jobs</p>
+<p>C. women were encouraged to take on all the administrative jobs in the University</p>
+<p>D. women were encouraged to do more scholarly activities</p>
+<ol start="5">
+<li>The title for this passage should be <strong>__</strong>.</li>
+</ol>
+<p>A. The University of Texas</p>
+<p>B. Milburn’s Report</p>
+<p>C. Women Professors</p>
+<p>D. Sexual Discrimination in Academia</p>
+<p><strong>答案：</strong>DDABD</p>
+<p><strong>Text 8</strong> </p>
+<p>In the last 500 years, nothing about people not their clothes, ideas, or languages has changed as much as what they eat. The original chocolate drink was made from the seeds of the cocoa tree by South American Indians. The Spanish introduced it to the rest of the world during the 1500’s. And although it was very expensive, it quickly became fashionable. In London shops where chocolate drinks were served became important meeting places. Some still exist today.</p>
+<p>　　The potato is also from the New World. Around 1600, the Spanish brought it from Peru to Europe, where it soon was widely grown. Ireland became so dependent on it that thousands of Irish people starved when the crop failed during the “Potato Famine” of 1845, and thousands more were forced to emigrate to America. </p>
+<p>　　There are many other foods that have traveled from south America to the Old World. But some others went in the opposite direction. Brazil is now the world’s largest grower of coffee, and coffee is an important crop in Colombia and other South American countries. But it is native to Ethiopia. It was first made into a drink by Arabs during the 1400’s.</p>
+<p>According to an Arabic legend, coffee was discovered when a goatherd(牧羊人)named Kaldi noticed that his goats were attracted to the red berries on a coffee bush. He tried one and experienced the “wide-awake” feeling that one-third of the world’s population now starts the day with.</p>
+<ol>
+<li>According to the passage, which of the following has changed the most in the last 500 years? .</li>
+</ol>
+<p>A. Food　　　　B. Chocolate drinks     C. Potato　　　D. Coffee</p>
+<ol start="2">
+<li>“Some” in “Some still exist today” refers to <strong>__</strong>.</li>
+</ol>
+<p>A. some cocoa trees　　　  B. some chocolate drinks</p>
+<p>C. some shops　　　　　　 D. some South American Indians</p>
+<ol start="3">
+<li>Thousands of Irish people starved during the “Potato Famine” because <strong>__</strong>.</li>
+</ol>
+<p>A. they were dependent on the potato that they refused to eat anything else</p>
+<p>B. they were forced to emigrate to America</p>
+<p>C. the weather conditions in Ireland were not suitable for growing the potato</p>
+<p>D. the potato harvest was bad</p>
+<ol start="4">
+<li>Coffee originally came from <strong>__</strong>.</li>
+</ol>
+<p>A. Brazil　　　B. Colombia　　　　C. Ethiopia　　　D. Arabia</p>
+<ol start="5">
+<li>The Arabic legend is used to prove that <strong>__</strong>.</li>
+</ol>
+<p>A. coffee was first discovered by Kaldi</p>
+<p>B. coffee was first discovered by Kaldi’s goats</p>
+<p>C. coffee was first discovered in south American countries</p>
+<p>D. coffee drinks were first made by Arabs　</p>
+<p><strong>答案：</strong>ACDCD</p>
+<p><strong>Text 9</strong> </p>
+<p>In cities with rent control, the city government sets the maximum rent that a landlord can charge for an apartment. Supporters of rent control argue that it protects people who are living in apartment. Their rent cannot increase; therefore, they are not in danger of losing their homes. However, the critics say that after a long time, rent control may have negative effects. Landlords know that they cannot increase their profits. Therefore, they invest in other businesses where they can increase their profits. They do not invest in new buildings which would also be rent-controlled. As a result, new apartments are not built. Many people who need apartments cannot find any. According to the critics, the end result of rent control is a shortage of apartments in the city.<br>   Some experts argue that the minimum wage law can cause problems in the same way. The federal government sets the minimum that an employer must pay workers. The minimum helps people who generally look for unskilled, low-paying jobs. However, if the minimum is high, employers may hire fewer workers. They will replace workers with machinery. Therefore, other things being equal, the number of workers that employers want decreases. Thus, critics hold the opinion that an increase in the minimum wage may cause unemployment. Some poor people may find themselves without jobs instead of with jobs at the minimum wage.<br>   Supporters of the minimum wage say that it helps people keep their dignity. Because of the law, workers cannot sell their services for less than the minimum. Furthermore, employers cannot force workers to accept jobs at unfair wages.<br>   Economic theory predicts the results of economic decision, such as decisions about farm production, rent control, and the minimum wage. The predictions may be corrected only if “other things are equal”. Economists do not agree on some of the predictions. They also do not agree on the value of different decisions. Some economists support a particular decision while others criticize it. Economists do agree, however, that there are no simple answers to economic questions.</p>
+<ol>
+<li>There is the possibility that setting maximum rent may________.</li>
+</ol>
+<p>A. cause a shortage of apartments</p>
+<p>B. worry those who rent apartments as homes</p>
+<p>C. increase the profits of landlords</p>
+<p>D. encourage landlords to invest in building apartments</p>
+<ol start="2">
+<li>According to the critics, rent control <strong><strong>__</strong></strong>.</li>
+</ol>
+<p>A. will always benefit those who rent apartments</p>
+<p>B. is unnecessary</p>
+<p>C. will bring negative effects in the long run</p>
+<p>D. is necessary under all circumstances</p>
+<ol start="3">
+<li>The problem of unemployment will arise <strong><strong>___</strong></strong>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>A. if the  minimum wage is set too high</th>
+<th>B. if the minimum wage is set too low</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C. if the  workers are unskilled</td>
+<td>D. if the maximum wage is set</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li>The passage tells us <strong><strong><strong>___</strong></strong></strong>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>A. the  relationship between supply and demand  B. the  possible results of government controls</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C. the  necessity of government control  D. the  urgency of getting rid of government controls</td>
+<td></td>
+</tr>
+</tbody></table>
+<ol start="5">
+<li>Which of the following statements is NOT true?</li>
+</ol>
+<p>A. The results of economic decisions cannot always be predicted.</p>
+<p>B. Minimum wage cannot always protect employees.</p>
+<p>C. Economic theory can help predict the results of economic decision if other factors are not changing.</p>
+<p>D. Economists usually have the same prediction about an economic decision.</p>
+<p><strong>答案：</strong>ACABD</p>
+<p><strong>Text 10</strong> </p>
+<p>According to a report issued in May 1998, elderly people who have consistently high blood levels of cortisol don’t score as well on memory tests as their peers with lower levels of the stress hormone. What’s more, high levels of cortisol are also associated with shrinking of the hippocampus(海马区), a region of the brain that plays a key role in learning and memory.</p>
+<p>The findings suggest that even cortisol levels in the normal, “healthy” range can actually accelerate brain aging.</p>
+<p>The study results “now provide substantial evidence that long-term exposure to adrenal(肾上腺) stress hormones may promote hippocampal aging in normal elderly humans, “write Nada Porter and Phillip Landfield. Cortisol is a hormone releases in response to stress by the adrenal glands(腺), which sit on top of the kidneys (肾).</p>
+<p>Over a 5-to 6-year period, dr. Sonia Lupine and his colleagues measures 24-hour cortisol levels in 51 healthy volunteers, most whom were in their 70s.</p>
+<p>The researchers tested the volunteers’ memory on six people in the increasing high category and five people in the decreasing moderate group. The groups did not differ in tests of immediate memory, but the increasing high cortisol group had other memory problems.</p>
+<p>The researchers also found that the total volume of the hippocampus in those in the increasing high group was 14% lower than those in the decreasing/moderate group, although there were no differences in other brain regions.</p>
+<p>The results suggest that “…brain aging can be accelerated by levels of adrenal hormones that are not generally regarded as pathological(病态的) and that variation within this normal range is related to variation in the rate of brain aging.” write Porter and Landfield. “This further suggests that chronic stress may accelerate the worsening of the hippocampus.”</p>
+<ol>
+<li>Which of the following plays a key role in one’s learning and memory?</li>
+</ol>
+<p>A. the kidneys       B. the adrenal hormone  </p>
+<p>C. the stress hormone    D. the hippocampus</p>
+<ol start="2">
+<li>When the levels of cortisol go high, the hippocampus <strong>____</strong>.</li>
+</ol>
+<p>　A. may expand        B. may shrink          </p>
+<p>C. may disappear       D. may function better</p>
+<ol start="3">
+<li>According to the passage, when people are under stress, <strong>____</strong>.</li>
+</ol>
+<p>A. the adrenal glands will produce cortisol    </p>
+<p>B. the kidneys will shrink rapidly</p>
+<p>　C. the hippocampus will produce cortisol     </p>
+<p>D. the brain will work more efficiently</p>
+<ol start="4">
+<li>It appears that when the hippocampus shrinks due to high levels of cortisol, other brain regions________.</li>
+</ol>
+<p>　A. may change dramatically               </p>
+<p>B. may stop functioning</p>
+<p>　C. may remain unaffected                 </p>
+<p>D. may be seriously damaged</p>
+<ol start="5">
+<li>The research conducted by Porter and Landfield showed that_______.</li>
+</ol>
+<p>　A. the levels of adrenal hormones have nothing to do with brain aging</p>
+<p>　B. changes in the levels of adrenal hormones can affect brain aging</p>
+<p>　C. chronic stress may strengthen one’s memory　</p>
+<p>D. the rate of brain aging always remains stable</p>
+<p><strong>答案：</strong>DBACB</p>
+<p><strong>Text 11</strong> </p>
+<p>  The engineer Camillo Oliver was 40 years old when he started the company in 1908. At his factory in Ivrea, he designed and produced the first Italian typewriter. Today the company’s head office is still in Ivrea, near Turin, but the company is much larger than it was in those days and there are offices all around the world. </p>
+<p>   By 1930 there was a staff of 700 and the company turned out 13,000 machines a year. Some went to customers in Italy, but Olivetti exported more typewriter to other countries. </p>
+<p>  Camillo’s son, Adriano, started working for the company in 1924 and later he became the boss. He introduced a standard speed for the production line and he employed technology and design specialists. The company developed new and better typewriters and then calculators. In 1959 it produced the ELEA computer in Italy. </p>
+<p>   After Adriano died in 1960, the company had a period of financial problems. Other companies, especially the Japanese, made faster progress in electronic technology than the Italian company. </p>
+<p>   In 1978, Carlo de Benedetti became the new boss. Olivetti increased its marking and service networks and made agreements with other companies to design and produce more advanced office equipment. Soon it became one of the world’s leading companies in information technology and communications. There are now five independent companies in the Olivetti group-one for personal computers, one for systems and services, and two for telecommunications.</p>
+<ol>
+<li>According to the passage, Camillo Olivetti started his company in <strong>__</strong>.</li>
+</ol>
+<p>A. 1908  B. 1980  C. 1918  D. 1928</p>
+<ol start="2">
+<li>From the text we learn that _____.</li>
+</ol>
+<p>A. by 1930 Olivetti produced 13,000 typewriters a year </p>
+<p>B. Olivetti earned more in the 1960s than in the 1950s </p>
+<p>C. some of Olivetti’s 700 staff regularly visited customers in Italy </p>
+<p>D. Olivetti set up offices in other countries from the very beginning</p>
+<ol start="3">
+<li>What was probably the direct result of Olivetti’s falling behind in electronic technology?<strong>___</strong></li>
+</ol>
+<p>A. Adriano’s death.</p>
+<p>B. A period of financial problems. </p>
+<p>C. Its faster progress. </p>
+<p>D. Its agreements with other companies.</p>
+<ol start="4">
+<li>What do we know about Olivetti?<strong>____</strong></li>
+</ol>
+<p>A. It produced the best typewriter in the world. </p>
+<p>B. It designed the world’s first mainframe computer. </p>
+<p>C. It exported more typewriters than other computer. </p>
+<p>D. It has five independent companies with its head office in Ivrea.</p>
+<ol start="5">
+<li>The best title for the text would be _____.</li>
+</ol>
+<p>A. The Origin of Olivetti         B. The Success of Olivetti</p>
+<p>C. The History of Olivetti         D. The Production of Olivetti</p>
+<p><strong>答案：</strong>AABBC</p>
+<p><strong>Text 12</strong> </p>
+<p>One of the qualities that most people admire in others is the willingness to admit one’s mistakes. It is extremely hard sometimes to say a simple thing like “I was wrong about that,” and it is even harder to say, “I was wrong, and you were right about that.” I had an experience recently with someone admitting to me </p>
+<p>that he had made a mistake fifteen years ago. He told me he had been the manager of a certain grocery store in the neighborhood where I grew up, and he asked me if I remembered the egg boxes. Then he related an incident and I began to remember vaguely the incident he was describing.<br>   I was about eight years old at the time, and I had gone into the store with my mother to do the weekly grocery shopping. On that particular day, I must have found my way to the dairy food department where the incident took place. </p>
+<p>There must have been a special sale on eggs that day because there was an impressive display of eggs in dozen and half-dozen boxes. The boxes were stacked three or four feet high. I must have stopped in front of a display to admire the stacks. Just then a woman came by pushing her grocery cart and knocked off the stacks of boxes. For some reason, I decided it was up to me to put the display back together, so I went to work.</p>
+<p>The manager heard the noise and came rushing over to see what had happened. When he appeared, I was on my knees inspecting some of the boxes to see if any of the eggs were broken, but to him it looked as if I was the culprit. He severely scolded me and wanted me to pay for any broken eggs. I tried to explain it wasn’t me who had broken them, but it did no good. Even though I quickly forgot all about the incident, obviously the manager did not.</p>
+<ol>
+<li><p>How old was the author when he wrote this article? </p>
+<p>A. about 8   B. about 18   C. about 23   D. about 25</p>
+</li>
+<li><p>Who was to blame for knocking off the stacks ofcartons? </p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>A. The author</th>
+<th>B. The manager</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C. A woman</td>
+<td>D. The author’s mother</td>
+</tr>
+</tbody></table>
+<ol start="3">
+<li><p>Which of the following statements is not true?</p>
+<p>A. The woman who knocked off the stacks of boxes was seriously criticized by the manager.</p>
+</li>
+</ol>
+<p>B. The author was severely criticized by the manager.</p>
+<p>C. A woman carelessly knocked off the stacks of cartons.</p>
+<p>D. It was the author who put the display back together. </p>
+<ol start="4">
+<li>Which of the following can serve as the best title for the passage? </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>A. It’s Harder to Admit One’s Mistake   B. I Was Once the Culprit</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>C. I Remember an Incident   D. A Case of Mistaken Identity</td>
+<td></td>
+</tr>
+</tbody></table>
+<ol start="5">
+<li><p>The tone of the article expresses the author’s     .</p>
+<p>A. admiration for the manager’s willingness to admit mistakes</p>
+</li>
+</ol>
+<p>B. anger to the manager for his wrong accusation</p>
+<p>  C. indignation against the woman who knocked off the stacks of cartons</p>
+<p>D. regret for the mistake he made in the store</p>
+<p><strong>答案：</strong>CCADA</p>
+<p><strong>Text 13</strong> </p>
+<p>The Internet has led to a huge increase in credit-card fraud. Your card information could even be for sale in an illegal Web site. Web sites offering cheap goods and services should be regarded with care. On-line shoppers who enter their credit-card information may never receive the goods they bought. The thieves then go shopping with your card number—or sell the information over the Internet. </p>
+<p>Computer hackers have broken down security systems, raising questions about the safety of cardholder information. Several months ago, 25000 customers of CD Universe, an on-line music retailer, were not lucky. Their names, addresses and credit-card numbers were posted on a Web site after the retailer refused to pay US $ 157828 to get back the information. Credit-card firms are now fighting against online fraud. MasterCard is working on plans for Web-only credit card, with a lower credit limit. The card could be used only for shopping on-line. </p>
+<p>However, there are a few simple steps you can take to keep from being cheated. Ask about your credit-card firm’s on-line rules: Under British law, cardholders are responsible for the first US $ 78 of any fraudulent spending. Shop only at secure sites: send your credit-card information only if the Web site offers advanced secure system.</p>
+<p>If the security is in place, a letter will appear in the bottom right-hand corner of your screen. The Web site address may also start with <a href="https://--the" target="_blank" rel="noopener">https://--the</a> extra “s” stands for secure. If in doubt, give your credit-card information over the telephone.</p>
+<p>Keep your password safe: Most online sites require a user name and password before placing an order. Treat your passwords with care.</p>
+<ol>
+<li>What do most people worry about the Internet according to this passage?</li>
+</ol>
+<p>A. A lot of stolen credit-cards were sold on the Internet.</p>
+<p>B. Fraud on the Internet.           </p>
+<p>C. Many Web sites are destroyed.</p>
+<p>D. Many illegal Web sites are on the Internet.</p>
+<ol start="2">
+<li>What is the meaning of “fraud”?</li>
+</ol>
+<p>A. cheating   B. sale   C. payment  D. safety</p>
+<ol start="3">
+<li>How can the thieves get the information of the credit-card?</li>
+</ol>
+<p>A. The customers give them the information</p>
+<p>B. The thieves steal the information from Web sites.</p>
+<p>C. The customers sell the information to them. </p>
+<p>D. Both A and B.</p>
+<ol start="4">
+<li>How many pieces of advice does the passage give to you?</li>
+</ol>
+<p>A. Four.     B. Three.   C. Five.     D. Six.</p>
+<ol start="5">
+<li>You are shopping on the site: http: // www. Shopping. com, and you want to buy a TV set, what does this article suggest doing? </li>
+</ol>
+<p>A. Order the TV set at once. 　　　      </p>
+<p>B. Do not buy the TV set on this site. </p>
+<p>C. E-mail the site your credit card information. </p>
+<p>D. Tell the site your password and buy the TV set for you?</p>
+<p><strong>答案：</strong>BABBB</p>
+<p><strong>Text 14</strong> </p>
+<p>Until the 1980s, the American homeless population comprised mainly older males. Today, homeless strikes much younger part of society. In fact, a 25-city survey by the U.S. Conference of Mayors in 1987 found that families with children make up the fastest growing part of the homeless population. Many homeless children gather in inner cities; this transient (变化无常的) and frequently frightened student population creates additional problems—both legal and educational—for already overburdened urban school administrators and teachers.</p>
+<p>Estimates of the homeless Americans range from 350,000 to three million. Likewise, estimates of the number of homeless school children vary radically. A US Department of Education report, based on state estimates, states that there are 220,000 homeless school-age children, about a third of whom do not attend school on a regular basis. But the National Coalition for the Homeless estimates that there are at least two times as many homeless children, and that less than half of them attend school regularly. </p>
+<p>One part of the homeless population that is particularly difficult to count consists of the “throwaway” youths who have been cast of their homes. The Elementary School Center in New York City estimates that there are 1.5 million of them, many of whom are not counted as children because they do not stay in family shelters and tend to live by themselves on the streets.</p>
+<p>Federal law, the Stewart B, McKinney Homeless Assistance Act of 1987, includes a section that addresses the educational needs of homeless children. The educational provisions of the McKinney Act are based on the belief that all homeless children have the right to a free, appropriate education.</p>
+<ol>
+<li>It is implied in the first paragraph that <strong>__</strong>.</li>
+</ol>
+<p>A.  The writer himself is homeless, even in his eighties</p>
+<p>B.  Many older homeless residents are going on strike in 25 cities</p>
+<p>C.  There is a serious shortage of academic facilities</p>
+<p>D.  Homeless children are denied the opportunity of receiving free education</p>
+<ol start="2">
+<li>The National Coalition for the homeless believes that the number of homeless children is <strong>__</strong>.</li>
+</ol>
+<p>A.  350,000    B. 1,500,000   C. 440,000   D. 110,000</p>
+<ol start="3">
+<li>One part of the homeless population is difficult to estimate, the reason might well be <strong>__</strong>.</li>
+</ol>
+<p>A.  The homeless children are too young to be counted as children</p>
+<p>B.  The homeless population is growing rapidly</p>
+<p>C.  The homeless children usually stay outside school</p>
+<p>D.  Some homeless children are deserted by their families</p>
+<ol start="4">
+<li>The McKinney Act is mentioned in this passage in order to show that <strong>__</strong>.</li>
+</ol>
+<p>A.  the educational problems of homeless children are being recognized</p>
+<p>B.  the estimates on homeless children are hard to determine</p>
+<p>C.  the address of grade-school children should be located</p>
+<p>D.  all homeless people are entitled to free education</p>
+<ol start="5">
+<li>The passage mainly deals with <strong>__</strong>.</li>
+</ol>
+<p>A.  the legal problems of the homeless children</p>
+<p>B.  the educational problems of homeless children</p>
+<p>C.  the social status of older males    </p>
+<p>  D. estimates on the homeless population</p>
+<p><strong>答案：</strong>CCDAB</p>
+<p><strong>Text 15</strong> </p>
+<p>Gestures are not the only area in which the unwary(粗心的)traveler can get tripped up(绊倒). Foreign cultures adhere to different business customs and behavior. For example:</p>
+<p>Caffeine(咖啡因)junkies(吸毒者)should restrain themselves in the Middle East. “Three cups of tea or coffee is usually the polite limit in offices and during social calls,” counsel “Travel Pak,” a free publication of Alia, the Royal Jordanian Airline. “But if your host keeps going, you also may continue sipping(小口地喝). If you have had your fill, give your empty cup a quick twist(一扭，螺旋状）–a sort of wiggle(扭动，摆动)–as you hand it back. That means “No more, thank you.”</p>
+<p>Middle East visitors also should not be surprised “if others barge(闯入)right into the office in the middle of your conversation with the person you are seeing,” notes “Travel Pak.” An old Arab custom calls for keeping an “open office.”</p>
+<p>The British, however, consider it impolite to interrupt a visitor, even after all business has been transacted(交易). The commercial caller is expected to be sensitive to the point, know when to stop, and initiate his or her own departure. </p>
+<p>In Japan certain guests at evening business gatherings will leave early. They should be allowed to leave without effusive(热情的)goodbye. The Japanese consider formal departures to be disruptive(扰乱)in such cases and disturbing to remaining guests.</p>
+<p>In Scandinavia and Finland business guests may be asked to shed(脱落)their clothes and join their hosts in sauna(桑拿浴). The invitation is a sign that a good working relationship has been established.</p>
+<p>In the Arab world, the word “no” must be mentioned three times before it is accepted. In contrast, it is considered good business manners to make many and long efforts to pick up the check.</p>
+<p>In People’s Republic of China, gift given is considered an insult, says Patrick J. Lewis, President of Club Universe, a Los Angeles tour operator. “If you want to give someone gift, make sure it is modest in value. This will not be considered offensive, but it may be declined.” “The Chinese manner of expression friendship and welcome is to clap.” Lewis adds. “You may be greeted with clapping when entering a factory, hospital, commune, or school. Politeness dictates that you respond with applause, even though it may seem like you are clapping for yourself.”</p>
+<ol>
+<li>In the Middle East, it is considered_______.</li>
+</ol>
+<p>A. impolite to drink at least 3cups of coffee</p>
+<p>B. impolite to drink more than 3 cups of coffee unless your host drinks more</p>
+<p>C. Polite to ask the host to give you as more as he can</p>
+<p>D. Polite to leave a party as early as you want</p>
+<ol start="2">
+<li>In Japan, the guest at an evening party will______.</li>
+</ol>
+<p>A. leave early without saying goodbye</p>
+<p>B. stay as long as he can</p>
+<p>C. stay to have a swimming with a host</p>
+<p>D. present their business cards immediately</p>
+<ol start="3">
+<li>In Finland, business guests may______.</li>
+</ol>
+<p>A. take flowers to the host</p>
+<p>B. send an expensive gift to the host</p>
+<p>C. have a swimming or sauna with the host</p>
+<p>D. present a business card</p>
+<ol start="4">
+<li>In China, a gift to the host means______.</li>
+</ol>
+<p>A. an attempt to praise the host</p>
+<p>B. a modest manner</p>
+<p>C. a response of applause</p>
+<p>D. an offensive action to the host’s dignity</p>
+<ol start="5">
+<li>Which of the following statements is NOT true according to the passage?</li>
+</ol>
+<p>A. Uninvited visitors are welcome in Middle Eastern office.</p>
+<p>B. In Britain, business visitors can stay as long as they like.</p>
+<p>C. In China, people may greet foreigners entering a school with clapping.</p>
+<p>D. In the Arab world, say “No” for 3 times until it is accepted.  </p>
+<p><strong>答案：</strong>BACDB</p>
+<p><strong>Text 16</strong> </p>
+<p>Romantic love is a culture trait found primarily in industrialized society. Elsewhere in the world, pragmatic(实用主义的) considerations rather than flights of fancy are often used to make a choice of partner. And romantic love is seen as an unfortunate inconvenience that Get in the way of the ordinary, Rational process of mate selection. Traces of this attitude Persist in the American upper classes. Where daughters are expected to marry “well”—That is, to a male who is eligible(称心如意的) by reason of family background and earning potential. Most Americans, however, see romantic love as essential for a successful marriage. And tend to look askance(轻蔑的) at anyone who marries for a more practical reason in which love plays no part.</p>
+<p>The phenomenon of romantic love occurs when two young people meet and found one other personally and physically attractive. They become mutually absorbed, start to Behave in what appears to be a flighty(充满幻想的), even emotional manner , decide that they are right for one other, And may then enter a marriage whose success is expected to be guaranteed by their enduring love. Behavior of this kind is portrayed and warmly endorsed(赞同)throughout American popular culture, by books, magazines, comics , records, popular song, movies and TV. Romantic love is a noble ideal and it can certainly provide a basic for the spouses to live happily ever after. But the marriage can equally well be founded on much more practical consideration—as indeed they have been in most society throughout most of history. Why is romantic love of such importance and modern world? The reason seems to be that it has some basic functions in. Maintaining the institution of the nuclear family(小家庭).</p>
+<ol>
+<li>Romantic love is less frequently found in many non-industrial society this because people in these society_______ .</li>
+</ol>
+<p>A. family believe that only money can make the world go around</p>
+<p>B. Fail To Bring the imaginative power of the mind into full play</p>
+<p>C. cannot find romantic love </p>
+<p>D. Have far more practical considerations to determine who will marry whom</p>
+<ol start="2">
+<li>The word potential could best be replaced by_______. </li>
+</ol>
+<p>A. Energy                </p>
+<p>B. ability                   </p>
+<p>C. voltage                     </p>
+<p>D. place</p>
+<ol start="3">
+<li>According to the passage, most Americans________.</li>
+</ol>
+<p>A. Expect their daughters to fall in love with a male at first sight</p>
+<p>B. Look up to those who marry for for the sake of wealth</p>
+<p>C. regard romantic love as the basic for a successful marriage</p>
+<p>D. Consider romantic love to be the most desirable thing in the world。</p>
+<ol start="4">
+<li>What can we learn from the second paragraph about romantic love? </li>
+</ol>
+<p>A. It is a common occurrence among the old               </p>
+<p>B. It is primarily depicted books</p>
+<p>C. It is characterized by Mutual attraction and absorption     </p>
+<p>D. It is rejected as flighty and irrational.</p>
+<ol start="5">
+<li>Which statements is true according to the passage?</li>
+</ol>
+<p>A. Romantic love makes people unable to think clearly and process of male selection.</p>
+<p>B. Only romantic love can make a marriage happy ever after.</p>
+<p>C. romantic love plays an insignificant role in maintaining the institution of the Nuclear family. </p>
+<p>D. much more practical considerations can also be the basis for a successful marriage.</p>
+<p><strong>答案：</strong>DBCCD</p>
+<h1 id="翻译"><a href="#翻译" class="headerlink" title="翻译"></a>翻译</h1><h2 id="U1"><a href="#U1" class="headerlink" title="U1"></a>U1</h2><p><strong>2.3 Translation</strong></p>
+<ol>
+<li><p>什么？不通电？我差点立刻打消在那里购房的念头。</p>
+</li>
+<li><p>40英亩的地给我们充裕的场地饲养动物，也给我的丈夫和儿子足够地方驾驶他们的全地形车。</p>
+</li>
+<li><p>了解自己拉水、自己发电的方方面面。</p>
+</li>
+<li><p>而水箱只能贮存5,000加仑。不久，他们便懂得我们必须少用水。</p>
+</li>
+<li><p>从电灯、吊扇到电脑、收音机，不用的时候都开着。</p>
+</li>
+</ol>
+<p><strong>4.2  Translation</strong></p>
+<ol>
+<li><p>Jack is so diligent a student that he never goes anywhere without a book.</p>
+</li>
+<li><p>This is an outline of my paper; any of your suggestions will be truly appreciated.</p>
+</li>
+<li><p>Whether you’re buying or renting, you’ll need to be fully aware what kind of property best suits you and your lifestyle.</p>
+</li>
+<li><p>It is dangerous to ride a bicycle on an icy road, so we have to use the brake to slow it down.</p>
+</li>
+<li><p>If we put all our energy and effort into this project, we will definitely accomplish it in a few more months.</p>
+</li>
+<li><p>I am thinking about moving to a three-bedroom house located near the town center. In addition, it is within walking distance to the train station.</p>
+</li>
+<li><p>A lot of the things we take for granted as trash, such as newspapers, magazines, old computers and cellphones, can actually be recycled or reused in one way or another.</p>
+</li>
+<li><p>— What questions can I ask when inquiring about a job?</p>
+</li>
+<li><p>— You may ask if the position is still available and how long you have to wait before getting to know if you will be given an interview.</p>
+</li>
+</ol>
+<h2 id="U2"><a href="#U2" class="headerlink" title="U2"></a>U2</h2><p><strong>2.3</strong></p>
+<ol>
+<li><p>我整天都在与近来一直控制着自己的情感苦苦抗争。</p>
+</li>
+<li><p>我时时刻刻想着家，迫切地想回家。</p>
+</li>
+<li><p>我可能成为进攻行动的一员，这就跟我总有一天可能要死一样。</p>
+</li>
+<li><p>这不是我的意愿，这是您的意愿。</p>
+</li>
+<li><p>迪伊第一次去看电影，我当然想在她身边。</p>
+</li>
+</ol>
+<p><strong>4.2 Translation</strong></p>
+<ol>
+<li><p>George longs for a chance to meet her, but he can’t bring himself to tell her about it.</p>
+</li>
+<li><p>Many smart and capable people do not achieve a lot in their life because they are afraid of the hardships they may have to endure.</p>
+</li>
+<li><p>I remember that in my childhood I had great enjoyment in living in the countryside where all the flowers were blooming in spring.</p>
+</li>
+<li><p>The government is sure to react to the recent growth in violent crime.</p>
+</li>
+<li><p>Quite a lot of people can undergo feelings of loss after they retire, and we may help them with our care and concern.</p>
+</li>
+<li><p>They would get together exchanging ideas and discussing the problems they were confronted with when they stayed in Silicon Valley in the 90’s.</p>
+</li>
+<li><p>Gazing upon the picture of her grandson who lost his life on D-Day, the elderly lady was filled with sorrow.</p>
+</li>
+<li><p>Some people worry that robots may someday become the dominating force in the world.</p>
+</li>
+</ol>
+<h2 id="U3"><a href="#U3" class="headerlink" title="U3"></a>U3</h2><p><strong>2.3</strong></p>
+<ol>
+<li><p>因进一个新的学校或有一份新的工作而决定搬家，这就不能不影响到友谊。</p>
+</li>
+<li><p>当只有一方改变时，往往造成的伤害最重。</p>
+</li>
+<li><p>友谊也是如此。</p>
+</li>
+<li><p>最终，即便是最亲密的友谊也可能失去存在的理由。</p>
+</li>
+<li><p>当涉及矛盾冲突时，即便那些令人称羡的亲密友谊，也需要得到呵护。</p>
+</li>
+</ol>
+<p><strong>4.2 Translation</strong></p>
+<ol>
+<li><p>The article/essay helps us get a deep insight into the nature of the problem.</p>
+</li>
+<li><p>Based on mutual respect, friendship will flourish.</p>
+</li>
+<li><p>Like a plant, friendship will wither if neglected.</p>
+</li>
+<li><p>No matter what may happen, we will do our best to overcome it.</p>
+</li>
+<li><p>A friendship without constant care from both sides will end up with a breakup.</p>
+</li>
+<li><p>This year cold weather has seriously affected the crops in the northern region.</p>
+</li>
+<li><p>As much as I hate to do it, I must finish the task as planned.</p>
+</li>
+<li><p>That means the new law also applies to private businesses.</p>
+<h2 id="U4"><a href="#U4" class="headerlink" title="U4"></a>U4</h2><p><strong>2.3</strong></p>
+</li>
+<li><p>在中国，人文学科的学习是安稳的重复，在这里则是惴惴不安的独创.</p>
+</li>
+<li><p>他当下的生活被一劈为二，已逝的岁月和将来的日子相互撕扯。而这正是我自己的写照。</p>
+</li>
+<li><p>每两周打电话回家时，我母亲总是极力劝我选修化学或生物学。</p>
+</li>
+<li><p>等到我的思乡情绪越来越重，读书时脑海里会蹦出小笼包和清炒鳝丝的时候，我那个按年代顺序排列的必读书单上，尼采已经取代了柏拉图，福楼拜已经取代了荷马。</p>
+</li>
+</ol>
+<p><strong>4.2  Translation</strong></p>
+<ol>
+<li><p>I grabbed my baby from the tiger before I had time to feel afraid. I guess it was a mother’s natural instinct.</p>
+</li>
+<li><p>Modern tourists yearn for mysterious places like Tibet. You should go there before it is flooded with visitors.</p>
+</li>
+<li><p>Now that my daughter can crawl, there is not a spot in the house she hasn’t reached. I’m just tired of picking up toys constantly after her.</p>
+</li>
+<li><p>I felt pulled apart of late by work and taking care of my sick child. Can I postpone turning in the business plan?</p>
+</li>
+<li><p>I don’t mean to be provocative, but I do think it’s better for our company to split into two.</p>
+</li>
+<li><p>The US government feels obligated to prefer US-made products, but it’s still possible for a foreign company to be its supplier. For instance, if a product is not made in the US, then the US government will buy abroad.</p>
+</li>
+<li><p>We must constantly analyze changes in the environment to see if there is a need to change the original program.</p>
+</li>
+<li><p>What’s your interpretation of the Chinese government’s new policy of allowing two children per family? Is it to make up for the shortage of young people in the future in China?</p>
+</li>
+</ol>
+<h2 id="U5"><a href="#U5" class="headerlink" title="U5"></a>U5</h2><p><strong>2.3</strong></p>
+<ol>
+<li><p>宇航员杨利伟实现了一个起源于很久之前的梦想。</p>
+</li>
+<li><p>虽然故事可能显得有点儿牵强，万户的痴梦中却包含了以火箭为动力的宇宙飞行的原理。</p>
+</li>
+<li><p>建造云杉鹅的想法源于第二次世界大战中更有效地运送部队和物资的需要。他的研究集中在飞鸟的复杂的解剖结构，他的飞行器的设计便是模拟飞鸟的。</p>
+</li>
+<li><p>他的研究集中在飞鸟的复杂的解剖结构，他的飞行器的设计便是模拟飞鸟的。</p>
+</li>
+<li><p>万户、霍华德·休斯和列昂纳多·达·芬奇这三位不可思议的人物，来自完全不同的地方和文化背景</p>
+</li>
+</ol>
+<p><strong>4.2 Translation</strong></p>
+<ol>
+<li><p>How to harness the power of the rockets is the key to the successful launch of a spaceship.</p>
+</li>
+<li><p>The 20th century witnessed the growth of the aviation industry.</p>
+</li>
+<li><p>During World War II, the United States needed giant cargo planes for transportation of war materials.</p>
+</li>
+<li><p>The film <em>The Aviator</em> is based on the life of Howard Hughes.</p>
+</li>
+<li><p>The professor thinks that more money should be invested in/put into research in the field of energy efficiency.</p>
+</li>
+<li><p>They are carrying out a secret mission.</p>
+</li>
+<li><p>“Focus on the content of the article. Don’t worry about individual words,” said the teacher to the students.</p>
+</li>
+<li><p>Wan Hu’s plan was too risky and too primitive to be successful.</p>
+</li>
+</ol>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(http://cdnp.gaowei.in/bing.jpg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/2020/07/20/%E6%B5%B7%E8%B1%9A/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>海豚</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(http://cdnp.gaowei.in/bingprepre.jpg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/2020/06/03/%E9%A9%AC%E5%8E%9F/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>马原</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2019.<a href="/">Hello World!</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
 <button class="hamburger hamburger--arrow-r" type="button">
     <div class="hamburger-box">
       <div class="hamburger-inner"></div>
     </div>
 </button> 
-<%- partial('partials/menu')%>
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="http://cdnp.gaowei.in/favicon.ico" alt="WEI"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>WEI</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>首页</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-th-list fa-fw"></i>分类</span>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%98%E6%A1%A3/">存档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A2%98%E5%BA%93/">题库</a></li></ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>页面</span>
+        <ul>
+          <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    
+  </ul>
+  </nav>
+</div>
+
 <div class="gototop js-top">
   <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
 </div>
-<script src="<%= js%>jquery.easing.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
 <script>
 (function () {
 	"use strict";
@@ -78,7 +1294,7 @@ else { css += 'main.min.css';}
 	});
 }());
 </script>
-<% if (theme.local_search.enable) {%><script src="<%= js%>local.search.js"></script><%}%>
-<%if (theme.comment.enable) {%><%- partial('third-party/comment')%><%}%>
-<%if (theme.mathjax.enable) {%><%if (page.mathjax) {%><%- partial('third-party/mathjax')%><%}%><%}%></body>
+
+
+</body>
 </html>

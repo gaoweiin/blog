@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme-color" content=#58b77a>
-  <title>手势帮助 | Hello World!</title>
+  <title>api | Hello World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="WEI">
   <meta name="keywords" content="">
@@ -69,9 +69,9 @@
   <div class="overlay">
   <div class="page-title">
     <div class="avatar"><a href="/"><img src="http://cdnp.gaowei.in/favicon.ico"></a></div>
-    <span>2020-05-08</span>
-    <h2>手势帮助</h2>
-    <div class="tags"><i class="fa fa-tag"></i><a class="tag-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></div>
+    <span>2020-08-05</span>
+    <h2>api</h2>
+    <div class="tags"><i class="fa fa-tag"></i><a class="tag-link" href="/tags/%E5%AD%98%E6%A1%A3/" rel="tag">存档</a></div>
     <div class="social-links">
     <a href="https://github.com/gaoweiin" target="_blank"><i class="fa fa-github fa-fw"></i></a>
     <a href="mailto:admin@gaowei.in" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
@@ -84,168 +84,154 @@
   <div class="lx-post">
     <div class="lx-entry padding">
       <div>
-        <p>手势帮助</p>
-<p>智能按键手势帮助</p>
+        <p>自建的api</p>
 <a id="more"></a>
 
-<h2 id="目前支持以下手势"><a href="#目前支持以下手势" class="headerlink" title="目前支持以下手势"></a>目前支持以下手势</h2><table>
+<h1 id="s-weii-ga短链接接口"><a href="#s-weii-ga短链接接口" class="headerlink" title="s.weii.ga短链接接口"></a>s.weii.ga短链接接口</h1><p><strong>接口地址：</strong><a href="https://s.weii.ga/api.php" target="_blank" rel="noopener">https://s.weii.ga/api.php</a></p>
+<p><strong>返回格式：</strong>json</p>
+<p><strong>请求方式：</strong>get</p>
+<p><strong>请求示例：</strong><a href="https://s.weii.ga/api.php?url=https://hexo.weii.ga/" target="_blank" rel="noopener">https://s.weii.ga/api.php?url=https://hexo.weii.ga/</a></p>
+<table>
 <thead>
 <tr>
-<th>序号</th>
-<th>手势名称</th>
-<th>手势</th>
-<th>示例图</th>
+<th align="center">名称</th>
+<th align="center">必填</th>
+<th align="center">类型</th>
+<th align="center">说明</th>
 </tr>
 </thead>
-<tbody>
+<tbody><tr>
+<td align="center">url</td>
+<td align="center">否</td>
+<td align="center">string</td>
+<td align="center">要缩短的地址</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
 <tr>
-<td>1</td>
-<td>数字1（原食指）</td>
-<td>One</td>
-<td><img src="https://ai.bdstatic.com/file/49A55428683148D2B3A49E39862FDA84"></td>
+<th align="center">名称</th>
+<th align="center">类型</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">error</td>
+<td align="center">string</td>
+<td align="center">错误类型</td>
 </tr>
 <tr>
-<td>2</td>
-<td>数字5（原掌心向前）</td>
-<td>Five</td>
-<td><img src="https://ai.bdstatic.com/file/526729FA42864E30927B90839ECD9FF7"></td>
+<td align="center">longurl</td>
+<td align="center">string</td>
+<td align="center">原链接</td>
 </tr>
 <tr>
-<td>3</td>
-<td>拳头</td>
-<td>Fist</td>
-<td><img src="https://ai.bdstatic.com/file/E07EDA50F9154C549700D5974ECB0C5B"></td>
+<td align="center">shorturl</td>
+<td align="center">string</td>
+<td align="center">缩短后链接</td>
 </tr>
 <tr>
-<td>4</td>
-<td>OK</td>
-<td>OK</td>
-<td><img src="https://ai.bdstatic.com/file/68D278D304424922844DF9354D6FC302"></td>
+<td align="center">stats</td>
+<td align="center">string</td>
+<td align="center">短链接状态监控</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="狗屁不通生成器接口"><a href="#狗屁不通生成器接口" class="headerlink" title="狗屁不通生成器接口"></a>狗屁不通生成器接口</h1><p><strong>接口地址：</strong><a href="https://api.weii.ga/b" target="_blank" rel="noopener">https://api.weii.ga/b</a></p>
+<p><strong>返回格式：</strong>json</p>
+<p><strong>请求方式：</strong>get</p>
+<p><strong>请求示例：</strong><a href="https://api.weii.ga/b?topic=abc&amp;length=200" target="_blank" rel="noopener">https://api.weii.ga/b?topic=abc&amp;length=200</a></p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">必填</th>
+<th align="center">类型</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">topic</td>
+<td align="center">是</td>
+<td align="center">string</td>
+<td align="center">要生成文章的主题</td>
 </tr>
 <tr>
-<td>5</td>
-<td>祈祷</td>
-<td>Prayer</td>
-<td><img src="https://ai.bdstatic.com/file/E8B21C5DEBD84BDD8D42860818084D87"></td>
+<td align="center">length</td>
+<td align="center">否</td>
+<td align="center">int</td>
+<td align="center">要生成的长度(默认6000)</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">类型</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">error</td>
+<td align="center">string</td>
+<td align="center">错误类型</td>
 </tr>
 <tr>
-<td>6</td>
-<td>作揖</td>
-<td>Congratulation</td>
-<td><img src="https://ai.bdstatic.com/file/42553BFA7954450E972BB659DAF58711"></td>
+<td align="center">主题</td>
+<td align="center">string</td>
+<td align="center">文章的主题</td>
 </tr>
 <tr>
-<td>7</td>
-<td>作别</td>
-<td>Honour</td>
-<td><img src="https://ai.bdstatic.com/file/773582C20AF8486594D5D27BEB283459"></td>
+<td align="center">文章</td>
+<td align="center">string</td>
+<td align="center">文章主体</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="“智能”对话生成器接口"><a href="#“智能”对话生成器接口" class="headerlink" title="“智能”对话生成器接口"></a>“智能”对话生成器接口</h1><p><strong>接口地址：</strong><a href="https://api.weii.ga/q" target="_blank" rel="noopener">https://api.weii.ga/q</a></p>
+<p><strong>返回格式：</strong>json</p>
+<p><strong>请求方式：</strong>get</p>
+<p><strong>请求示例：</strong><a href="http://www.weinas.ga:14253/q?question=qq" target="_blank" rel="noopener">http://www.weinas.ga:14253/q?question=qq</a></p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">必填</th>
+<th align="center">类型</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">question</td>
+<td align="center">否</td>
+<td align="center">string</td>
+<td align="center">问题</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">类型</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">error_code</td>
+<td align="center">int</td>
+<td align="center">错误类型</td>
 </tr>
 <tr>
-<td>8</td>
-<td>单手比心</td>
-<td>Heart_single</td>
-<td><img src="https://ai.bdstatic.com/file/6E1EDCD6A366474FA5AE4620CED6950C"></td>
+<td align="center">question</td>
+<td align="center">string</td>
+<td align="center">问题</td>
 </tr>
 <tr>
-<td>9</td>
-<td>点赞</td>
-<td>Thumb_up</td>
-<td><img src="https://ai.bdstatic.com/file/2A7FD1F6F9CA44389478F982D0BF5C00"></td>
+<td align="center">answer</td>
+<td align="center">string</td>
+<td align="center">答案</td>
 </tr>
-<tr>
-<td>10</td>
-<td>Diss</td>
-<td>Thumb_down</td>
-<td><img src="https://ai.bdstatic.com/file/A909595AE0DF4CA9A9768229777AA610"></td>
-</tr>
-<tr>
-<td>11</td>
-<td>我爱你</td>
-<td>ILY</td>
-<td><img src="https://ai.bdstatic.com/file/5C40E720A05043589ED0628B4C85ADE8"></td>
-</tr>
-<tr>
-<td>12</td>
-<td>掌心向上</td>
-<td>Palm_up</td>
-<td><img src="https://ai.bdstatic.com/file/E0AA97D41E48469CA19A50035F56E382"></td>
-</tr>
-<tr>
-<td>13</td>
-<td>双手比心1</td>
-<td>Heart_1</td>
-<td><img src="https://ai.bdstatic.com/file/8495BD1A7CDC4F9A87F445668F01D571"></td>
-</tr>
-<tr>
-<td>14</td>
-<td>双手比心2</td>
-<td>Heart_2</td>
-<td><img src="https://ai.bdstatic.com/file/3066188974234639A7367F07D3424216"></td>
-</tr>
-<tr>
-<td>15</td>
-<td>双手比心3</td>
-<td>Heart_3</td>
-<td><img src="https://ai.bdstatic.com/file/03BBFC09C1104CEF9A68591A566031F0"></td>
-</tr>
-<tr>
-<td>16</td>
-<td>数字2</td>
-<td>Two</td>
-<td><img src="https://ai.bdstatic.com/file/84A5F4BB98484AF3A544E244B29D1B9A"></td>
-</tr>
-<tr>
-<td>17</td>
-<td>数字3</td>
-<td>Three</td>
-<td><img src="https://ai.bdstatic.com/file/A9EACC02EBCB4C3E82D59A809FBE9E18"></td>
-</tr>
-<tr>
-<td>18</td>
-<td>数字4</td>
-<td>Four</td>
-<td><img src="https://ai.bdstatic.com/file/BEA2ADCA77D64DB39BDC3EDA73F5CB8D"></td>
-</tr>
-<tr>
-<td>19</td>
-<td>数字6</td>
-<td>Six</td>
-<td><img src="https://ai.bdstatic.com/file/5BF462823A174A76A1B0433DB60533B3"></td>
-</tr>
-<tr>
-<td>20</td>
-<td>数字7</td>
-<td>Seven</td>
-<td><img src="https://ai.bdstatic.com/file/85426EE2C2914F28AB3518805788C84A"></td>
-</tr>
-<tr>
-<td>21</td>
-<td>数字8</td>
-<td>Eight</td>
-<td><img src="https://ai.bdstatic.com/file/9A79F6E242B442288D734274F6F52E79"></td>
-</tr>
-<tr>
-<td>22</td>
-<td>数字9</td>
-<td>Nine</td>
-<td><img src="https://ai.bdstatic.com/file/7FB1D639F5DD42F2BBCAFC8683D183D4"></td>
-</tr>
-<tr>
-<td>23</td>
-<td>Rock</td>
-<td>Rock</td>
-<td><img src="https://ai.bdstatic.com/file/099D3FB301B140759CF2DDD2B6B4E780"></td>
-</tr>
-<tr>
-<td>24</td>
-<td>竖中指</td>
-<td>Insult</td>
-<td><img src="https://ai.bdstatic.com/file/3073D558422D426FABA5D1105115064C"></td>
-</tr>
-</tbody>
-</table>
-
-
+</tbody></table>
 
       </div>
     </div>
@@ -254,12 +240,12 @@
 <div class="lx-navigation">
 	<div class="lx-cover prev lx-cover-sm" style="background-image: url(http://cdnp.gaowei.in/bing.jpg)">
 		<div class="overlay"></div>
-		<a class="copy" href="/2020/05/13/%E9%A9%AC%E5%8E%9F%E5%8D%95%E9%80%89/">
+		<a class="copy" href="#">
 			<div class="display-t">
 				<div class="display-tc">
 					<div>
 						<span>Next</span>
-						<h3>马原单选</h3>
+						<h3>没有更新的文章</h3>
 					</div>
 				</div>
 			</div>
@@ -267,12 +253,12 @@
 	</div>
         <div class="lx-cover next lx-cover-sm" style="background-image: url(http://cdnp.gaowei.in/bingprepre.jpg)">
 		<div class="overlay"></div>
-		<a class="copy" href="/2020/04/30/Xcode%E5%86%99c/">
+		<a class="copy" href="/2020/08/01/%E5%B0%8F%E5%B7%A5%E5%85%B7/">
 			<div class="display-t">
 				<div class="display-tc">
 					<div>
 						<span>Prev</span>
-						<h3>Xcode写c</h3>
+						<h3>小工具</h3>
 					</div>
 				</div>
 			</div>

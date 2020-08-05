@@ -1,58 +1,227 @@
-<% var pageTitle = page.title || '';
-if (is_archive()) pageTitle = __('pagetitle.archive');
-if (is_tag()) pageTitle = __('pagetitle.tag') + '-' + page.tag;
-if (is_category()) pageTitle = __('pagetitle.category') + '-' + page.category;
-if (pageTitle == '') {
-    pageTitle = config.title;
-} else {
-    pageTitle += ' | ' + config.title;
-}
-var js = theme.base_file.js;
-var css = theme.base_file.css;
-if (theme.develop){ js = config.root + 'js/'; css = config.root + 'css/main.css';}
-else { css += 'main.min.css';}
-%><!DOCTYPE html>
-<html <%if(config.language.length){%>lang="<%-config.language.substring(0,2)%>"<%}%>>
+<!DOCTYPE html>
+<html lang="zh">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="theme-color" content=<%- theme.theme_color%>>
-  <title><%=pageTitle%></title>
+  <meta name="theme-color" content=#58b77a>
+  <title>基于esp32 cam的云端人脸识别 | Hello World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="<%- config.author%>">
-  <meta name="keywords" content="<%- config.keywords%>">
-  <meta name="description" content="<%- config.description%>">
-  <%- partial('partials/config')%>
-  <link rel="shortcut icon" href="<%- url_for(theme.favicon)%>">
-  <link rel="stylesheet" href="<%= css%>">
-  <%-partial('partials/font')%>
-  <script src="<%= theme.base_file.jquery_cdn%>"></script>
-  <script src="<%= js%>jquery.jside.menu.js"></script>
+  <meta name="author" content="WEI">
+  <meta name="keywords" content="">
+  <meta name="description" content="前路虽长,尤可期许">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'lx',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="http://cdnp.gaowei.in/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
 	<script>
 	$(document).ready(function(){
 	$(".menu-container").jSideMenu({
 	    jSidePosition: "position-right",
 	    jSideSticky: true,
-	    jSideSkin: "<%- theme.menu_theme%>",
+	    jSideSkin: "greenish",
 	     });
 	}); 
 	</script>
-  <%-partial('third-party/analytics/index')%>
-  <%- lx_font()%>
-  <link rel="stylesheet" href="<%= theme.font_awesome%>">
-</head>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 4.2.1"></head>
 <body>
-<%- body %>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(http://cdnp.gaowei.in/bingpre.jpg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="http://cdnp.gaowei.in/favicon.ico"></a></div>
+    <span>2020-02-27</span>
+    <h2>基于esp32 cam的...</h2>
+    <div class="tags"><i class="fa fa-tag"></i><a class="tag-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></div>
+    <div class="social-links">
+    <a href="https://github.com/gaoweiin" target="_blank"><i class="fa fa-github fa-fw"></i></a>
+    <a href="mailto:admin@gaowei.in" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+    <a href="tencent://message/?Menu=yes&amp;uin=331562022" target="_blank"><i class="fa fa-qq fa-fw"></i></a>
+</div></div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <p>基于esp32 cam的云端人脸识别</p>
+<a id="more"></a>
+
+<h1 id="esp32cam"><a href="#esp32cam" class="headerlink" title="esp32cam"></a>esp32cam</h1><p>使用esp32_cam模块在自建mqtt服务器上使用python进行基于百度智能云的人脸识别/人脸搜索.</p>
+<h2 id="esp32固件"><a href="#esp32固件" class="headerlink" title="esp32固件"></a>esp32固件</h2><p>每隔5秒会向mqtt服务器分段发送一张照片(也可以改成与人体传感器联动)</p>
+<h3 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Arduino.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;esp_camera.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;WiFi.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;PubSubClient.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">char</span>* ssid = <span class="string">"************"</span>;<span class="comment">//Wi-Fi热点名</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">char</span>* password = <span class="string">"******************"</span>;<span class="comment">//Wi-Fi热点密码</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">char</span>* mqtt_server = <span class="string">"**************"</span>;<span class="comment">//mqtt服务器地址 </span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span>   port=<span class="number">1883</span>;<span class="comment">//mqtt端口</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">char</span>* topic_name = <span class="string">"img"</span>;<span class="comment">//mqtt主题</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">char</span>* client_id = <span class="string">"esp32cam"</span>;<span class="comment">//mqtt客户名</span></span><br><span class="line"><span class="built_in">WiFiClient</span> espClient;<span class="comment">//设置mqtt服务器</span></span><br><span class="line"><span class="function">PubSubClient <span class="title">client</span><span class="params">(espClient)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="摄像头针脚定义"><a href="#摄像头针脚定义" class="headerlink" title="摄像头针脚定义"></a>摄像头针脚定义</h4><p><a href="http://wiki.ai-thinker.com/esp32-cam" target="_blank" rel="noopener">根据安信可科技给出的摄像头定义</a></p>
+<blockquote>
+<p><a href="https://github.com/donny681/ESP32_CAMERA_QR" target="_blank" rel="noopener">https://github.com/donny681/ESP32_CAMERA_QR</a></p>
+</blockquote>
+<p>也可以在esp32_cam的示例文件找到</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> CameraPin_PWDN   =  <span class="number">32</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> CameraPin_RESET  =  <span class="number">-1</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> CameraPin_XCLK   =   <span class="number">0</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> CameraPin_SIOD   =  <span class="number">26</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> CameraPin_SIOC   =  <span class="number">27</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> CameraPin_Y9     =  <span class="number">35</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> CameraPin_Y8     =  <span class="number">34</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> CameraPin_Y7     =  <span class="number">39</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> CameraPin_Y6     =  <span class="number">36</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> CameraPin_Y5     =  <span class="number">21</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> CameraPin_Y4     =  <span class="number">19</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> CameraPin_Y3     =  <span class="number">18</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> CameraPin_Y2     =   <span class="number">5</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> CameraPin_VSYNC  =  <span class="number">25</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> CameraPin_HREF   =  <span class="number">23</span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> CameraPin_PCLK   =  <span class="number">22</span>;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="打开端口"><a href="#打开端口" class="headerlink" title="打开端口"></a>打开端口</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setupSerial</span><span class="params">()</span> </span>&#123;<span class="comment">//开端口</span></span><br><span class="line">    <span class="built_in">Serial</span>.<span class="built_in">begin</span>(<span class="number">115200</span>);</span><br><span class="line">    <span class="built_in">Serial</span>.setDebugOutput(<span class="literal">true</span>);</span><br><span class="line">    <span class="built_in">Serial</span>.<span class="built_in">println</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="连接WLAN"><a href="#连接WLAN" class="headerlink" title="连接WLAN"></a>连接WLAN</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup_wifi</span><span class="params">()</span> </span>&#123;<span class="comment">//自动连WIFI接入网络</span></span><br><span class="line">    <span class="built_in">delay</span>(<span class="number">10</span>);</span><br><span class="line">    <span class="built_in">WiFi</span>.<span class="built_in">begin</span>(ssid, password);</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">WiFi</span>.status() != WL_CONNECTED) &#123;</span><br><span class="line">         <span class="built_in">delay</span>(<span class="number">500</span>);</span><br><span class="line">         <span class="built_in">Serial</span>.<span class="built_in">print</span>(<span class="string">"..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">Serial</span>.<span class="built_in">println</span>(<span class="string">"WiFi connected"</span>);</span><br><span class="line">    <span class="built_in">Serial</span>.<span class="built_in">println</span>(<span class="string">"IP address: "</span>);</span><br><span class="line">    <span class="built_in">Serial</span>.<span class="built_in">println</span>(<span class="built_in">WiFi</span>.<span class="built_in">localIP</span>());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="初始化摄像头"><a href="#初始化摄像头" class="headerlink" title="初始化摄像头"></a>初始化摄像头</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setupCamera</span><span class="params">()</span> </span>&#123;<span class="comment">//初始化摄像头</span></span><br><span class="line">  <span class="keyword">const</span> <span class="keyword">camera_config_t</span> <span class="built_in">config</span> = &#123;</span><br><span class="line">    .pin_pwdn     = CameraPin_PWDN,</span><br><span class="line">    .pin_reset    = CameraPin_RESET,</span><br><span class="line">    .pin_xclk     = CameraPin_XCLK,</span><br><span class="line">    .pin_sscb_sda = CameraPin_SIOD,</span><br><span class="line">    .pin_sscb_scl = CameraPin_SIOC,</span><br><span class="line">    .pin_d7       = CameraPin_Y9,</span><br><span class="line">    .pin_d6       = CameraPin_Y8,</span><br><span class="line">    .pin_d5       = CameraPin_Y7,</span><br><span class="line">    .pin_d4       = CameraPin_Y6,</span><br><span class="line">    .pin_d3       = CameraPin_Y5,</span><br><span class="line">    .pin_d2       = CameraPin_Y4,</span><br><span class="line">    .pin_d1       = CameraPin_Y3,</span><br><span class="line">    .pin_d0       = CameraPin_Y2,</span><br><span class="line">    .pin_vsync    = CameraPin_VSYNC,</span><br><span class="line">    .pin_href     = CameraPin_HREF,</span><br><span class="line">    .pin_pclk     = CameraPin_PCLK,</span><br><span class="line">    .xclk_freq_hz = <span class="number">20000000</span>,</span><br><span class="line">    .ledc_timer   = LEDC_TIMER_0,</span><br><span class="line">    .ledc_channel = LEDC_CHANNEL_0,</span><br><span class="line">    .pixel_format = PIXFORMAT_JPEG,<span class="comment">//格式</span></span><br><span class="line">    .frame_size   = FRAMESIZE_SVGA,<span class="comment">//设置大小,太大会失败</span></span><br><span class="line">    .jpeg_quality = <span class="number">10</span>,<span class="comment">//质量</span></span><br><span class="line">    .fb_count     = <span class="number">1</span>,</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">esp_err_t</span> err = esp_camera_init(&amp;<span class="built_in">config</span>);</span><br><span class="line">  <span class="built_in">Serial</span>.<span class="built_in">printf</span>(<span class="string">"esp_camera_init: 0x%x\n"</span>, err);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// sensor_t *s = esp_camera_sensor_get();</span></span><br><span class="line">  <span class="comment">// s-&gt;set_framesize(s, FRAMESIZE_QVGA);</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="重新连接mqtt相关"><a href="#重新连接mqtt相关" class="headerlink" title="重新连接mqtt相关"></a>重新连接mqtt相关</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">reconnect</span><span class="params">()</span> </span>&#123;<span class="comment">//等待，直到连接上服务器</span></span><br><span class="line">    <span class="keyword">while</span> (!client.<span class="built_in">connected</span>()) &#123;<span class="comment">//如果没有连接上</span></span><br><span class="line">        <span class="keyword">if</span> (client.<span class="built_in">connect</span>(client_id)) &#123;<span class="comment">//设置接入时的用户名</span></span><br><span class="line">            client.subscribe(topic_name);<span class="comment">//接收的topic</span></span><br><span class="line">            <span class="built_in">Serial</span>.<span class="built_in">println</span>(<span class="string">"connect success"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">Serial</span>.<span class="built_in">print</span>(<span class="string">"failed, rc="</span>);<span class="comment">//连接失败</span></span><br><span class="line">            <span class="built_in">Serial</span>.<span class="built_in">print</span>(client.state());<span class="comment">//重新连接</span></span><br><span class="line">            <span class="built_in">Serial</span>.<span class="built_in">println</span>(<span class="string">" try again in 10 seconds"</span>);<span class="comment">//延时10秒后重新连接</span></span><br><span class="line">            <span class="built_in">delay</span>(<span class="number">10000</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="分段发送照片到mqtt"><a href="#分段发送照片到mqtt" class="headerlink" title="分段发送照片到mqtt"></a>分段发送照片到mqtt</h3><p>主要原因是由于esp32的内存小,一次全部发送会失败 所以采用分段发送的方法</p>
+<blockquote>
+<p><a href="https://me.csdn.net/weixin_43507946" target="_blank" rel="noopener">cvbga</a></p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">String</span> msg;</span><br><span class="line"><span class="keyword">int</span> timeCount = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">getimg</span><span class="params">()</span></span>&#123;<span class="comment">//拍照分段发送到mqtt</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">camera_fb_t</span> *fb = esp_camera_fb_get();</span><br><span class="line">    <span class="keyword">if</span> (fb)&#123;</span><br><span class="line">        <span class="built_in">Serial</span>.<span class="built_in">printf</span>(<span class="string">"width: %d, height: %d, buf: 0x%x, len: %d\n"</span>, fb-&gt;<span class="built_in">width</span>, fb-&gt;<span class="built_in">height</span>, fb-&gt;buf, fb-&gt;len);</span><br><span class="line">        <span class="keyword">char</span> data[<span class="number">4104</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; fb-&gt;len; i++)&#123;</span><br><span class="line">         </span><br><span class="line">            <span class="built_in">sprintf</span>(data, <span class="string">"%02X"</span>, *((fb-&gt;buf + i)));</span><br><span class="line">            msg += data;</span><br><span class="line">            <span class="keyword">if</span> (msg.length() == <span class="number">4096</span>)&#123;</span><br><span class="line">                timeCount += <span class="number">1</span>;</span><br><span class="line">                client.beginPublish(topic_name, msg.length(), <span class="number">0</span>);</span><br><span class="line">                client.<span class="built_in">print</span>(msg);</span><br><span class="line">                client.endPublish();</span><br><span class="line">                msg = <span class="string">""</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (msg.length() &gt; <span class="number">0</span>)&#123;</span><br><span class="line">            client.beginPublish(topic_name, msg.length(), <span class="number">0</span>);</span><br><span class="line">            client.<span class="built_in">print</span>(msg);</span><br><span class="line">            client.endPublish();</span><br><span class="line">            msg = <span class="string">""</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        client.publish(topic_name, <span class="string">"1"</span>);</span><br><span class="line">        timeCount = <span class="number">0</span>;</span><br><span class="line">        esp_camera_fb_return(fb);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// put your setup code here, to run once:</span></span><br><span class="line">    setupSerial();</span><br><span class="line">    setup_wifi();</span><br><span class="line">    setupCamera();</span><br><span class="line">    client.setServer(mqtt_server, port);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="comment">// put your main code here, to run repeatedly:</span></span><br><span class="line">    reconnect();<span class="comment">//确保连上服务器，否则一直等待。</span></span><br><span class="line">    client.loop();<span class="comment">//接收数据的循环函数。</span></span><br><span class="line">    getimg();<span class="comment">//mqtt拍照发送</span></span><br><span class="line">    <span class="built_in">delay</span>(<span class="number">5000</span>);  <span class="comment">// [ms]</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="服务器python程序"><a href="#服务器python程序" class="headerlink" title="服务器python程序"></a>服务器python程序</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> paho.mqtt.client <span class="keyword">as</span> mqtt</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> cv2.cv2 <span class="keyword">as</span> cv2</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> binascii</span><br><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"><span class="keyword">import</span> requests</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">mqttclient = mqtt.Client()</span><br><span class="line">HOST = <span class="string">"********"</span> <span class="comment">#mqtt服务器</span></span><br><span class="line">PORT = <span class="number">1883</span>       <span class="comment">#mqtt端口</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">GlobalValue</span>:</span></span><br><span class="line">    data = [<span class="string">""</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">on_client_connect</span><span class="params">(client, userdata, flags, rc)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> rc == <span class="number">0</span>:</span><br><span class="line">        print(<span class="string">'connected!!!'</span>)</span><br><span class="line">    <span class="keyword">elif</span> rc == <span class="number">3</span>:</span><br><span class="line">        print(<span class="string">"Server can't be used"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">'Other errors'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">on_message</span><span class="params">(client, userdata, message)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> message.topic == <span class="string">"img"</span>:</span><br><span class="line">        GlobalValue.data.append(str(message.payload.decode()))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#发布</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">publish</span><span class="params">(topic, payload, qos)</span>:</span></span><br><span class="line">    mqttclient.publish(topic, payload, qos)</span><br><span class="line"></span><br><span class="line"><span class="comment">#订阅</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">subscribe</span><span class="params">(topic, qos)</span>:</span></span><br><span class="line">    mqttclient.subscribe(topic, qos)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    mqttclient.on_message = on_message</span><br><span class="line">    mqttclient.on_connect = on_client_connect</span><br><span class="line">    mqttclient.connect(HOST, PORT, <span class="number">60</span>)</span><br><span class="line">    subscribe(<span class="string">'img'</span>, <span class="number">0</span>)</span><br><span class="line">    subscribe(<span class="string">'control'</span>, <span class="number">0</span>)</span><br><span class="line">    publish(<span class="string">'control'</span>, <span class="string">"1"</span>, <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<p>设置获取自己的access_token</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">host = <span class="string">'https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&amp;client_id=【官网获取的AK】&amp;client_secret=【官网获取的SK】'</span></span><br><span class="line">response = requests.get(host)</span><br><span class="line">rep = response.json()[<span class="string">"access_token"</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    mqttclient.loop_start()</span><br><span class="line">    <span class="keyword">if</span> (GlobalValue.data[len(GlobalValue.data) - <span class="number">1</span>]) == <span class="string">"1"</span>:</span><br><span class="line">        data1 = <span class="string">""</span>.join(GlobalValue.data[<span class="number">0</span>:(len(GlobalValue.data) - <span class="number">1</span>)])</span><br><span class="line">        GlobalValue.data = [<span class="string">""</span>]</span><br><span class="line">        data1 = binascii.a2b_hex(data1)</span><br><span class="line">        data1 = np.frombuffer(data1, dtype=np.uint8)</span><br><span class="line">        img = cv2.imdecode(data1, <span class="number">1</span>)</span><br><span class="line">        <span class="comment">##可以直接看图片</span></span><br><span class="line">        <span class="comment"># cv2.imshow("test", img)</span></span><br><span class="line">        <span class="comment"># cv2.waitKey(1)</span></span><br><span class="line">       </span><br><span class="line">        <span class="comment">#图片转换为 base64   </span></span><br><span class="line">        image = cv2.imencode(<span class="string">'.jpg'</span>, img)[<span class="number">1</span>]</span><br><span class="line">        base64_data = str(base64.b64encode(image))[<span class="number">2</span>:<span class="number">-1</span>]</span><br><span class="line">        <span class="comment">##可以打印整个base64数据测试</span></span><br><span class="line">        <span class="comment">#print (base64_data)</span></span><br></pre></td></tr></table></figure>
+<h3 id="图片使用post-base64的方法上传"><a href="#图片使用post-base64的方法上传" class="headerlink" title="图片使用post base64的方法上传"></a>图片使用post base64的方法上传</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">            <span class="comment"># #人脸识别</span></span><br><span class="line">            <span class="comment"># request_url = "https://aip.baidubce.com/rest/2.0/face/v3/detect"</span></span><br><span class="line">            <span class="comment"># params = "&#123;\"image\":\""+base64_data+"\",\"image_type\":\"BASE64\",\"face_field\":\"faceshape,facetype\"&#125;"</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 人脸搜索</span></span><br><span class="line">            request_url = <span class="string">"https://aip.baidubce.com/rest/2.0/face/v3/search"</span></span><br><span class="line">            params = <span class="string">"&#123;\"image\":\""</span>+base64_data+<span class="string">"\",\"image_type\":\"BASE64\",\"group_id_list\":\"[这里写人脸库名]\",\"quality_control\":\"LOW\",\"liveness_control\":\"NORMAL\"&#125;"</span></span><br><span class="line"></span><br><span class="line">            access_token = rep</span><br><span class="line">            request_url = request_url + <span class="string">"?access_token="</span> + access_token</span><br><span class="line">            headers = &#123;<span class="string">'content-type'</span>: <span class="string">'application/json'</span>&#125;</span><br><span class="line">            response = requests.post(request_url, data=params, headers=headers)</span><br><span class="line">            <span class="keyword">if</span> response:</span><br><span class="line">                out = response.json()</span><br><span class="line">                <span class="keyword">if</span> out[<span class="string">'error_code'</span>] == <span class="number">0</span>:   </span><br><span class="line">                    msg = out[<span class="string">'result'</span>][<span class="string">'user_list'</span>] [<span class="number">0</span>]   <span class="comment">#格式化操作</span></span><br><span class="line">                    print(<span class="string">"发现了"</span>+msg[<span class="string">'user_id'</span>]+<span class="string">",有"</span>+str(msg[<span class="string">'score'</span>])[<span class="number">0</span>:<span class="number">4</span>]+<span class="string">"%的可能"</span>)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    print(<span class="string">'发现错误'</span>+out[<span class="string">'error_msg'</span>]+<span class="string">'错误代码'</span>+str(out[<span class="string">'error_code'</span>]))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(http://cdnp.gaowei.in/bing.jpg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/2020/04/20/Hexo%E7%94%A8%E6%B3%95/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>Hexo用法</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(http://cdnp.gaowei.in/bingprepre.jpg)">
+		<div class="overlay"></div>
+		<a class="copy" href="#">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>没有更早的文章</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2019.<a href="/">Hello World!</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
 <button class="hamburger hamburger--arrow-r" type="button">
     <div class="hamburger-box">
       <div class="hamburger-inner"></div>
     </div>
 </button> 
-<%- partial('partials/menu')%>
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="http://cdnp.gaowei.in/favicon.ico" alt="WEI"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>WEI</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>首页</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-th-list fa-fw"></i>分类</span>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%98%E6%A1%A3/">存档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A2%98%E5%BA%93/">题库</a></li></ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>页面</span>
+        <ul>
+          <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    
+  </ul>
+  </nav>
+</div>
+
 <div class="gototop js-top">
   <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
 </div>
-<script src="<%= js%>jquery.easing.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
 <script>
 (function () {
 	"use strict";
@@ -78,7 +247,7 @@ else { css += 'main.min.css';}
 	});
 }());
 </script>
-<% if (theme.local_search.enable) {%><script src="<%= js%>local.search.js"></script><%}%>
-<%if (theme.comment.enable) {%><%- partial('third-party/comment')%><%}%>
-<%if (theme.mathjax.enable) {%><%if (page.mathjax) {%><%- partial('third-party/mathjax')%><%}%><%}%></body>
+
+
+</body>
 </html>

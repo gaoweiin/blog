@@ -322,7 +322,7 @@ blockquote p,
 blockquote div {
   text-align: center;
 }
-.post-button a.btn{
+.post-button a.btn {
   display: inline-block;
   padding: 0 20px;
   font-size: 14px;
@@ -338,7 +338,7 @@ blockquote div {
   line-height: 2;
 }
 .btn,
-a.btn{
+a.btn {
   display: inline-block;
   padding: 0 20px;
   font-size: 14px;
@@ -353,7 +353,7 @@ a.btn{
   transition-delay: 0s;
   line-height: 2;
 }
-.btn:hover{
+.btn:hover {
   border-color: $black-s;
   color: $white;
   background: $black-s;

@@ -1,58 +1,485 @@
-<% var pageTitle = page.title || '';
-if (is_archive()) pageTitle = __('pagetitle.archive');
-if (is_tag()) pageTitle = __('pagetitle.tag') + '-' + page.tag;
-if (is_category()) pageTitle = __('pagetitle.category') + '-' + page.category;
-if (pageTitle == '') {
-    pageTitle = config.title;
-} else {
-    pageTitle += ' | ' + config.title;
-}
-var js = theme.base_file.js;
-var css = theme.base_file.css;
-if (theme.develop){ js = config.root + 'js/'; css = config.root + 'css/main.css';}
-else { css += 'main.min.css';}
-%><!DOCTYPE html>
-<html <%if(config.language.length){%>lang="<%-config.language.substring(0,2)%>"<%}%>>
+<!DOCTYPE html>
+<html lang="zh">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="theme-color" content=<%- theme.theme_color%>>
-  <title><%=pageTitle%></title>
+  <meta name="theme-color" content=#58b77a>
+  <title>英语单词 | Hello World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="<%- config.author%>">
-  <meta name="keywords" content="<%- config.keywords%>">
-  <meta name="description" content="<%- config.description%>">
-  <%- partial('partials/config')%>
-  <link rel="shortcut icon" href="<%- url_for(theme.favicon)%>">
-  <link rel="stylesheet" href="<%= css%>">
-  <%-partial('partials/font')%>
-  <script src="<%= theme.base_file.jquery_cdn%>"></script>
-  <script src="<%= js%>jquery.jside.menu.js"></script>
+  <meta name="author" content="WEI">
+  <meta name="keywords" content="">
+  <meta name="description" content="前路虽长,尤可期许">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'lx',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="http://cdnp.gaowei.in/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
 	<script>
 	$(document).ready(function(){
 	$(".menu-container").jSideMenu({
 	    jSidePosition: "position-right",
 	    jSideSticky: true,
-	    jSideSkin: "<%- theme.menu_theme%>",
+	    jSideSkin: "greenish",
 	     });
 	}); 
 	</script>
-  <%-partial('third-party/analytics/index')%>
-  <%- lx_font()%>
-  <link rel="stylesheet" href="<%= theme.font_awesome%>">
-</head>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 4.2.1"></head>
 <body>
-<%- body %>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(http://cdnp.gaowei.in/bingpre.jpg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="http://cdnp.gaowei.in/favicon.ico"></a></div>
+    <span>2020-05-25</span>
+    <h2>英语单词</h2>
+    <div class="tags"><i class="fa fa-tag"></i><a class="tag-link" href="/tags/%E5%AD%98%E6%A1%A3/" rel="tag">存档</a></div>
+    <div class="social-links">
+    <a href="https://github.com/gaoweiin" target="_blank"><i class="fa fa-github fa-fw"></i></a>
+    <a href="mailto:admin@gaowei.in" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+    <a href="tencent://message/?Menu=yes&amp;uin=331562022" target="_blank"><i class="fa fa-qq fa-fw"></i></a>
+</div></div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <p>英语单词</p>
+<a id="more"></a>
+
+
+<p>Unit 1<br>1<br>【填空题】<br>Jack has no interest <strong><strong><strong><strong>____</strong></strong></strong></strong>in pursuing an acting career. He loves writing and directing.</p>
+<p>accomplish;self-sufficient; utility; agent; whatsoever; system; adjustment; organic; slow down; set about; available</p>
+<p>consist of; be familiar with; ins and outs; put in; learn of;</p>
+<p>我的答案：</p>
+<p>第一空：<br>whatsoever</p>
+<p>2<br>【填空题】<br>The idea was to have users upload(上传)their medical records, so that they could be____________________ at any time.</p>
+<p>accomplish;self-sufficient; utility; agent; whatsoever; system; adjustment; organic; slow down; set about; available</p>
+<p>consist of; be familiar with; ins and outs; put in; learn of;</p>
+<p>我的答案：</p>
+<p>第一空：<br>available</p>
+<p>3<br>【填空题】<br>Traffic jams often build up when drivers <strong><strong><strong><strong>____</strong></strong></strong></strong> to see what happened in a crash.</p>
+<p>accomplish;self-sufficient; utility; agent; whatsoever; system; adjustment; organic; slow down; set about; available</p>
+<p>consist of; be familiar with; ins and outs; put in; learn of;</p>
+<p>我的答案：</p>
+<p>第一空：<br>slow down</p>
+<p>4<br>【填空题】<br>A native New Yorker, Ben <strong><strong><strong><strong>____</strong></strong></strong></strong> the city, its neighborhoods, and all he has connections with.</p>
+<p>accomplish;self-sufficient; utility; agent; whatsoever; system; adjustment; organic; slow down; set about; available</p>
+<p>consist of; be familiar with; ins and outs; put in; learn of;</p>
+<p>我的答案：</p>
+<p>第一空：<br>is familiar with</p>
+<p>5<br>【填空题】<br>You may have already seen your dream house. Before you <strong><strong><strong><strong>____</strong></strong></strong></strong> an offer, you can do a few more things to ensure you purchase the right property for the right price.</p>
+<p>accomplish;self-sufficient; utility; agent; whatsoever; system; adjustment; organic; slow down; set about; available</p>
+<p>consist of; be familiar with; ins and outs; put in; learn of;</p>
+<p>我的答案：</p>
+<p>第一空：<br>put in</p>
+<p>6<br>【填空题】<br>Buying <strong><strong><strong><strong>____</strong></strong></strong></strong> fruit and vegetables costs more, and for many shoppers, the benefits hardly seem worth the extral expense.</p>
+<p>accomplish;self-sufficient; utility; agent; whatsoever; system; adjustment; organic; slow down; set about; available</p>
+<p>consist of; be familiar with; ins and outs; put in; learn of;</p>
+<p>我的答案：</p>
+<p>第一空：<br>organic</p>
+<p>7<br>【填空题】<br><strong><strong><strong><strong>____</strong></strong></strong></strong> living is the practice of providing for your own needs without outside aid or resources.</p>
+<p>accomplish;self-sufficient; utility; agent; whatsoever; system; adjustment; organic; slow down; set about; available</p>
+<p>consist of; be familiar with; ins and outs; put in; learn of;</p>
+<p>我的答案：</p>
+<p>第一空：<br>Self-sufficient</p>
+<p>8<br>【填空题】<br>In the interview, the writer was asked how he <strong><strong><strong><strong>____</strong></strong></strong></strong> writing a novel based on a dream he once had.</p>
+<p>accomplish;self-sufficient; utility; agent; whatsoever; system; adjustment; organic; slow down; set about; available</p>
+<p>consist of; be familiar with; ins and outs; put in; learn of;</p>
+<p>我的答案：</p>
+<p>第一空：<br>set about</p>
+<p>9<br>【填空题】<br>Are you thinking of becoming an insuance sales <strong><strong><strong><strong>____</strong></strong></strong></strong> ?Take this quiz to find out if this is the right career choice for you.</p>
+<p>accomplish;self-sufficient; utility; agent; whatsoever; system; adjustment; organic; slow down; set about; available</p>
+<p>consist of; be familiar with; ins and outs; put in; learn of;</p>
+<p>我的答案：</p>
+<p>第一空：<br>agent</p>
+<p>10<br>【填空题】<br>The rent for the apartment is reasonable, besides, the <strong><strong><strong><strong>____</strong></strong></strong></strong> are included, which means you don’t have to pay anything for gas, electricity and water.</p>
+<p>accomplish;self-sufficient; utility; agent; whatsoever; system; adjustment; organic; slow down; set about; available</p>
+<p>consist of; be familiar with; ins and outs; put in; learn of;</p>
+<p>我的答案：</p>
+<p>第一空：<br>utilities</p>
+<p>11<br>【填空题】<br>A central heating and cooling <strong><strong><strong><strong>____</strong></strong></strong></strong> produces warm or cool air in one central area and distritutes it throughout the building.</p>
+<p>accomplish;self-sufficient; utility; agent; whatsoever; system; adjustment; organic; slow down; set about; available</p>
+<p>consist of; be familiar with; ins and outs; put in; learn of;</p>
+<p>我的答案：</p>
+<p>第一空：<br>system</p>
+<p>12<br>【填空题】<br>We were deeply shocked and saddened when we <strong><strong><strong><strong>____</strong></strong></strong></strong> the sudden death of our newly retired professor.</p>
+<p>accomplish;self-sufficient; utility; agent; whatsoever; system; adjustment; organic; slow down; set about; available</p>
+<p>consist of; be familiar with; ins and outs; put in; learn of;</p>
+<p>我的答案：</p>
+<p>第一空：<br>learned of</p>
+<p>13<br>【填空题】<br>If you know the <strong><strong><strong><strong>____</strong></strong></strong></strong> of something, you know all the details about it and understand how it works.</p>
+<p>accomplish;self-sufficient; utility; agent; whatsoever; system; adjustment; organic; slow down; set about; available</p>
+<p>consist of; be familiar with; ins and outs; put in; learn of;</p>
+<p>我的答案：</p>
+<p>第一空：<br>ins and outs</p>
+<p>14<br>【填空题】<br>It’s long been proven that we can <strong><strong><strong><strong>____</strong></strong></strong></strong> any project if we break it up into small pieces and do the project one piece at a time.</p>
+<p>accomplish;self-sufficient; utility; agent; whatsoever; system; adjustment; organic; slow down; set about; available</p>
+<p>consist of; be familiar with; ins and outs; put in; learn of;</p>
+<p>我的答案：</p>
+<p>第一空：<br>accomplish</p>
+<p>15<br>【填空题】<br>All electronic computers <strong><strong><strong><strong>____</strong></strong></strong></strong> four basic units although they may be of different kinds.</p>
+<p>in use;  overall;  consist of;  haul;  toss;  go out</p>
+<p>我的答案：</p>
+<p>第一空：<br>consist of</p>
+<p>16<br>【填空题】<br>The moment I say it clearly for what it was —–a dead fish—-I <strong><strong><strong><strong>____</strong></strong></strong></strong> it away immediately.</p>
+<p>in use;  overall;  consist of;  haul;  toss;  go out</p>
+<p>我的答案：</p>
+<p>第一空：<br>tossed</p>
+<p>17<br>【填空题】<br>True, the furnishings are dated but <strong><strong><strong><strong>____</strong></strong></strong></strong> , the hotel is very clean and the staff very friendly.</p>
+<p>in use;  overall;  consist of;  haul;  toss;  go out</p>
+<p>我的答案：</p>
+<p>第一空：<br>overall</p>
+<p>18<br>【填空题】<br>They had little difficulty in hooking the fish, but <strong><strong><strong><strong>____</strong></strong></strong></strong> it out of the water proved to be a big problem.</p>
+<p>in use;  overall;  consist of;  haul;  toss;  go out</p>
+<p>我的答案：</p>
+<p>第一空：<br>hauling</p>
+<p>19<br>【填空题】<br>They built a fireplace to heat the small flat, but there were nights when the fire <strong><strong><strong><strong>____</strong></strong></strong></strong> and they shivered under the blanket.</p>
+<p>in use;  overall;  consist of;  haul;  toss;  go out</p>
+<p>我的答案：</p>
+<p>第一空：<br>went out</p>
+<p>20<br>【填空题】<br>The pot you saw had been <strong><strong><strong><strong>____</strong></strong></strong></strong> for four years and showed very little wear（磨损、用旧）.</p>
+<p>in use;  overall;  consist of;  haul;  toss;  go out</p>
+<p>我的答案：</p>
+<p>第一空：<br>in use</p>
+<p>Unit 2<br>1<br>【填空题】<br>While I was working in a fast-food restaurant, I constantly dreamt of being able to own one <strong><strong><strong>_____</strong></strong></strong>.</p>
+<p>assault;   bloom;  constantly;  correspondence;  dominate; endure;  enjoyment;  exchange;   invasion;  impressive; react to;  sympathize with;   count up;  realization; retire; separation;  someday</p>
+<p>我的答案：<br>第一空：<br>someday</p>
+<p>2<br>【填空题】<br>It was common for people to keep up <strong><strong><strong>_____</strong></strong></strong> with friends through letters before the age of the Internet.</p>
+<p>assault;   bloom;  constantly;  correspondence;  dominate; endure;  enjoyment;  exchange;   invasion;  impressive; react to;  sympathize with;   count up;  realization; retire; separation;  someday</p>
+<p>我的答案：<br>第一空：<br>correspondence</p>
+<p>3<br>【填空题】<br>In modern Chinese society, women, to a large extent, are no longer <strong><strong><strong>_____</strong></strong></strong> by men either in family life or in the workplace.</p>
+<p>assault;   bloom;  constantly;  correspondence;  dominate; endure;  enjoyment;  exchange;   invasion;  impressive; react to;  sympathize with;   count up;  realization; retire; separation;  someday</p>
+<p>我的答案：<br>第一空：<br>dominated</p>
+<p>4<br>【填空题】<br>There is now a growing <strong><strong><strong>_____</strong></strong></strong> of the importance of recycling among the residents in our neighborhood.</p>
+<p>assault;   bloom;  constantly;  correspondence;  dominate; endure;  enjoyment;  exchange;   invasion;  impressive; react to;  sympathize with;   count up;  realization; retire; separation;  someday</p>
+<p>我的答案：<br>第一空：<br>realization</p>
+<p>5<br>【填空题】<br>The Japanese <strong><strong><strong>_____</strong></strong></strong> during World War II met with fierce resistance from the Chines people.</p>
+<p>assault;   bloom;  constantly;  correspondence;  dominate; endure;  enjoyment;  exchange;   invasion;  impressive; react to;  sympathize with;   count up;  realization; retire; separation;  someday</p>
+<p>我的答案：<br>第一空：<br>invasion</p>
+<p>6<br>【填空题】<br>It is wonderful to see flowers <strong><strong><strong>_____</strong></strong></strong> in different colours after a long bleak winter.</p>
+<p>assault;   bloom;  constantly;  correspondence;  dominate; endure;  enjoyment;  exchange;   invasion;  impressive; react to;  sympathize with;   count up;  realization; retire; separation;  someday</p>
+<p>我的答案：<br>第一空：<br>bloom</p>
+<p>7<br>【填空题】<br>The elderly landlady couldn’t <strong><strong><strong>_____</strong></strong></strong>the behavior of the young man any more: he tossed trash all over the building.</p>
+<p>assault;   bloom;  constantly;  correspondence;  dominate; endure;  enjoyment;  exchange;   invasion;  impressive; react to;  sympathize with;   count up;  realization; retire; separation;  someday</p>
+<p>我的答案：<br>第一空：<br>endure</p>
+<p>8<br>【填空题】<br>It is true that human beings have had war <strong><strong><strong>_____</strong></strong></strong> throughout history; nevertheless human civilization has managed to survive.</p>
+<p>assault;   bloom;  constantly;  correspondence;  dominate; endure;  enjoyment;  exchange;   invasion;  impressive; react to;  sympathize with;   count up;  realization; retire; separation;  someday</p>
+<p>我的答案：<br>第一空：<br>constantly</p>
+<p>9<br>【填空题】<br>An increasingly large number of Chinese plan to spend their time travelling to different countries and seeing more of the world when they <strong><strong><strong>_____</strong></strong></strong>.</p>
+<p>assault;   bloom;  constantly;  correspondence;  dominate; endure;  enjoyment;  exchange;   invasion;  impressive; react to;  sympathize with;   count up;  realization; retire; separation;  someday</p>
+<p>我的答案：<br>第一空：<br>retire</p>
+<p>10<br>【填空题】<br>Last week I submitted by my first project proposal and I was very anxious to know how the department manager would <strong><strong><strong>_____</strong></strong></strong> it.</p>
+<p>assault;   bloom;  constantly;  correspondence;  dominate; endure;  enjoyment;  exchange;   invasion;  impressive; react to;  sympathize with;   count up;  realization; retire; separation;  someday</p>
+<p>我的答案：<br>第一空：<br>react to</p>
+<p>11<br>【填空题】<br>We all <strong><strong><strong>_____</strong></strong></strong> those who lost loved ones in the disaster.</p>
+<p>assault;   bloom;  constantly;  correspondence;  dominate; endure;  enjoyment;  exchange;   invasion;  impressive; react to;  sympathize with;   count up;  realization; retire; separation;  someday</p>
+<p>我的答案：<br>第一空：<br>sympathize with</p>
+<p>12<br>【填空题】<br>The general decided to launch an <strong><strong><strong>_____</strong></strong></strong> on the enemy at midnight.</p>
+<p>assault;   bloom;  constantly;  correspondence;  dominate; endure;  enjoyment;  exchange;   invasion;  impressive; react to;  sympathize with;   count up;  realization; retire; separation;  someday</p>
+<p>我的答案：<br>第一空：<br>assault</p>
+<p>13<br>【填空题】<br>At that time, most stores in that region allowed shoppers to <strong><strong><strong>_____</strong></strong></strong> goods and services at a mutually agreed price.</p>
+<p>assault;   bloom;  constantly;  correspondence;  dominate; endure;  enjoyment;  exchange;   invasion;  impressive; react to;  sympathize with;   count up;  realization; retire; separation;  someday</p>
+<p>我的答案：<br>第一空：<br>exchange</p>
+<p>14<br>【填空题】<br>The kids never received any professional training previously, but their performance was <strong><strong><strong>_____</strong></strong></strong>.</p>
+<p>assault;   bloom;  constantly;  correspondence;  dominate; endure;  enjoyment;  exchange;   invasion;  impressive; react to;  sympathize with;   count up;  realization; retire; separation;  someday</p>
+<p>我的答案：<br>第一空：<br>impressive</p>
+<p>15<br>【填空题】<br>It’s amazing that the toddler can <strong><strong><strong>_____</strong></strong></strong> to one hundred and backward.</p>
+<p>assault;   bloom;  constantly;  correspondence;  dominate; endure;  enjoyment;  exchange;   invasion;  impressive; react to;  sympathize with;   count up;  realization; retire; separation;  someday</p>
+<p>我的答案：<br>第一空：<br>count up</p>
+<p>16<br>【填空题】<br>The research team has made all necessary preparations for the project to start and they are frustrated to learn that it is to be_________________ indefinitely.</p>
+<p>adore;  bet;   by the day;   compensate for;   long for;   of late;   on hand;   postpone; continually</p>
+<p>我的答案：<br>第一空：<br>postponed</p>
+<p>17<br>【填空题】<br>What disturbs investors is the fact that the market has been fluctuating irrationally <strong><strong><strong>_____</strong></strong></strong>.</p>
+<p>adore;  bet;   by the day;   compensate for;   long for;   of late;   on hand;   postpone; continually</p>
+<p>我的答案：<br>第一空：<br>of late</p>
+<p>18<br>【填空题】<br>It’s natural for young people to <strong><strong><strong>_____</strong></strong></strong>adventure and romance.</p>
+<p>adore;  bet;   by the day;   compensate for;   long for;   of late;   on hand;   postpone; continually</p>
+<p>我的答案：<br>第一空：<br>long for</p>
+<p>19<br>【填空题】<br>The client was very hard to please and had been complaining <strong><strong><strong>_____</strong></strong></strong>, despite all our efforts to satisfy her demands.</p>
+<p>adore;  bet;   by the day;   compensate for;   long for;   of late;   on hand;   postpone; continually</p>
+<p>我的答案：<br>第一空：<br> by the day</p>
+<p>20<br>【填空题】<br>The travel agency apologized to the clients who missed the tour bus. In addition, it <strong><strong><strong>_____</strong></strong></strong> the additional travelling costs.</p>
+<p>adore;  bet;   by the day;   compensate for;   long for;   of late;   on hand;   postpone; continually</p>
+<p>我的答案：<br>第一空：<br>compensated for</p>
+<p>21<br>【填空题】<br>As the outdoor concert attracted crowds of teenagers, the organizer made sure police and volunteers were <strong><strong><strong>_____</strong></strong></strong> throughout the event, just in case.</p>
+<p>adore;  bet;   by the day;   compensate for;   long for;   of late;   on hand;   postpone; continually</p>
+<p>我的答案：<br>第一空：<br>on hand</p>
+<p>22<br>【填空题】<br>The proud woman <strong><strong><strong>_____</strong></strong></strong> her son and would do anything to please him.</p>
+<p>adore;  bet;   by the day;   compensate for;   long for;   of late;   on hand;   postpone; continually</p>
+<p>我的答案：<br>第一空：<br>adored</p>
+<p>23<br>【填空题】<br>Those days the number of the unemployed, especially in the big cities, kept going up almost <strong><strong><strong>_____</strong></strong></strong>.</p>
+<p>adore;  bet;   by the day;   compensate for;   long for;   of late;   on hand;   postpone; continually</p>
+<p>我的答案：<br>第一空：<br> by the day</p>
+<p>Unit 3<br>【填空题】<br>We set out to find the truth behind the <strong><strong><strong>__</strong></strong></strong> of the scientist’s disappearance.</p>
+<p>apart; expose; bounce back; invest; date; extended;</p>
+<p>mutual; likewise; venture; survive; tend; mystery;</p>
+<p>involve; refer to; consume; slip away; end up with</p>
+<p>我的答案：</p>
+<p>第一空：<br>mystery</p>
+<p>2<br>【填空题】<br>A good relationship is built on honesty, trust, and <strong><strong><strong>__</strong></strong></strong> respect.</p>
+<p>apart; expose; bounce back; invest; date; extended;</p>
+<p>mutual; likewise; venture; survive; tend; mystery;</p>
+<p>involve; refer to; consume; slip away; end up with</p>
+<p>我的答案：</p>
+<p>第一空：<br>mutual</p>
+<p>3<br>【填空题】<br>Kids may grow faster or slower but most of them still <strong><strong><strong>__</strong></strong></strong> an average height.</p>
+<p>apart; expose; bounce back; invest; date; extended;</p>
+<p>mutual; likewise; venture; survive; tend; mystery;</p>
+<p>involve; refer to; consume; slip away; end up with</p>
+<p>我的答案：</p>
+<p>第一空：<br>end up with</p>
+<p>4<br>【填空题】<br>In the joint <strong><strong><strong>__</strong></strong></strong>, the Chinese party will hold a 51 percent controlling interest.</p>
+<p>apart; expose; bounce back; invest; date; extended;</p>
+<p>mutual; likewise; venture; survive; tend; mystery;</p>
+<p>involve; refer to; consume; slip away; end up with</p>
+<p>我的答案：</p>
+<p>第一空：<br>venture</p>
+<p>5<br>【填空题】<br>Although John <strong><strong><strong>__</strong></strong></strong> the girl for a year, he is still in two mind as to whether to marry her or not.</p>
+<p>apart; expose; bounce back; invest; date; extended;</p>
+<p>mutual; likewise; venture; survive; tend; mystery;</p>
+<p>involve; refer to; consume; slip away; end up with</p>
+<p>我的答案：</p>
+<p>第一空：<br>has dated</p>
+<p>6<br>【填空题】<br>Many people are unaware of just how much food and drink they <strong><strong><strong>__</strong></strong></strong> each day.</p>
+<p>apart; expose; bounce back; invest; date; extended;</p>
+<p>mutual; likewise; venture; survive; tend; mystery;</p>
+<p>involve; refer to; consume; slip away; end up with</p>
+<p>我的答案：</p>
+<p>第一空：<br>consume</p>
+<p>7<br>【填空题】<br>In order not to hurt Mary’s feelings, please don’t <strong><strong><strong>__</strong></strong></strong> the incident again.</p>
+<p>apart; expose; bounce back; invest; date; extended;</p>
+<p>mutual; likewise; venture; survive; tend; mystery;</p>
+<p>involve; refer to; consume; slip away; end up with</p>
+<p>我的答案：</p>
+<p>第一空：<br>refer to</p>
+<p>8<br>【填空题】<br>He and Jeannie used to live together, but recently they have been <strong><strong><strong>__</strong></strong></strong> for the first time.</p>
+<p>apart; expose; bounce back; invest; date; extended;</p>
+<p>mutual; likewise; venture; survive; tend; mystery;</p>
+<p>involve; refer to; consume; slip away; end up with</p>
+<p>我的答案：</p>
+<p>第一空：<br>apart</p>
+<p>9<br>【填空题】<br>Adam has announced that he is to take an <strong><strong><strong>__</strong></strong></strong> touring break in order to spend more time with his family.</p>
+<p>apart; expose; bounce back; invest; date; extended;</p>
+<p>mutual; likewise; venture; survive; tend; mystery;</p>
+<p>involve; refer to; consume; slip away; end up with</p>
+<p>我的答案：</p>
+<p>第一空：<br>extended</p>
+<p>10<br>【填空题】<br>Jim <strong><strong><strong>__</strong></strong></strong> the heart attack thanks to the prompt first aid treatment.</p>
+<p>apart; expose; bounce back; invest; date; extended;</p>
+<p>mutual; likewise; venture; survive; tend; mystery;</p>
+<p>involve; refer to; consume; slip away; end up with</p>
+<p>我的答案：</p>
+<p>第一空：<br>survived</p>
+<p>11<br>【填空题】<br>His interview did not go well and his chance of getting the job slipped away.</p>
+<p>apart; expose; bounce back; invest; date; extended;</p>
+<p>mutual; likewise; venture; survive; tend; mystery;</p>
+<p>involve; refer to; consume; slip away; end up with</p>
+<p>我的答案：</p>
+<p>第一空：<br>slipped away</p>
+<p>12<br>【填空题】<br>Kids <strong><strong><strong>__</strong></strong></strong> to an unhealthy environment tend to grow up with more problems.</p>
+<p>apart; expose; bounce back; invest; date; extended;</p>
+<p>mutual; likewise; venture; survive; tend; mystery;</p>
+<p>involve; refer to; consume; slip away; end up with</p>
+<p>我的答案：</p>
+<p>第一空：<br>exposed </p>
+<p>13<br>【填空题】<br>An occasional all-nighter is rough, but hes is young enough to <strong><strong><strong>__</strong></strong></strong>.</p>
+<p>apart; expose; bounce back; invest; date; extended;</p>
+<p>mutual; likewise; venture; survive; tend; mystery;</p>
+<p>involve; refer to; consume; slip away; end up with</p>
+<p>我的答案：</p>
+<p>第一空：<br>bounce back</p>
+<p>14<br>【填空题】<br>Olivier turned it down flat and tried to persuade Vivien to do <strong><strong><strong>__</strong></strong></strong>.</p>
+<p>apart; expose; bounce back; invest; date; extended;</p>
+<p>mutual; likewise; venture; survive; tend; mystery;</p>
+<p>involve; refer to; consume; slip away; end up with</p>
+<p>我的答案：</p>
+<p>第一空：<br>likewise</p>
+<p>15<br>【填空题】<br>Nowadays when you buy a house in a big city, you have to <strong><strong><strong>__</strong></strong></strong> lots of money.</p>
+<p>apart; expose; bounce back; invest; date; extended;</p>
+<p>mutual; likewise; venture; survive; tend; mystery;</p>
+<p>involve; refer to; consume; slip away; end up with</p>
+<p>我的答案：</p>
+<p>第一空：<br>invest</p>
+<p>Unit 4<br>1<br>【填空题】</p>
+<ol>
+<li>Which one is better, a <strong><strong>___</strong></strong> job with a low pay or a job with a high pay but easy to lose?</li>
+</ol>
+<p>catalog, destination, dub,filter, grab, hesitate, linger, memorize, pop up, preparation, provocative, secure, split, spot, stick to, stretch out, suicide</p>
+<p>我的答案：<br>第一空：<br>secure</p>
+<p>2<br>【填空题】<br>News <strong><strong>___</strong></strong> through from Bombay（孟买）last night of a city on strike and tourists stuck at the airport.</p>
+<p>catalog, destination, dub,filter, grab, hesitate, linger, memorize, pop up, preparation, provocative, secure, split, spot, stick to, stretch out, suicide</p>
+<p>我的答案：<br>第一空：<br>filtered</p>
+<p>3<br>【填空题】<br><strong><strong>___</strong></strong> ranks as the 10th leading cause of death in the United States. Globally, an estimated 700,000 people take their own lives annually.</p>
+<p>catalog, destination, dub,filter, grab, hesitate, linger, memorize, pop up, preparation, provocative, secure, split, spot, stick to, stretch out, suicide</p>
+<p>我的答案：<br>第一空：<br>Suicide</p>
+<p>4<br>【填空题】<br>A large product <strong><strong>___</strong></strong> is critical to a successful furniture store website. People who visit your website are looking for new furniture. You need to show it to them.</p>
+<p>catalog, destination, dub,filter, grab, hesitate, linger, memorize, pop up, preparation, provocative, secure, split, spot, stick to, stretch out, suicide</p>
+<p>我的答案：<br>第一空：<br>catalog</p>
+<p>5<br>【填空题】<br>Some of the most <strong><strong>___</strong></strong> thinkers, writers, artists, business people, teachers and other leaders drawn from different fields around the world will gather at this summer program —- to teach, speak, lead, question, and answer.</p>
+<p>catalog, destination, dub,filter, grab, hesitate, linger, memorize, pop up, preparation, provocative, secure, split, spot, stick to, stretch out, suicide</p>
+<p>我的答案：<br>第一空：<br>provocative</p>
+<p>6<br>【填空题】<br>The guy tried to run away but the policeman caught him by <strong><strong>___</strong></strong> the collar of his coat.</p>
+<p>catalog, destination, dub,filter, grab, hesitate, linger, memorize, pop up, preparation, provocative, secure, split, spot, stick to, stretch out, suicide</p>
+<p>我的答案：<br>第一空：<br>grabbing</p>
+<p>7<br>【填空题】<br>This dialogue window <strong><strong>___</strong></strong> in my game every five seconds! How do I disable it?</p>
+<p>catalog, destination, dub,filter, grab, hesitate, linger, memorize, pop up, preparation, provocative, secure, split, spot, stick to, stretch out, suicide</p>
+<p>我的答案：<br>第一空：<br>pops up</p>
+<p>8<br>【填空题】<br>Life is like a journey with no known <strong><strong>___</strong></strong>.</p>
+<p>catalog, destination, dub,filter, grab, hesitate, linger, memorize, pop up, preparation, provocative, secure, split, spot, stick to, stretch out, suicide</p>
+<p>我的答案：<br>第一空：<br>destination</p>
+<p>9<br>【填空题】<br>No one can finish all the tasks alone. Don’t <strong><strong>___</strong></strong> to ask for help. We can all benefit from cooperation.</p>
+<p>catalog, destination, dub,filter, grab, hesitate, linger, memorize, pop up, preparation, provocative, secure, split, spot, stick to, stretch out, suicide</p>
+<p>我的答案：<br>第一空：<br>hesitate</p>
+<p>10<br>【填空题】<br>Manchester United , <strong><strong>___</strong></strong> Red Devils, is a top football team in England.</p>
+<p>catalog, destination, dub,filter, grab, hesitate, linger, memorize, pop up, preparation, provocative, secure, split, spot, stick to, stretch out, suicide</p>
+<p>我的答案：<br>第一空：<br>dubbed</p>
+<p>11<br>【填空题】</p>
+<ol>
+<li>The police officer turned to the crowd and shouted, “Come on. You need to get out of here. No <strong><strong>___</strong></strong> around the crime scene.</li>
+</ol>
+<p>catalog, destination, dub,filter, grab, hesitate, linger, memorize, pop up, preparation, provocative, secure, split, spot, stick to, stretch out, suicide</p>
+<p>我的答案：<br>第一空：<br>lingering</p>
+<p>12<br>【填空题】<br>The flower show is so crowded that there is never an ideal <strong><strong>___</strong></strong> for taking pictures no matter how you position yourself.</p>
+<p>catalog, destination, dub,filter, grab, hesitate, linger, memorize, pop up, preparation, provocative, secure, split, spot, stick to, stretch out, suicide</p>
+<p>我的答案：<br>第一空：<br>spot</p>
+<p>13<br>【填空题】<br>Our mutual friend John has got a rare ability to <strong><strong>___</strong></strong> facts and figures.</p>
+<p>catalog, destination, dub,filter, grab, hesitate, linger, memorize, pop up, preparation, provocative, secure, split, spot, stick to, stretch out, suicide</p>
+<p>我的答案：<br>第一空：<br>memorize</p>
+<p>14<br>【填空题】<br>John <strong><strong>___</strong></strong> an arm from bed to pick up his phone. Sleepily he asked, “ Who is is?”</p>
+<p>catalog, destination, dub,filter, grab, hesitate, linger, memorize, pop up, preparation, provocative, secure, split, spot, stick to, stretch out, suicide</p>
+<p>我的答案：<br>第一空：<br>stretched out</p>
+<p>15<br>【填空题】<br>An advance team was sent to the UK to make___________ for President Xi Jingping’s visit.</p>
+<p>catalog, destination, dub,filter, grab, hesitate, linger, memorize, pop up, preparation, provocative, secure, split, spot, stick to, stretch out, suicide</p>
+<p>我的答案：<br>第一空：<br>preparations</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(http://cdnp.gaowei.in/bing.jpg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/2020/06/03/%E9%A9%AC%E5%8E%9F/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>马原</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(http://cdnp.gaowei.in/bingprepre.jpg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/2020/05/13/%E9%A9%AC%E5%8E%9F%E5%A4%9A%E9%80%89/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>马原多选</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2019.<a href="/">Hello World!</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
 <button class="hamburger hamburger--arrow-r" type="button">
     <div class="hamburger-box">
       <div class="hamburger-inner"></div>
     </div>
 </button> 
-<%- partial('partials/menu')%>
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="http://cdnp.gaowei.in/favicon.ico" alt="WEI"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>WEI</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>首页</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-th-list fa-fw"></i>分类</span>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%98%E6%A1%A3/">存档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A2%98%E5%BA%93/">题库</a></li></ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>页面</span>
+        <ul>
+          <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    
+  </ul>
+  </nav>
+</div>
+
 <div class="gototop js-top">
   <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
 </div>
-<script src="<%= js%>jquery.easing.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
 <script>
 (function () {
 	"use strict";
@@ -78,7 +505,7 @@ else { css += 'main.min.css';}
 	});
 }());
 </script>
-<% if (theme.local_search.enable) {%><script src="<%= js%>local.search.js"></script><%}%>
-<%if (theme.comment.enable) {%><%- partial('third-party/comment')%><%}%>
-<%if (theme.mathjax.enable) {%><%if (page.mathjax) {%><%- partial('third-party/mathjax')%><%}%><%}%></body>
+
+
+</body>
 </html>

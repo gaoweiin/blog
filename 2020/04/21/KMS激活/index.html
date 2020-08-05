@@ -1,58 +1,213 @@
-<% var pageTitle = page.title || '';
-if (is_archive()) pageTitle = __('pagetitle.archive');
-if (is_tag()) pageTitle = __('pagetitle.tag') + '-' + page.tag;
-if (is_category()) pageTitle = __('pagetitle.category') + '-' + page.category;
-if (pageTitle == '') {
-    pageTitle = config.title;
-} else {
-    pageTitle += ' | ' + config.title;
-}
-var js = theme.base_file.js;
-var css = theme.base_file.css;
-if (theme.develop){ js = config.root + 'js/'; css = config.root + 'css/main.css';}
-else { css += 'main.min.css';}
-%><!DOCTYPE html>
-<html <%if(config.language.length){%>lang="<%-config.language.substring(0,2)%>"<%}%>>
+<!DOCTYPE html>
+<html lang="zh">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="theme-color" content=<%- theme.theme_color%>>
-  <title><%=pageTitle%></title>
+  <meta name="theme-color" content=#58b77a>
+  <title>KMS激活 | Hello World!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="<%- config.author%>">
-  <meta name="keywords" content="<%- config.keywords%>">
-  <meta name="description" content="<%- config.description%>">
-  <%- partial('partials/config')%>
-  <link rel="shortcut icon" href="<%- url_for(theme.favicon)%>">
-  <link rel="stylesheet" href="<%= css%>">
-  <%-partial('partials/font')%>
-  <script src="<%= theme.base_file.jquery_cdn%>"></script>
-  <script src="<%= js%>jquery.jside.menu.js"></script>
+  <meta name="author" content="WEI">
+  <meta name="keywords" content="">
+  <meta name="description" content="前路虽长,尤可期许">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'lx',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="http://cdnp.gaowei.in/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
 	<script>
 	$(document).ready(function(){
 	$(".menu-container").jSideMenu({
 	    jSidePosition: "position-right",
 	    jSideSticky: true,
-	    jSideSkin: "<%- theme.menu_theme%>",
+	    jSideSkin: "greenish",
 	     });
 	}); 
 	</script>
-  <%-partial('third-party/analytics/index')%>
-  <%- lx_font()%>
-  <link rel="stylesheet" href="<%= theme.font_awesome%>">
-</head>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 4.2.1"></head>
 <body>
-<%- body %>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(http://cdnp.gaowei.in/bingpre.jpg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="http://cdnp.gaowei.in/favicon.ico"></a></div>
+    <span>2020-04-21</span>
+    <h2>KMS激活</h2>
+    <div class="tags"><i class="fa fa-tag"></i><a class="tag-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a></div>
+    <div class="social-links">
+    <a href="https://github.com/gaoweiin" target="_blank"><i class="fa fa-github fa-fw"></i></a>
+    <a href="mailto:admin@gaowei.in" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+    <a href="tencent://message/?Menu=yes&amp;uin=331562022" target="_blank"><i class="fa fa-qq fa-fw"></i></a>
+</div></div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <p>KMS激活</p>
+<a id="more"></a>
+
+<h1 id="KMS"><a href="#KMS" class="headerlink" title="KMS"></a>KMS</h1><ol>
+<li><p>确保你的windows的key为对应的批量key</p>
+</li>
+<li><p>以管理员权限运行cmd，输入命令行：slmgr /skms weii.ga</p>
+</li>
+</ol>
+<h2 id="office激活的方法，kms服务器的使用方式："><a href="#office激活的方法，kms服务器的使用方式：" class="headerlink" title="office激活的方法，kms服务器的使用方式："></a>office激活的方法，kms服务器的使用方式：</h2><ol>
+<li><p>office必须是VOL版本，否则是无法使用kms激活的</p>
+</li>
+<li><p>找到PC上安装office的文件夹位置</p>
+</li>
+</ol>
+<p>默认的，64位的位置为：C:\Program Files (x86)\Microsoft Office\Office16</p>
+<p>32位的位置为：C:\Program Files\Microsoft Office\Office16</p>
+<ol start="3">
+<li>以管理员权限运行cmd，进入office安装位置，输入以下三个命令行：</li>
+</ol>
+<p>cd C:\Program Files (x86)\Microsoft Office\Office16</p>
+<p>cscript ospp.vbs /sethst: weii.ga</p>
+<p>cscript ospp.vbs /act</p>
+<hr>
+<p>顺便，附上windows10各个版本的key：</p>
+<h3 id="Windows-10-Professional"><a href="#Windows-10-Professional" class="headerlink" title="Windows 10 Professional"></a>Windows 10 Professional</h3><p>W269N-WFGWX-YVC9B-4J6C9-T83GX</p>
+<h3 id="Windows-10-Professional-N"><a href="#Windows-10-Professional-N" class="headerlink" title="Windows 10 Professional N"></a>Windows 10 Professional N</h3><p>MH37W-N47XK-V7XM9-C7227-GCQG9</p>
+<h3 id="Windows-10-Enterprise"><a href="#Windows-10-Enterprise" class="headerlink" title="Windows 10 Enterprise"></a>Windows 10 Enterprise</h3><p>NPPR9-FWDCX-D2C8J-H872K-2YT43</p>
+<h3 id="Windows-10-Enterprise-N"><a href="#Windows-10-Enterprise-N" class="headerlink" title="Windows 10 Enterprise N"></a>Windows 10 Enterprise N</h3><p>DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4</p>
+<h3 id="Windows-10-Education"><a href="#Windows-10-Education" class="headerlink" title="Windows 10 Education"></a>Windows 10 Education</h3><p>NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</p>
+<h3 id="Windows-10-Education-N"><a href="#Windows-10-Education-N" class="headerlink" title="Windows 10 Education N"></a>Windows 10 Education N</h3><p>2WH4N-8QGBV-H22JP-CT43Q-MDWWJ</p>
+<h3 id="Windows-10-Enterprise-2015-LTSB"><a href="#Windows-10-Enterprise-2015-LTSB" class="headerlink" title="Windows 10 Enterprise 2015 LTSB"></a>Windows 10 Enterprise 2015 LTSB</h3><p>WNMTR-4C88C-JK8YV-HQ7T2-76DF9</p>
+<h3 id="Windows-10-Enterprise-2015-LTSB-N"><a href="#Windows-10-Enterprise-2015-LTSB-N" class="headerlink" title="Windows 10 Enterprise 2015 LTSB N"></a>Windows 10 Enterprise 2015 LTSB N</h3><p>2F77B-TNFGY-69QQF-B8YKP-D69TJ</p>
+<h3 id="Windows-10-Enterprise-2016-LTSB"><a href="#Windows-10-Enterprise-2016-LTSB" class="headerlink" title="Windows 10 Enterprise 2016 LTSB"></a>Windows 10 Enterprise 2016 LTSB</h3><p>DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ</p>
+<h3 id="Windows-10-Enterprise-2016-LTSB-N"><a href="#Windows-10-Enterprise-2016-LTSB-N" class="headerlink" title="Windows 10 Enterprise 2016 LTSB N"></a>Windows 10 Enterprise 2016 LTSB N</h3><p>QFFDN-GRT3P-VKWWX-X7T3R-8B639</p>
+<hr>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(http://cdnp.gaowei.in/bing.jpg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/2020/04/24/PyAutoGUI/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>PyAutoGUI</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(http://cdnp.gaowei.in/bingprepre.jpg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/2020/04/20/Hexo%E7%94%A8%E6%B3%95/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>Hexo用法</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2019.<a href="/">Hello World!</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
 <button class="hamburger hamburger--arrow-r" type="button">
     <div class="hamburger-box">
       <div class="hamburger-inner"></div>
     </div>
 </button> 
-<%- partial('partials/menu')%>
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="http://cdnp.gaowei.in/favicon.ico" alt="WEI"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>WEI</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>首页</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-th-list fa-fw"></i>分类</span>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%98%E6%A1%A3/">存档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A2%98%E5%BA%93/">题库</a></li></ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>页面</span>
+        <ul>
+          <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    
+  </ul>
+  </nav>
+</div>
+
 <div class="gototop js-top">
   <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
 </div>
-<script src="<%= js%>jquery.easing.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
 <script>
 (function () {
 	"use strict";
@@ -78,7 +233,7 @@ else { css += 'main.min.css';}
 	});
 }());
 </script>
-<% if (theme.local_search.enable) {%><script src="<%= js%>local.search.js"></script><%}%>
-<%if (theme.comment.enable) {%><%- partial('third-party/comment')%><%}%>
-<%if (theme.mathjax.enable) {%><%if (page.mathjax) {%><%- partial('third-party/mathjax')%><%}%><%}%></body>
+
+
+</body>
 </html>
