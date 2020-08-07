@@ -149,7 +149,71 @@
 
 <p>刷新浏览器，即可看到相应的变动</p>
 <hr>
-<h1 id="Day2"><a href="#Day2" class="headerlink" title="Day2"></a>Day2</h1>
+<h1 id="Day2"><a href="#Day2" class="headerlink" title="Day2"></a>Day2</h1><h2 id="搭建wiki知识库"><a href="#搭建wiki知识库" class="headerlink" title="搭建wiki知识库"></a>搭建wiki知识库</h2><h3 id="安装wget-git"><a href="#安装wget-git" class="headerlink" title="安装wget git"></a>安装wget git</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget git      // for Amazon Linux/CentOS</span><br><span class="line">apt-get -y install wget git  // for Debian/Ubuntu</span><br></pre></td></tr></table></figure>
+
+<p>安装lamp</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/teddysun/lamp.git</span><br><span class="line">cd lamp</span><br><span class="line">chmod 755 *.sh</span><br><span class="line">./lamp.sh</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用提示</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lamp add      创建虚拟主机</span><br><span class="line">lamp del      删除虚拟主机</span><br><span class="line">lamp list     列出虚拟主机</span><br></pre></td></tr></table></figure>
+
+<p><strong>程序目录</strong></p>
+<ul>
+<li>MySQL 安装目录: /usr/local/mysql</li>
+<li>MySQL 数据库目录：/usr/local/mysql/data（默认路径，安装时可更改）</li>
+<li>MariaDB 安装目录: /usr/local/mariadb</li>
+<li>MariaDB 数据库目录：/usr/local/mariadb/data（默认路径，安装时可更改）</li>
+<li>PHP 安装目录: /usr/local/php</li>
+<li>Apache 安装目录： /usr/local/apache</li>
+</ul>
+<p><strong>命令一览</strong></p>
+<ul>
+<li>MySQL 或 MariaDB 命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;etc&#x2F;init.d&#x2F;mysqld (start|stop|restart|status)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Apache 命令</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;etc&#x2F;init.d&#x2F;httpd (start|stop|restart|status)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Memcached 命令（可选安装）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;etc&#x2F;init.d&#x2F;memcached (start|stop|restart|status)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Redis 命令（可选安装）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;etc&#x2F;init.d&#x2F;redis-server (start|stop|restart|status)</span><br></pre></td></tr></table></figure>
+
+<p><strong>网站根目录</strong></p>
+<blockquote>
+<p>默认的网站根目录： /data/www/default</p>
+</blockquote>
+<p>打开终端连接到ECS 下载MediaWiki</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;releases.wikimedia.org&#x2F;mediawiki&#x2F;1.29&#x2F;mediawiki-1.29.1.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>使用解压命令解压到网站目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf mediawiki-1.29.1.tar.gz</span><br><span class="line">mv 目录名 目录名</span><br></pre></td></tr></table></figure>
+
+<p>使用chown修改权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R 目录</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置MediaWiki"><a href="#设置MediaWiki" class="headerlink" title="设置MediaWiki"></a>设置MediaWiki</h2><p>访问ECS ip 按提示完成配置，</p>
+<p>如果通过上面的脚本安装lamp，默认数据库就安装好了<br>phpmyadmin 后台地址： http://网站域名或IP/phpmyadmin/<br>phpmyadmin 默认用户名：root 默认密码：<code>lamp.sh</code></p>
+<p>将文件锁按照说明上传到指定位置</p>
+<p>完成！</p>
+<hr>
+<h1 id="Day3"><a href="#Day3" class="headerlink" title="Day3"></a>Day3</h1><h2 id="基于云服务器构建微信公众号管理系统"><a href="#基于云服务器构建微信公众号管理系统" class="headerlink" title="基于云服务器构建微信公众号管理系统"></a>基于云服务器构建微信公众号管理系统</h2><h3 id="就是个微擎"><a href="#就是个微擎" class="headerlink" title="就是个微擎"></a>就是个微擎</h3><p>和上面一样安装lamp</p>
+<p>下载微擎并安装unzip</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://cdn.w7.cc/download/WeEngine-Laster-Online.zip</span><br><span class="line">apt install unzip</span><br><span class="line">unzip WeEngine-Laster-Online.zip -d 网页目录</span><br></pre></td></tr></table></figure>
+
+<p>如果通过上面的脚本安装lamp，默认数据库就安装好了<br>phpmyadmin 后台地址： <a href="http://ECSIP/phpmyadmin/" target="_blank" rel="noopener">http://ECSIP/phpmyadmin/</a><br>phpmyadmin 默认用户名：root 默认密码：<code>lamp.sh</code><br>  （<strong>注：</strong>此密码为 MySQL 的 root 密码。在安装时会要求输入，如不输入则为默认密码 <code>lamp.sh</code>）</p>
+<p>访问http://你的域名/install.php进行安装</p>
+<p>按照需求设置参数</p>
+<p>登录微擎后台，点击最上侧导航栏的系统管理 进行更新</p>
+
       </div>
     </div>
   </div>
