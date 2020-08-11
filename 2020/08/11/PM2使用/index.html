@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>PM2使用 | Hello World!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="WEI">
+  <meta name="keywords" content="">
+  <meta name="description" content="前路虽长,尤可期许">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'lx',
+    version: '0.3.9',
+    localsearch:{
+      "enable": false,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'null'
+  };
+</script>
+
+  <link rel="shortcut icon" href="http://cdnp.gaowei.in/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 4.2.1"></head>
+<body>
+<div class="single">
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(http://cdnp.gaowei.in/bingpre.jpg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="http://cdnp.gaowei.in/favicon.ico"></a></div>
+    <span>2020-08-11</span>
+    <h2>PM2使用</h2>
+    <div class="tags"><i class="fa fa-tag"></i><a class="tag-link" href="/tags/%E5%AD%98%E6%A1%A3/" rel="tag">存档</a></div>
+    <div class="social-links">
+    <a href="https://github.com/gaoweiin" target="_blank"><i class="fa fa-github fa-fw"></i></a>
+    <a href="mailto:admin@gaowei.in" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+    <a href="tencent://message/?Menu=yes&amp;uin=331562022" target="_blank"><i class="fa fa-qq fa-fw"></i></a>
+</div></div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <p>PM2使用</p>
+<a id="more"></a>
+
+<p>安装<code>npm install -g pm2</code></p>
+<p>pm2安装好后，会自动创建下面目录。</p>
+<ul>
+<li><code>$HOME/.pm2</code> will contain all PM2 related files</li>
+<li><code>$HOME/.pm2/logs</code> will contain all applications logs</li>
+<li><code>$HOME/.pm2/pids</code> will contain all applications pids</li>
+<li><code>$HOME/.pm2/pm2.log</code> PM2 logs</li>
+<li><code>$HOME/.pm2/pm2.pid</code> PM2 pid</li>
+<li><code>$HOME/.pm2/rpc.sock</code> Socket file for remote commands</li>
+<li><code>$HOME/.pm2/pub.sock</code> Socket file for publishable events</li>
+<li><code>$HOME/.pm2/conf.js</code> PM2 Configuration</li>
+</ul>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>参数说明：</p>
+<ul>
+<li><code>--watch</code>：监听应用目录的变化，一旦发生变化，自动重启。如果要精确监听、不见听的目录，最好通过配置文件。</li>
+<li><code>-i --instances</code>：启用多少个实例，可用于负载均衡。如果<code>-i 0</code>或者<code>-i max</code>，则根据当前机器核数确定实例数目。</li>
+<li><code>--ignore-watch</code>：排除监听的目录/文件，可以是特定的文件名，也可以是正则。比如<code>--ignore-watch=&quot;test node_modules &quot;some scripts&quot;&quot;</code></li>
+<li><code>-n --name</code>：应用的名称。查看应用信息的时候可以用到。</li>
+<li><code>-o --output</code>：标准输出日志文件的路径。</li>
+<li><code>-e --error</code>：错误输出日志文件的路径。</li>
+<li><code>--interpreter</code>：the interpreter pm2 should use for executing app (bash, python…)。比如你用的coffee script来编写应用。</li>
+</ul>
+<p>完整命令行参数列表：<a href="http://pm2.keymetrics.io/docs/usage/quick-start/#options" target="_blank" rel="noopener">地址</a></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 start app.js -<span class="literal">-watch</span> <span class="literal">-i</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 restart app.js</span><br></pre></td></tr></table></figure>
+
+<h3 id="停止"><a href="#停止" class="headerlink" title="停止"></a>停止</h3><p>停止特定的应用。可以先通过<code>pm2 list</code>获取应用的名字（–name指定的）或者进程id。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 stop app_name|app_id</span><br></pre></td></tr></table></figure>
+
+<p>如果要停止所有应用，可以</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 stop all</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>类似<code>pm2 stop</code>，如下</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pm2 stop app_name|app_id</span><br><span class="line">pm2 stop all</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看进程状态"><a href="#查看进程状态" class="headerlink" title="查看进程状态"></a>查看进程状态</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm2 list</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看某个进程的信息"><a href="#查看某个进程的信息" class="headerlink" title="查看某个进程的信息"></a>查看某个进程的信息</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">[<span class="type">root</span>@<span class="type">iZ94wb7tioqZ</span> <span class="type">pids</span>]<span class="comment"># pm2 describe 0</span></span><br><span class="line">Describing <span class="keyword">process</span> with id <span class="number">0</span> - name oc<span class="literal">-server</span></span><br><span class="line">┌───────────────────┬──────────────────────────────────────────────────────────────┐</span><br><span class="line">│ status            │ online                                                       │</span><br><span class="line">│ name              │ oc<span class="literal">-server</span>                                                    │</span><br><span class="line">│ id                │ <span class="number">0</span>                                                            │</span><br><span class="line">│ path              │ /<span class="keyword">data</span>/file/qiquan/over_the_counter/server/bin/www            │</span><br><span class="line">│ args              │                                                              │</span><br><span class="line">│ exec cwd          │ /<span class="keyword">data</span>/file/qiquan/over_the_counter/server                    │</span><br><span class="line">│ error log path    │ /<span class="keyword">data</span>/file/qiquan/over_the_counter/server/logs/app<span class="literal">-err</span><span class="literal">-0</span>.log │</span><br><span class="line">│ out log path      │ /<span class="keyword">data</span>/file/qiquan/over_the_counter/server/logs/app<span class="literal">-out</span><span class="literal">-0</span>.log │</span><br><span class="line">│ pid path          │ /root/.pm2/pids/oc<span class="literal">-server</span><span class="literal">-0</span>.pid                              │</span><br><span class="line">│ mode              │ fork_mode                                                    │</span><br><span class="line">│ node v8 arguments │                                                              │</span><br><span class="line">│ watch &amp; reload    │                                                             │</span><br><span class="line">│ interpreter       │ node                                                         │</span><br><span class="line">│ restarts          │ <span class="number">293</span>                                                          │</span><br><span class="line">│ unstable restarts │ <span class="number">0</span>                                                            │</span><br><span class="line">│ uptime            │ <span class="number">87</span>m                                                          │</span><br><span class="line">│ created at        │ <span class="number">2016</span><span class="literal">-08</span><span class="literal">-26T08</span>:<span class="number">13</span>:<span class="number">43.705</span>Z                                     │</span><br><span class="line">└───────────────────┴──────────────────────────────────────────────────────────────┘</span><br></pre></td></tr></table></figure>
+
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p><img src="https://counter.weii.ga/get/@:PM2?theme=rule34" alt=":name"></p>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(http://cdnp.gaowei.in/bing.jpg)">
+		<div class="overlay"></div>
+		<a class="copy" href="#">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>没有更新的文章</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(http://cdnp.gaowei.in/bingprepre.jpg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/2020/08/06/ECS%E4%B8%83%E5%A4%A9%E8%AE%AD%E7%BB%83%E8%90%A5/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>ECS七天训练营</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+
+<footer>
+  <div>
+  Copyright &copy; 2019.<a href="/">Hello World!</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="http://cdnp.gaowei.in/favicon.ico" alt="WEI"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>WEI</p>
+          <span class="tagline">Hello, World!</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>首页</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-th-list fa-fw"></i>分类</span>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%98%E6%A1%A3/">存档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%A2%98%E5%BA%93/">题库</a></li></ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>页面</span>
+        <ul>
+          <li><a href="/about/">About</a></li>
+        </ul>
+    </li>
+    
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+
+
+</body>
+</html>
