@@ -127,15 +127,20 @@ h2.title a {
 }
 .single #lx-aside {
   position: relative;
-  height: 375px;
+  height: 450px;
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .single #lx-aside {
+    height: 400px;
+  }
 }
 @media screen and (max-width: 768px) {
   #lx-aside {
     width: 100%;
     position: relative;
     z-index: 4;
-    height: 375px;
+    height: 400px;
   }
 }
 #lx-aside a {
@@ -410,7 +415,7 @@ a.category-link {
 .lx-post .lx-entry {
   float: left;
   width: 100%;
-  border: none;
+  boder: none;
   border-radius: 15px;
   margin-bottom: 15px;
   background: #fff;
