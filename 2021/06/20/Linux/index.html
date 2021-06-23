@@ -151,8 +151,9 @@
 <p>设置共享目录</p>
 <p><code>mkdir /usr/share/smbs</code></p>
 <p><code>chmod 777 -R /usr/share/smbs</code></p>
-<p><code>semanage fcontext -at samba_share_t &quot;/home/wei/smb(/.*)?&quot;</code></p>
-<p><code>restorecon /home/wei/smb/</code></p>
+<p><code>semanage fcontext -at samba_share_t &quot;/usr/share/smbs(/.*)?&quot;</code></p>
+<p><code>restorecon /usr/share/smbs</code></p>
+<p><code>vim /etc/samba/smb.conf</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">        workgroup &#x3D; WORKGROUP</span><br><span class="line">        security &#x3D; user</span><br><span class="line">        map to guest &#x3D; Bad User</span><br><span class="line">        passdb backend &#x3D; tdbsam</span><br><span class="line"></span><br><span class="line">        printing &#x3D; cups</span><br><span class="line">        printcap name &#x3D; cups</span><br><span class="line">        load printers &#x3D; yes</span><br><span class="line">        cups options &#x3D; raw</span><br><span class="line">[share]</span><br><span class="line">        path &#x3D; &#x2F;usr&#x2F;share&#x2F;smbs</span><br><span class="line">        public &#x3D; yes</span><br><span class="line">        guest ok &#x3D; yes</span><br><span class="line">        browseable &#x3D; yes</span><br><span class="line">        writable &#x3D; yes</span><br></pre></td></tr></table></figure>
 
 <p><code>testparm</code></p>
