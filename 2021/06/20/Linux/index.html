@@ -93,9 +93,7 @@
   <div class="lx-post">
     <div class="lx-entry padding">
       <div>
-        Linux
-
-<p>Linux</p>
+        <p>Linux</p>
 <a id="more"></a>
 
 <h1 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作:"></a>文件操作:</h1><p><code>mv 源 目标</code></p>
@@ -103,8 +101,19 @@
 <p><code>touch 文件名</code></p>
 <p><code>mkdir 文件夹名</code></p>
 <p><code>ls</code> 显示当前目录下未隐藏的文件</p>
-<h1 id="NFS"><a href="#NFS" class="headerlink" title="NFS:"></a>NFS:</h1><p><strong>###</strong> <strong>服务器端操作</strong></p>
-<p><code>yum install rpcbind nfs-utils -y</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将当前目录下的文件创建归档压缩文件files.tar.gz，并查看是否创建成功(6.0分)</span><br></pre></td></tr></table></figure>
+
+<p><code>tar -czvf  files.tar.gz .</code>打包</p>
+<p><code>tar -xzvf files.tar.gz -C a</code>解包</p>
+<p><code>tar -cvf</code>打包</p>
+<p><code>tar -zcvf</code>压缩打包</p>
+<p><code>tar -xvf</code>解包</p>
+<p><code>tar -xzvf</code>解压缩</p>
+<h1 id="NFS"><a href="#NFS" class="headerlink" title="NFS:"></a>NFS:</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">配置NFS服务器及测试:</span><br><span class="line">服务器:	</span><br><span class="line">    (1)在配置文件中，设置共享目录及读写权限	</span><br><span class="line">    (2)设置IP地址:</span><br><span class="line">    (3)在共享目录下创建文件，并启动该服务:</span><br><span class="line">客户端:访问该共享目录，并挂载，并查看挂载目录内容(12.0分)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="服务器端操作"><a href="#服务器端操作" class="headerlink" title="服务器端操作"></a>服务器端操作</h3><p><code>yum install rpcbind nfs-utils -y</code></p>
 <p><code>mkdir /home/wei/nfs</code></p>
 <p><code>chmod 777 -R /home/wei/nfs</code></p>
 <p><code>vim /etc/sysconfig/network-scripts/ifcfg-ens33</code></p>
@@ -119,7 +128,7 @@
 
 <p><code>exportfs -rv</code></p>
 <h3 id="客户端操作"><a href="#客户端操作" class="headerlink" title="客户端操作"></a>客户端操作</h3><p><code>mount -t nfs 192.168.83.212:/home/wei/nfs /home/wei/nfsc</code></p>
-<h1 id="dhcp"><a href="#dhcp" class="headerlink" title="dhcp:"></a>dhcp:</h1><h3 id="服务器端操作"><a href="#服务器端操作" class="headerlink" title="服务器端操作"></a>服务器端操作</h3><p><code>yum install dhcp-server -y</code></p>
+<h1 id="dhcp"><a href="#dhcp" class="headerlink" title="dhcp:"></a>dhcp:</h1><h3 id="服务器端操作-1"><a href="#服务器端操作-1" class="headerlink" title="服务器端操作"></a>服务器端操作</h3><p><code>yum install dhcp-server -y</code></p>
 <p><code>cat /usr/share/doc/dhcp-server/dhcpd.conf.example</code></p>
 <p><code>nano /etc/dhcp/dhcpd.conf</code></p>
 <p><code>systemctl start dhcpd</code></p>
@@ -128,7 +137,12 @@
 <p><img src="http://cdnp.gaowei.in/markdown/20210620111846.png" alt="image-20210620111723469"></p>
 <p><img src="http://cdnp.gaowei.in/markdown/20210620111859.png" alt="image-20210620111807626"></p>
 <hr>
-<h1 id="dns"><a href="#dns" class="headerlink" title="dns:"></a>dns:</h1><h3 id="服务器端操作-1"><a href="#服务器端操作-1" class="headerlink" title="服务器端操作"></a>服务器端操作</h3><p><code>yum install bind</code></p>
+<h1 id="dns"><a href="#dns" class="headerlink" title="dns:"></a>dns:</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">查看系统中是否安装了dns服务器软件如果已经安装了将其卸载后并安装&#x2F;没有安装则安装，安装后并查看都安装了哪些文件，并查看对应服务的状态(5.0分)</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="服务器端操作-2"><a href="#服务器端操作-2" class="headerlink" title="服务器端操作"></a>服务器端操作</h3><p><code>yum install bind</code></p>
+<p><code>rpm -ql bind</code></p>
 <p><code>nano /etc/named.conf</code></p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">options &#123;</span><br><span class="line">	listen-on port 53 &#123; 127.0.0.1;any; &#125;;</span><br><span class="line"></span><br><span class="line">        listen-on-v6 port 53 &#123; ::1; &#125;;</span><br><span class="line">        directory       <span class="string">"/var/named"</span>;</span><br><span class="line">        dump-file       <span class="string">"/var/named/data/cache_dump.db"</span>;</span><br><span class="line">        statistics-file <span class="string">"/var/named/data/named_stats.txt"</span>;</span><br><span class="line">        memstatistics-file <span class="string">"/var/named/data/named_mem_stats.txt"</span>;</span><br><span class="line">        secroots-file   <span class="string">"/var/named/data/named.secroots"</span>;</span><br><span class="line">        recursing-file  <span class="string">"/var/named/data/named.recursing"</span>;</span><br><span class="line">        allow-query     &#123; localhost;any; &#125;;</span><br></pre></td></tr></table></figure>
 
@@ -146,7 +160,7 @@
 <p><code>named-checkzone &quot;wei.zz&quot; site.zz.wei</code></p>
 <h3 id="客户端操作-1"><a href="#客户端操作-1" class="headerlink" title="客户端操作"></a>客户端操作</h3><p><code>nslookup</code></p>
 <p><img src="http://cdnp.gaowei.in/markdown/20210623161050.png" alt="image-20210623161014728"></p>
-<h1 id="Samba"><a href="#Samba" class="headerlink" title="Samba;"></a>Samba;</h1><h3 id="服务器端操作-2"><a href="#服务器端操作-2" class="headerlink" title="服务器端操作"></a>服务器端操作</h3><p><code>setenforce 0</code> 关SELinux</p>
+<h1 id="Samba"><a href="#Samba" class="headerlink" title="Samba;"></a>Samba;</h1><h3 id="服务器端操作-3"><a href="#服务器端操作-3" class="headerlink" title="服务器端操作"></a>服务器端操作</h3><p><code>setenforce 0</code> 关SELinux</p>
 <p><code>yum install samba</code></p>
 <p>设置共享目录</p>
 <p><code>mkdir /usr/share/smbs</code></p>
@@ -164,6 +178,43 @@
 <p><code>smbpasswd -a smbu1</code></p>
 <p><code>smbclient -U smbu1 //192.168.119.128/share</code></p>
 <p><img src="http://cdnp.gaowei.in/markdown/20210623180820.png" alt="image-20210623180804201"></p>
+<h3 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用一条命令， 合并文件&#x2F;etc&#x2F;passwd和&#x2F;etc&#x2F;inittab的内容到文件&#x2F;home&#x2F;myfile中注:截图显示输入的命令及输出结果，结果较长的可以只截取一部分。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost home]#cat /etc/passwd /etc/inittab &gt; /home/myfile</span><br><span class="line">[root@localhost home]#cat /home/myfile</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="makefile"><a href="#makefile" class="headerlink" title="makefile"></a>makefile</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">编写含有3个C源文件的程序，内容能够体现出3个文件之间的调用，并能够在输出结果的相应位置显示自己  的学号及姓名。并编写Makefile文件实现项目的管理。</span><br><span class="line">要求:3个源程序代码截图、Makefile文件内容截图、make编译结果截图、程序运行结果截图。(20.0分)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost /]# mkdir maketest</span><br><span class="line">[root@localhost /]# cd maketest/</span><br><span class="line">[root@localhost maketest]# vim main.c</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"fi.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"f2.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;	</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"THIS\n"</span>);	</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"xuehao\n"</span>);	</span><br><span class="line">    func1();	</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"xingming\n"</span>);	</span><br><span class="line">    func2();	</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost maketest]# vim fi.c</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func1</span><span class="params">()</span></span>&#123;	</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"1906070213\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost maketest]# vim f2.c</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func2</span><span class="params">()</span></span>&#123;	</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"tanglihuang\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost maketest]# vim fi.h</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func1</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost maketest]# vim f2.h</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func2</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost maketest]# vim makefile</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">CC=gcc</span><br><span class="line"><span class="section">begin:main.o fi.o f2.o	</span></span><br><span class="line">	gcc -o exec main.o fi.o f2.o</span><br><span class="line"><span class="section">main.o:main.c	</span></span><br><span class="line">	gcc -c main.c</span><br><span class="line"><span class="section">fi.o:fi.c fi.h	</span></span><br><span class="line">	gcc -c fi.c</span><br><span class="line"><span class="section">f2.o:f2.c f2.h	</span></span><br><span class="line">	gcc -c f2.c</span><br><span class="line"><span class="section">clean:	</span></span><br><span class="line">	rm -rf *.o exec</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost maketest]# make</span><br><span class="line">[root@localhost maketest]# ./exec</span><br></pre></td></tr></table></figure>
+
 
       </div>
     </div>
